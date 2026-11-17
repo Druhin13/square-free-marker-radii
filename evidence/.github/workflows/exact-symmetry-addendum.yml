@@ -1,0 +1,16 @@
+name: Private exact symmetry annex verification
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  verify-exact-symmetry-annex:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout only original/private research source tree
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Independently audit four rules, C4 core and all S4 subgroups
+        run: python3 -B tools/verify_exact_symmetry_addendum.py

@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "title": "Square-Free Marker Symmetry — publication artifact registry",
+  "state": "original_certificates_migrated_sha256_exact; clean_main_theorem_replay_verified_2026-11-15",
+  "subject": "quaternary bi-infinite square-free marker rules with separation >=3 and domination <=2",
+  "explanation": "All 21 original certificate files preserve exact Git object identities and pass byte-count/SHA-256 checks. The main theorem and full subgroup proof suite independently replayed in the clean 2026-11-15 private main workflow, run 43659501269. Per-row migration_status records only byte identity; successful execution is a separate, revision-specific CI gate. Future changes require new green CI.",
+  "sha256_definition": "SHA-256 of exact original file bytes, without normalization or rewriting.",
+  "intended_release_directory": "proofs/m3",
+  "artifact_count": 21,
+  "artifacts": [
+    {
+      "id": "unrestricted-r4-core",
+      "relative_path": "proofs/m3/kbl-q4-m3-r4-core.cnf",
+      "size_bytes": 485473,
+      "sha256": "a2f66feec531e8cd08abe79f9a619eb0177129c482577521d735b133060467f3",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "unrestricted-r4-direct-proof",
+      "relative_path": "proofs/m3/kbl-q4-m3-r4-core-direct-proof.drat",
+      "size_bytes": 1450181,
+      "sha256": "35b9366639739e68e0134b27638c1042251fd5fd32774d8d8cfa040e2d53faf7",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "unrestricted-r4-easy-core",
+      "relative_path": "proofs/m3/kbl-q4-m3-r4-easy-core.cnf",
+      "size_bytes": 213129,
+      "sha256": "925d9b7e28384bca92f29818b97a24d37b8aabe19b39d65041c4b7ca7ca5a833",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "unrestricted-r4-easy-witnesses",
+      "relative_path": "proofs/m3/kbl-q4-m3-r4-easy-core-witnesses.json",
+      "size_bytes": 2349406,
+      "sha256": "e07105792b091aaad3080b58a9fc016febd3786d7f620c3b961884c8ed4cc277",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "unrestricted-r4-remaining-extensions",
+      "relative_path": "proofs/m3/kbl-q4-m3-r4-remaining-core-extensions.json",
+      "size_bytes": 6410443,
+      "sha256": "870e27d7af896aa12d2ad075a9a06007bfbf310f4a0090bb0a6d30085e9123e3",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "unrestricted-r5-model",
+      "relative_path": "proofs/m3/kbl-q4-m3-r5-result.txt",
+      "size_bytes": 595752,
+      "sha256": "d5ba5df3f93f6e996ffe1164d2dcb2886e0f530638f894b45a090ea79d2eb7c7",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-complete-cnf",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-q4-m3-r6-s4.cnf",
+      "size_bytes": 39463151,
+      "sha256": "95c9c6aa8e1cf8d14200feb59a4d9e4160a7818cf63e35eb19e6e3ab4310da6e",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-source-export",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-export.json",
+      "size_bytes": 1584,
+      "sha256": "1ad0a70c9f6d70c7465f78e14ec8b36e0d5b39e8e34d4c3758f6ad5d6458a17a",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-orbit-preflight",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-orbit-preflight.json",
+      "size_bytes": 2793,
+      "sha256": "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-cnf-source-audit",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-cnf-audit.json",
+      "size_bytes": 1598,
+      "sha256": "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-ten-clause-core",
+      "relative_path": "proofs/m3/s4-r6-ten-core/core.cnf",
+      "size_bytes": 195,
+      "sha256": "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-reduced-drat",
+      "relative_path": "proofs/m3/s4-r6-ten-core/core-lemmas.drat",
+      "size_bytes": 222,
+      "sha256": "16c6f25a8d3136a0b6ed916c639c17d99080263ea40008b51666dfc62287a700",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-original-drat",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-proof.drat",
+      "size_bytes": 11092,
+      "sha256": "877b2d2c3417735de7a2d74b9e7359bd4fe62a495ac3bdbe28af9c28a31fa6a3",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-solver-result",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-result.txt",
+      "size_bytes": 16,
+      "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-original-source-audit",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-ten-core-biinfinite-audit.json",
+      "size_bytes": 14722,
+      "sha256": "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-corrected-hall-extremities",
+      "relative_path": "proofs/m3/s4-r6-full-tail-repair/kbl-m3-r6-s4-ten-core-full-tail-repair.json",
+      "size_bytes": 11964,
+      "sha256": "04f08bace9f5bf2d67daa7c7e69997f2c4171db10112ea2030fef50e64ed6ade",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-r6-independent-extension-audit",
+      "relative_path": "proofs/m3/s4-r6-full-tail-repair/kbl-m3-r6-s4-full-tail-independent-audit.json",
+      "size_bytes": 3112,
+      "sha256": "2bf307c5523870fee6f81f53d06ce1f16441d03236e98d8d02f1be37536ca57c",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-l14-orbit-preflight",
+      "relative_path": "proofs/m3/s4-L14-nine-color/kbl-m3-r6-s4-orbit-preflight.json",
+      "size_bytes": 2793,
+      "sha256": "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-l14-nine-coloring",
+      "relative_path": "proofs/m3/s4-L14-nine-color/kbl-q4-m3-s4-L14-coloring.json",
+      "size_bytes": 463685,
+      "sha256": "bd45025e9d58523711e966664f2cc922f0566546a820184e98ce48e386701525",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-l14-coloring-manifest",
+      "relative_path": "proofs/m3/s4-L14-nine-color/kbl-m3-s4-L14-coloring-export.json",
+      "size_bytes": 665,
+      "sha256": "cd48e13fdcc4c5cb3380eea9715142c2d10617ce56439ee92e7d71a5f084ea14",
+      "migration_status": "verified",
+      "release_required": true
+    },
+    {
+      "id": "s4-l14-independent-color-audit",
+      "relative_path": "proofs/m3/s4-L14-nine-color/kbl-m3-s4-L14-coloring-audit.json",
+      "size_bytes": 1440,
+      "sha256": "c0a0996a8c1a87db12fa42b1f188a18a85d5309cdc47c45a50d3180bb3e430de",
+      "migration_status": "verified",
+      "release_required": true
+    }
+  ]
+}

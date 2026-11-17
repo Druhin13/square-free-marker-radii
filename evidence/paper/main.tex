@@ -1,0 +1,1334 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs}
+\usepackage[margin=1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\SigmaFour}{\{0,1,2,3\}}
+\newcommand{\Xsf}{X_{\mathrm{sf},4}}
+\newcommand{\Lang}{\mathcal{L}}
+\newcommand{\Sym}{S_4}
+
+\title{The Exact Locality Cost of Alphabet\\Symmetry in Square-Free Marker Rules}
+\author{}
+\date{Working manuscript --- 15 November 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We determine optimal input-window radii for shift-equivariant Boolean
+marker rules on the bi-infinite square-free subshift over four letters.
+Selected sites must be at least three positions apart, and every
+position must lie within distance two of a marker. Without imposed
+alphabet symmetry the least symmetric coding radius is five; full
+alphabet-permutation invariance under $S_4$ raises it to seven.
+More precisely, for each subgroup $H\le S_4$, the optimum is five
+if $|H|\le2$, six if $|H|>2$ and $H$ contains no four-cycle, and
+seven if $H$ contains a four-cycle. These cases account for
+10, 13 and 7 of the 30 subgroups, respectively.
+Lower bounds combine finite packing/covering clauses realized
+in genuine bi-infinite square-free sources, explicit extension
+lemmas and independently checked propositional refutations.
+Upper bounds use exhaustively validated finite-word marker
+tables; an eleven-clause obstruction excludes four-cycle
+invariance at radius six. We also classify all realizable exact
+alphabet stabilizers at radius five. This fixed-parameter
+classification quantifies the locality cost of alphabet
+symmetry; it does not claim a new general marker-existence
+theorem or a new SAT method.
+\end{abstract}
+
+\noindent\textbf{Keywords.}
+square-free words; symbolic dynamics; local marker rules;
+alphabet-permutation symmetry; coding radius; certified
+finite-factor obstructions.
+
+\noindent\textbf{2020 Mathematics Subject Classification.}
+Primary 37B10; Secondary 68R15, 68R07.
+
+\section{Introduction}
+
+Classical marker lemmas provide finite-radius markers for aperiodic
+zero-dimensional dynamical systems; see, for example, the modern
+subshift formulation discussed by Meyerovitch
+\cite{meyerovitch2025embedding}. Here the question is quantitative:
+what is the least radius of a \emph{single} local rule for a prescribed
+marker spacing and covering guarantee? A further constraint is
+invariance under every renaming of the alphabet.
+
+A concrete quantitative predecessor is T{\"o}rm{\"a}'s computable
+$n$-marker block map, whose symmetric radius is bounded by
+$n|A|^{2n+1}$ \cite[Lemma~6.10]{torma2015structural}.
+At $n=3$ on a four-symbol alphabet this gives
+$3\cdot4^7=49{,}152$. Its alternative to finding a marker within
+distance $n-1=2$ is a central length-seven word with period less
+than three. Such a word necessarily contains a square, so this
+alternative is impossible on the square-free shift. Thus finite
+radius and the desired packing/covering behavior are already
+classically guaranteed; the sharp fixed-parameter radius is not.
+
+Our focus is the quaternary square-free shift with
+separation-three and domination-distance-two requirements.
+Exact lower bounds need more than finite square-free
+source words: the underlying constraints must be realized
+in bi-infinite square-free configurations. Our proof
+therefore separates finite SAT/DRAT evidence from the
+Hall--Thue extension arguments, and checks positive rules
+against every finite square-free source.
+
+\paragraph{What is new in the fixed model.}
+The minimum unrestricted radius is five.
+Every single alphabet involution remains compatible with
+that optimum, but larger subgroups require radius six,
+and the presence of a four-cycle forces radius seven.
+The full $S_4$ penalty is exactly two. A short
+radius-five four-cycle collision and an eleven-clause
+radius-six obstruction help explain the two levels.
+The contribution is this quantitative subgroup
+classification, not the classical existence of markers,
+a new SAT method or a new graph-coloring algorithm.
+
+\section{The model}
+
+A finite word is \emph{square-free} if it contains no consecutive
+repetition $uu$ with $u$ nonempty. Let
+\[
+  \Xsf=\{x\in\SigmaFour^{\mathbb Z}:
+          \text{$x$ has no nonempty square factor}\}.
+\]
+Write $\Lang_n(\Xsf)$ for the set of length-$n$ factors occurring in
+some $x\in\Xsf$.
+
+A symmetric-radius-$r$ marker rule is a function
+\[
+ f:\Lang_{2r+1}(\Xsf)\longrightarrow\{0,1\}.
+\]
+At site $i$ on $x$, the indicator is
+$m_f(x,i)=f(x_{i-r}\cdots x_{i+r})$. Validity means
+\begin{align}
+ m_f(x,i)=m_f(x,j)=1,\ i\ne j
+   &\Longrightarrow |i-j|\ge3, \label{eq:separation}\\
+ \forall i\in\mathbb Z\quad
+   &\exists j\in[i-2,i+2]\colon m_f(x,j)=1.
+   \label{eq:domination}
+\end{align}
+Equivalently, consecutive markers have gaps from three to five.
+For instance, the set of sites
+$\{8k,8k+3:k\in\mathbb Z\}$ has alternating gaps
+three and five and obeys both output constraints.
+This is only an illustrative marker pattern: it does
+not define a single input-dependent block rule that
+works on every square-free configuration.
+
+The symmetric group $\Sym$ acts on $\Xsf$ by applying the same
+alphabet permutation at every position. A rule is
+$\Sym$-\emph{invariant} if
+$f(\pi w)=f(w)$ for all $\pi\in\Sym$ and
+$w\in\Lang_{2r+1}(\Xsf)$. Invariance under a subgroup $H\le\Sym$ is defined
+by the same condition with $\pi\in H$. For such an
+$H$, let $r_H(4,3)$ be the least symmetric coding
+radius admitting a valid $H$-invariant rule; the
+parameters $(4,3)$ denote respectively the alphabet
+size and the required minimum separation between
+markers (the covering distance is two throughout).
+We write $r_{\mathrm{all}}(4,3)=r_{\{e\}}(4,3)$
+for no imposed alphabet symmetry and
+$r_{\Sym}(4,3)$ for the full group.
+
+\begin{remark}
+Write $\mathcal W_n$ for the finite set of all square-free words
+of length $n$ over $\SigmaFour$. This set can strictly contain
+$\Lang_n(\Xsf)$. For example,
+$\texttt{010201030102010}\in\mathcal W_{15}$
+is square-free but cannot be extended by
+any one of the four symbols on either side,
+so it does not belong to $\Lang_{15}(\Xsf)$.
+Using $\mathcal W_n$ yields
+legitimate sufficient conditions for an upper-bound construction, but
+a lower-bound clause must be witnessed by a factor that really occurs
+in a bi-infinite word. We maintain this distinction throughout.
+\end{remark}
+
+\subsection{Qualitative existence under alphabet symmetry}
+
+Even before the quantitative construction below, a classical marker
+lemma guarantees that full alphabet symmetry cannot obstruct marker
+selection at \emph{every} radius. The following observation clarifies
+which part of the result is genuinely quantitative.
+
+\begin{proposition}[Qualitative symmetry-invariant markers]
+\label{prop:existence}
+For every finite group $G\le S_4$ acting by alphabet relabeling,
+there exists a valid, $G$-invariant marker rule of some finite
+symmetric coding radius on $\Xsf$.
+\end{proposition}
+
+\begin{proof}
+The quotient $Y=\Xsf/G$ is compact and zero dimensional: since $G$
+is finite, invariant clopen neighborhoods separate distinct
+finite orbits. The shift descends to a homeomorphism of $Y$.
+If $\sigma^p[x]=[x]$ for some $p\ge1$, then
+$\sigma^p x=gx$ for some $g\in G$. Since $g$ has finite order
+$h$, we obtain $\sigma^{ph}x=x$, contradicting the
+square-freeness of $x$. Thus the quotient shift is aperiodic.
+
+Apply a Krieger-type marker lemma
+\cite[Lemma 3.4]{meyerovitch2025embedding} to $Y$
+with the finite symmetric shift set $\{-2,-1,1,2\}$.
+It yields a clopen set $C\subseteq Y$ with
+$C\cap\sigma^d C=\varnothing$ for $d\in\{-2,-1,1,2\}$,
+and whose translates for $d\in\{-2,-1,0,1,2\}$ cover
+$Y$. Pulling $C$ back to $\Xsf$ gives
+a clopen, $G$-invariant marker set. Since $\Xsf$ is a
+compact finite-alphabet subshift, a clopen indicator is
+determined by some finite symmetric coordinate window,
+in accordance with the sliding-block principle
+\cite{hedlund1969codes}.
+Its shift translates define the desired shared rule.
+\end{proof}
+
+The argument provides no numerical coding-radius bound,
+and it does not determine the minimum radius. In contrast,
+the source-certified marker-table construction below gives
+the exact full-$S_4$ radius seven.
+
+\section{Main fixed-parameter statement}
+
+\begin{theorem}[Exact locality cost of full alphabet symmetry]
+\label{thm:main}
+For the quaternary bi-infinite square-free shift
+under \eqref{eq:separation}--\eqref{eq:domination},
+\[
+ \boxed{r_{\mathrm{all}}(4,3)=5,\qquad
+        r_{\Sym}(4,3)=7.}
+\]
+Thus full alphabet-permutation invariance increases
+the minimum symmetric coding radius by exactly two.
+\end{theorem}
+The unrestricted radius-four refutation and
+the full-$S_4$ radius-six obstruction provide
+the lower bounds. The radius-five unrestricted
+and radius-seven fully invariant decision tables
+furnish the matching upper bounds, verified below.
+
+\section{A square-free two-sided extension lemma}
+
+Fix one symbol, denoted $0$, as a separator. A finite
+square-free source with a separator admits two different extension
+arguments depending on whether that symbol occurs once or more
+than once. Stating both cases is essential for the finite-source
+lower-bound certificates.
+
+\begin{lemma}[Single-separator extension]\label{lem:single-separator}
+Let $Z$ be a finite square-free word over $\SigmaFour$
+containing $0$ at exactly one position $a$. Suppose the entire
+prefix $Z[0,a)$ is a terminal segment of a left-infinite
+square-free ternary word over $\{1,2,3\}$, and the entire
+suffix $Z(a,N)$ is an initial segment of a right-infinite
+square-free ternary word over $\{1,2,3\}$, where
+$Z(a,N)=z_{a+1}\cdots z_{N-1}$ and $N=|Z|$.
+Then $Z$ occurs in a bi-infinite square-free word.
+\end{lemma}
+\begin{proof}
+Identify the complete separator-free prefix and suffix
+with their respective infinite ternary rays and glue them
+to the single symbol $0$. A square containing $0$ would
+have to contain the same symbol twice, once in each half,
+which is impossible. A square avoiding $0$ lies wholly
+within one of the two square-free ternary rays. Thus the
+bi-infinite glued word contains no square.
+\end{proof}
+
+\begin{lemma}[Two-sided separator extension]\label{lem:separator}
+Let $Z=z_0\ldots z_{N-1}$ be a finite square-free word over
+$\SigmaFour$, with at least two occurrences of $0$. Let $a$ and $b$
+be the indices of its first and last $0$, and write $D=b-a\ge1$.
+Suppose
+\[
+   a\ge D-1,\qquad N-1-b\ge D-1.
+\]
+Suppose also that the \emph{entire} prefix $Z[0,a)$ is a terminal
+segment of a left-infinite square-free word over $\{1,2,3\}$ and
+the \emph{entire} suffix $Z(b,N)$ is an initial segment of a
+right-infinite square-free word over $\{1,2,3\}$, where
+$Z(b,N)=z_{b+1}\cdots z_{N-1}$.
+Then $Z$ occurs in a bi-infinite square-free word over $\SigmaFour$.
+\end{lemma}
+
+\begin{proof}
+Glue the chosen two ternary rays to $Z$, identifying the complete
+zero-free prefix and suffix rather than adding duplicate copies.
+A square lying entirely in $Z$ is impossible. A square containing no
+$0$ that crosses a left or right outer join lies wholly within the
+corresponding square-free ternary ray: it cannot cross the separator
+block. Thus only a square containing $0$ and crossing an outer join
+needs to be excluded.
+
+Index $Z$ starting at $0$, with its left extension at negative
+indices. Suppose a square of period $p$ starts at $s<0$ and contains
+a $0$. Its right endpoint is $s+2p-1\le2p-2$. Let $t\ge a$ be its
+first occurrence of $0$. This occurrence must lie in the first
+half of the square, since otherwise the corresponding site at $t-p$
+would be an earlier $0$. Therefore $t+p$ is another occurrence
+of $0$ in the square, whence
+\[
+   p\le b-a=D.
+\]
+On the other hand $t+p$ lies before the right endpoint, so
+$t+p\le 2p-2$ and
+\[
+   p\ge t+2\ge a+2\ge D+1,
+\]
+a contradiction. Reversal of indices gives the identical
+contradiction for a square crossing the right join, using
+$N-1-b\ge D-1$. Hence the glued word is square-free.
+\end{proof}
+
+The classical Hall--Thue word is obtained from the fixed point of
+\[
+  0\mapsto012,\qquad1\mapsto02,\qquad2\mapsto1.
+\]
+Its square-freeness goes back to Thue; the
+specified Hall morphism and the historical proof are
+described in \cite{badkobeh2022avoiding,lothaire2002words}.
+The Hall morphism need not preserve square-freeness
+on \emph{every} ternary square-free input: what is
+used here is square-freeness of its \emph{fixed point}.
+The substitution is primitive, so its shift orbit
+closure is minimal and the fixed point is uniformly
+recurrent \cite[Sec.~5.2]{queffelec2010substitution}.
+Every finite factor therefore occurs in a
+bi-infinite square-free orbit-closure point, with
+arbitrarily long left and right extensions.
+
+Some of the historical source checkers also allow
+reversals of ternary Hall factors. This causes
+no extra assumption: reversing an entire
+bi-infinite square-free Hall orbit-closure point
+preserves square-freeness and realizes every reversed
+factor. Independently chosen alphabet relabelings
+and (where used) reversals of the two zero-free
+rays are permitted in
+Lemmas~\ref{lem:single-separator}
+and~\ref{lem:separator}; the proof only needs
+each ray separately to be square-free.
+
+\paragraph{Complete source-realization case distinction.}
+The lower-bound certificate verifiers distinguish finite sources
+by their extension construction. The written argument covers
+every category:
+\[
+\begin{array}{@{}ll@{}}
+\text{Finite witness class}&\text{Infinite extension argument}\\
+\hline
+\text{ternary Hall--Thue factor}&
+  \text{two-sided Hall--Thue orbit closure}\\
+\text{exactly one distinguished separator}&
+  \text{Lemma~\ref{lem:single-separator}}\\
+\text{at least two separators, with full ternary exteriors}&
+  \text{Lemma~\ref{lem:separator}}
+\end{array}
+\]
+The verifier classes named \texttt{single-separator} use
+the second row (25, 30 and 31 original core sources
+in the three-cycle, normal Klein-four and intransitive
+Klein-four obstruction suites, respectively).
+Classes called \texttt{multi-separator},
+\texttt{padded-multi-separator},
+\texttt{expanded-multi-separator} or
+\texttt{external-double-separator}, and the corresponding
+radius-four constructions, use the third row after
+checking all separators and the complete ternary exteriors.
+A source without a separator must be certified as a
+Hall--Thue factor by the first row. The finite programs
+check these premises; the infinite extension implications
+are the mathematical lemmas above. No finite square-free
+word is assumed automatically bi-infinitely extendible.
+
+\section{Computer-assisted lower bounds}
+
+Let $G\le S_4$ be either the trivial group (for unrestricted
+rules) or an alphabet-permutation symmetry group. Write
+$[w]_G$ for the orbit of a finite word $w$ under $G$ and
+assign one Boolean variable $y_{[w]_G}$ to each length-$(2r+1)$
+context orbit. For a finite word $v$, write $v[a,b]$ for
+its inclusive coordinate subword with indices starting at zero.
+
+The local conditions have the following exact propositional form.
+For $d\in\{1,2\}$ and $v\in\mathcal W_{2r+1+d}$,
+marker separation at displacement $d$ requires
+\begin{equation}\label{eq:source-separation-clause}
+  \neg y_{[v[0,2r]]_G}
+  \ \lor\
+  \neg y_{[v[d,d+2r]]_G}.
+\end{equation}
+For every $v\in\mathcal W_{2r+5}$, covering the center
+position within distance two requires
+\begin{equation}\label{eq:source-cover-clause}
+  \bigvee_{d=0}^{4} y_{[v[d,d+2r]]_G}.
+\end{equation}
+Repeated orbit variables within a clause are interpreted in the
+ordinary propositional sense.
+
+\begin{proposition}[Finite-factor certificate semantics]
+\label{prop:finite-clauses}
+A satisfying assignment to all clauses
+\eqref{eq:source-separation-clause}--\eqref{eq:source-cover-clause}
+over the finite square-free word sets $\mathcal W_n$ defines
+a valid, $G$-invariant radius-$r$ marker rule on $\Xsf$.
+Conversely, every such valid rule satisfies the clauses
+whose source words belong to the actual language
+$\Lang_n(\Xsf)$. In particular, an unsatisfiable collection
+of clauses each witnessed by a bi-infinitely realizable
+source word excludes every valid radius-$r$ rule.
+\end{proposition}
+\begin{proof}
+Assign to each source-language context the Boolean value of
+its orbit variable. Every pair of sites at distance $d\in\{1,2\}$
+is contained in a length-$(2r+1+d)$ factor; its separation
+clause forbids selecting both sites. Every five consecutive
+candidate marker sites have their radius-$r$ contexts inside
+one length-$(2r+5)$ factor; its covering clause forces at
+least one selection. This proves the first assertion, since
+every factor of $\Xsf$ is finite and square-free. For the
+converse, take any source word that occurs in a bi-infinite
+configuration and apply the defining separation or covering
+condition at the corresponding sites. A valid rule therefore
+satisfies its associated clause. If these genuine-source
+clauses are jointly inconsistent, no valid rule can exist.
+\end{proof}
+
+The two separation families have source lengths
+$2r+2$ and $2r+3$; the covering family has source length
+$2r+5$. Thus the unrestricted radius-four and radius-five
+checks use lengths $(10,11,13)$ and $(12,13,15)$,
+respectively, while the full-symmetry radius-six
+obstruction uses $(14,15,17)$. This finite encoding
+is standard; the theorem-critical additional issue for
+an unsatisfiability proof is source realization in $\Xsf$.
+
+\subsection{Unrestricted radius five}
+
+The unrestricted result is proved by two complementary
+finite certificates: a refuted radius-four subformula
+and a fully checked radius-five assignment. At radius
+four, there are 12,768 named square-free length-nine
+context variables. The archived unsatisfiable core has
+24,292 distinct clauses: 14,367 packing clauses
+and 9,925 five-site covering clauses. This core
+need not be a minimal UNSAT core; it is a fixed,
+source-supported subformula, and checking its
+unsatisfiability is enough.
+
+The 11,981-clause first subformula has 101
+direct Hall-factor certificates, 5,801
+single-separator certificates, and 6,079
+two-separator-with-margins certificates.
+The remaining 12,311 clauses have 12,233
+multiple-separator witnesses and 78
+external-double-separator witnesses.
+Two separately implemented auditors validate each
+individual source word, its original variable/packing
+or covering clause, its finite square-freeness and
+the relevant complete Hall--Thue exteriors and
+separator margins. Their union is checked to equal
+the 24,292-clause archived core, with zero
+unresolved source clauses.
+
+For radius four, the ideal packing source lengths
+are ten (distance one) and eleven (distance two).
+The archived packing witnesses \emph{all} use
+length-eleven words; a distance-one clause is
+obtained from two adjacent length-nine subwindows
+of that longer source. This does not change its
+validity, provided the full length-eleven source
+is bi-infinitely realizable, as the source auditors
+verify. The original exact core and a separately
+SHA-256-pinned DRAT trace are checked together
+by the external DRAT proof checker. Thus the
+mathematical source-realization lemmas and
+the finite refutation jointly exclude radius four.
+
+At radius five, a complete Boolean assignment
+to all 87,936 named length-eleven finite
+square-free contexts satisfies the packing
+constraints on all 230,520 length-12 and
+604,608 length-13 square-free words and
+the covering constraints on all 4,156,392
+length-15 square-free words. This is sufficient
+even without knowing which of those finite
+words extend bi-infinitely. Therefore
+$r_{\mathrm{all}}(4,3)=5$, since a
+smaller-radius rule can ignore additional
+input coordinates.
+
+\subsection{A ten-clause full-permutation obstruction at radius six}
+
+For full $\Sym$-invariance at radius six, factor contexts related
+by any alphabet relabeling must share one Boolean decision.
+Our original DIMACS orbit-variable IDs are \emph{one-based}:
+enumerate length-13 square-free words over $\SigmaFour$
+lexicographically, retain those in canonical
+first-appearance form (their distinct symbols first appear
+as $0,1,2,3$), and assign consecutive IDs starting at one.
+This gives 25,192 orbit variables. Every named length-13
+context maps to its first-appearance normalization.
+The length-14, -15 and -17 source families likewise enumerate
+canonical square-free words lexicographically but use
+\emph{zero-based} source ordinals; the original verifier
+independently checks the precise mappings.
+Exhaustively enumerated finite square-free source factors give a
+source-identifiable constraint system. A reduced unsatisfiable core
+contains ten original clauses involving eight Boolean orbit
+variables. For readability, set
+\[
+\begin{array}{c|cccccccc}
+\text{symbol}&A&B&C&D&E&F&G&H\\\hline
+\text{orbit ID}&21696&4588&12753&7817&21695&12754&21697&21915
+\end{array}
+\]
+and write the ten clauses as
+\begin{align*}
+&(\neg A\vee\neg B),\quad
+ (\neg C\vee\neg D),\quad
+ (\neg D\vee\neg E),\\
+&(\neg F),\quad(\neg G),\quad(\neg C\vee\neg H),\\
+&(C\vee B\vee F\vee G),\\
+&(A\vee D\vee F\vee G),\\
+&(E\vee C\vee F\vee G),\\
+&(H\vee D\vee F\vee G).
+\end{align*}
+
+\begin{lemma}\label{lem:tenclauses}
+These ten propositional clauses are jointly unsatisfiable.
+\end{lemma}
+\begin{proof}
+The unit clauses force $F=G=0$. If $C=1$, then the clauses
+$\neg C\vee\neg D$ and $\neg C\vee\neg H$ give $D=H=0$,
+contradicting $H\vee D$. Thus $C=0$.
+The clauses $E\vee C$ and $C\vee B$ now force $E=B=1$.
+Then $\neg D\vee\neg E$ and $\neg A\vee\neg B$ force
+$D=A=0$, contradicting $A\vee D$.
+\end{proof}
+
+The finite contradiction alone does not prove nonexistence on
+$\Xsf$. Each of the ten source clauses must arise from an
+actually occurring bi-infinite square-free configuration.
+The archived source certificates fix the corresponding finite
+source word and orbit identifiers. A separately audited extension
+certificate gives a full ternary Hall--Thue factor for the
+\emph{entire} zero-free extremity on each side, together with the
+margins of Lemma~\ref{lem:separator}. The checker tests the complete
+extremities, including symbols in the source word beyond its first
+or last separator, rather than only checking appended padding.
+Lemma~\ref{lem:separator} then establishes bi-infinite
+extendibility. Together with Lemma~\ref{lem:tenclauses}, this
+excludes every fully $\Sym$-invariant radius-six rule.
+Monotonicity of the coding radius excludes smaller radii and yields
+\[
+ r_{\Sym}(4,3)\ge 7.
+\]
+
+Independent DIMACS/source checks, a direct check of all $2^8$
+truth assignments, and the original and reduced DRAT proofs are
+part of the archived evidence. The appendix identifies the ten source factors, while
+\texttt{REPRODUCING.md} documents the exact verifier commands
+and pinned proof artifacts.
+
+\section{A supplementary full-symmetry coloring construction}
+
+\begin{proposition}[Shortest proper alphabet-orbit color window]
+\label{prop:minimum-color-window}
+There is no $S_4$-invariant coloring of length-$L$
+square-free factors, for $L\le13$, assigning different
+colors to every pair of sites at distance two on
+$\Xsf$. For $L=14$, a proper nine-color assignment
+exists by the certified finite graph below.
+Thus 14 is the smallest window length for this
+\emph{proper-factor-coloring construction}, not a
+lower bound on arbitrary marker rules.
+\end{proposition}
+\begin{proof}
+The square-free length-15 word
+\[
+ V=\texttt{021320310213203}
+\]
+has first and third length-13 windows
+$\texttt{0213203102132}$ and
+$\texttt{1320310213203}$.
+The latter is obtained from the former by the
+alphabet four-cycle $0\mapsto1\mapsto2\mapsto3
+\mapsto0$. They therefore must have the same
+color under any $S_4$-invariant factor coloring,
+contradicting distance-two properness.
+
+This is a source factor of the bi-infinite shift:
+the SHA-pinned orbit-preflight witness is a
+square-free length-38 extension containing $V$
+at offset 12. Its separator $0$ occurs at positions
+12, 17, 20 and 25 (span $D=13$), with complete
+ternary Hall--Thue exteriors of length $D-1=12$
+on both sides. Lemma~\ref{lem:separator} gives
+bi-infinite extension. Any hypothetical proper
+coloring on a shorter word length could be applied
+to a consistently aligned subword of each
+length-13 window, yielding an impossible
+length-13 proper coloring. The length-14 existence
+claim is furnished by the separately checked
+nine-color graph assignment below.
+\end{proof}
+
+Although not sharp, the radius-23 construction below
+provides a distinct combinatorial marker method.
+Its certificate does not depend on the new radius-seven
+decision table.
+
+For $w\in\mathcal W_{14}$, let $[w]$ be its orbit under
+alphabet relabeling. A finite conflict graph has 66,047
+length-14 square-free word orbits as vertices. Join two vertices
+whenever their length-14 windows occur at displacement one or
+two in a finite square-free word of length 15 or 16.
+Exhaustive enumeration yields 173,183 length-15 and 453,998
+length-16 canonical source rows and 627,159 distinct undirected
+conflict edges. A stored nine-color assignment was independently
+checked against every source conflict. This graph may include
+finite words absent from $\Lang_n(\Xsf)$; enforcing the stronger
+finite-word constraints suffices for an \emph{upper} bound without
+assuming bi-infinite extendibility.
+
+Let $c(i)\in\{0,\dots,8\}$ be the color of the orbit of the
+centered factor $x[i-6,i+7]$. The independent graph audit ensures
+\[
+       c(i)\ne c(j)\qquad\text{when }1\le |i-j|\le2.
+       \tag{*}\label{eq:proper}
+\]
+Define marker decisions by increasing color rank:
+\[
+ M_k(i)= [c(i)=k]\ \wedge\
+       \bigwedge_{\substack{j<k\\d\in\{-2,-1,1,2\}}}
+       \neg M_j(i+d),
+       \quad 0\le k\le8,
+\]
+and select $i$ when $M(i)=\bigvee_{k=0}^8 M_k(i)$.
+The recursion is over finitely many color ranks, not over
+the spatial positions, and is therefore well defined on
+bi-infinite configurations.
+
+\begin{proposition}[Finite-color marker construction]
+\label{prop:color}
+If a shift-invariant color rule from centered length-$L$
+windows uses $C$ colors and assigns different colors to
+positions at distances one and two, the ordered-color
+construction above yields marker separation at least three,
+domination distance at most two, and symmetric radius at most
+\[
+  \left\lceil\frac{L-1}{2}\right\rceil+2(C-1).
+\]
+The marker rule inherits every alphabet symmetry of the
+underlying color rule.
+\end{proposition}
+
+\begin{proof}
+If selected sites at distance at most two have different
+colors, the later-color site would be blocked by the earlier
+selected site, a contradiction. Sites with equal colors
+cannot lie that close by the hypothesis. Hence the separation
+is at least three.
+
+If a site of color $k$ was not selected, its defining
+conjunction failed because a site of a smaller color had
+already been selected within distance two. Every site is
+therefore selected or dominated.
+
+The decision $M_k(i)$ depends only on colors at sites
+within $2k$ of $i$: each recursive call moves by at most two
+sites and decreases the color rank by at least one. A
+centered length-$L$ factor reads at most
+$\lceil(L-1)/2\rceil$ positions in either direction.
+Consequently the final decision has symmetric radius
+at most $\lceil(L-1)/2\rceil+2(C-1)$. Color-orbit
+invariance and the rank-only recursion preserve alphabet
+symmetry; translation equivariance is immediate.
+\end{proof}
+
+For the actual length-14 color window $x[i-6,i+7]$,
+the left and right symbol dependencies have radii six and
+seven. The eight possible decreasing-rank steps add at most
+16 positions on each side. Thus the final marker at $i$
+depends only on $x[i-22,i+23]$, which is contained in
+a symmetric radius-23 window. With $L=14$ and $C=9$,
+Proposition~\ref{prop:color} gives
+\[
+            r_{\Sym}(4,3)\le7+2(8)=23.
+\]
+The independent coloring audit establishes properness;
+the rank-dependency argument establishes locality.
+This supplies a nonoptimal full-symmetry rule;
+the sharp upper bound is checked separately.
+
+\section{Alphabet-invariance subgroups at radius five}
+\label{sec:subgroup}
+
+At the exact unrestricted optimum, the allowable alphabet
+symmetry can be classified. A subgroup $H\le S_4$ is
+\emph{realizable at radius five} if some valid radius-five
+rule is invariant under every $h\in H$ on
+$\Lang_{11}(\Xsf)$. This describes which groups a rule
+can respect, not necessarily its exact stabilizer.
+
+\begin{lemma}[A short four-cycle obstruction]
+\label{lem:fourcycle}
+No valid radius-five marker rule on $\Xsf$ is invariant
+under a four-cycle of the input alphabet.
+\end{lemma}
+\begin{proof}
+Consider the square-free length-15 word
+\[
+ W=\texttt{012032130120321}.
+\]
+For the four-cycle $g$ given by
+$0\mapsto2$, $1\mapsto0$, $2\mapsto3$, $3\mapsto1$,
+the five successive length-11 windows have orbit
+pattern $A,B,A,B,A$. Their first two representatives are
+$\texttt{01203213012}$ and $\texttt{12032130120}$.
+Indeed, applying the \emph{same} permutation $g$ takes
+each window at position $i$ to that at $i+2$ for
+$i=0,1,2$.
+If the rule is invariant under $g$, separation at
+distance two forces $A=B=0$, while domination at the
+central site forces $A\vee B$, a contradiction.
+
+The word $W$ really occurs in $\Xsf$: the explicitly
+checked square-free extension
+\[
+ Z=\texttt{12101203213012032101202}
+\]
+contains it at offset three. The separator symbol $3$
+occurs at positions 7, 10 and 15, giving span $D=8$;
+the entire separator-free prefix and suffix both
+have length $D-1=7$ and are factors of relabeled
+ternary Hall--Thue rays. Renaming the separator and
+applying Lemma~\ref{lem:separator} proves that
+$Z$, hence $W$, is bi-infinitely extendible.
+The bundled elementary checker directly verifies
+these finite facts and all six conjugate four-cycles.
+\end{proof}
+
+\begin{theorem}[Radius-five subgroup classification]
+\label{thm:subgroup}
+A subgroup $H\le S_4$ is realizable at radius five if
+and only if $|H|\le2$. In particular, every single
+transposition and every single double transposition
+is compatible with optimal locality, but no larger
+alphabet-permutation subgroup is.
+\end{theorem}
+\begin{proof}
+The separately archived positive SAT assignments,
+independently checked against all named finite
+square-free factors of lengths 11, 12, 13 and 15,
+provide an $(0\,1)$-invariant rule and a different
+$(0\,1)(2\,3)$-invariant rule. Alphabet conjugacy
+gives existence for every order-two subgroup; the
+trivial subgroup is also realizable.
+
+For the converse, the certified three-cycle obstruction
+and Lemma~\ref{lem:fourcycle} exclude every element
+of order three or four from the invariance group $H$.
+Thus each nonidentity element of $H$ has order two.
+It follows that $H$ is abelian: since $a^2=b^2=(ab)^2=e$,
+we have $ab=ba$ for any $a,b\in H$.
+
+If $H$ contains a transposition, relabel it as $(0\,1)$.
+Every element of $H$ then lies in its centralizer
+\[
+ \{e,(0\,1),(2\,3),(0\,1)(2\,3)\}.
+\]
+A group of order greater than two must be this entire
+intransitive Klein-four group. If $H$ contains no
+transposition, its nonidentity elements can only be
+the three double transpositions; order greater than
+two then forces the normal Klein-four group.
+The independent finite-source, two-sided Hall--Thue
+extension and DRAT certificates exclude \emph{both}
+Klein-four types at radius five. Hence $|H|\le2$.
+\end{proof}
+
+The negative three-cycle, normal Klein-four, and
+intransitive Klein-four certificates respectively
+verify 12,747, 53,487, and 26,819 source-supported
+clauses with standalone UNSAT proofs. The separate
+positive witnesses are checked over all original
+named finite contexts, not only orbit representatives.
+The finite-to-bi-infinite step for the negative cases
+uses the classical Hall--Thue recurrence facts and
+Lemma~\ref{lem:separator}; exact clean-checkout
+verification commands appear in \texttt{REPRODUCING.md}.
+
+Theorem~\ref{thm:subgroup} classifies which subgroups
+can already be imposed at radius five. The next
+theorem determines the exact minimum radius for
+every subgroup. The radius-five exact-stabilizer
+classification remains Corollary~\ref{cor:exact-stabilizers}.
+
+\section{Exact locality for every alphabet subgroup}
+\label{sec:exact-radii}
+
+\begin{lemma}[Eleven-clause radius-six four-cycle obstruction]
+\label{lem:new-c4-r6}
+No valid radius-six rule on $\Xsf$ is invariant
+under an alphabet four-cycle.
+\end{lemma}
+\begin{proof}
+Take $g=(0\,1\,2\,3)$ and let $A,\dots,I$ name
+nine distinct orbits of length-13 factors under
+$\langle g\rangle$. The eleven source words of lengths
+14, 15 and 17, and their exact packing and covering
+clauses, appear in Table~\ref{tab:c4-core}.
+Each source word has a checked finite square-free
+extension with at least two distinguished separators.
+The complete ternary exteriors are relabeled
+\emph{forward} Hall--Thue factors; their lengths
+meet the separator span-minus-one margin condition.
+Lemma~\ref{lem:separator} therefore makes every
+source bi-infinitely realizable.
+
+The two unit clauses force $D=F=0$.
+If $C=1$, the clauses
+$\neg C\vee\neg G$ and $\neg C\vee\neg H$
+would force $G=H=0$, contradicting
+$D\vee F\vee G\vee H$. Hence $C=0$.
+The clauses $B\vee C\vee D\vee F$
+and $C\vee D\vee E\vee F$ now force
+$B=E=1$, so $G=I=0$. The two remaining
+covering clauses force $H=A=1$, contrary to
+$\neg A\vee\neg H$.
+
+The independent small-core auditor reconstructs
+the orbits and clauses from all eleven source
+words, verifies their complete Hall--Thue
+extremities and directly rejects all $2^9$
+Boolean assignments. Every four-cycle is a
+conjugate of $g$, so the obstruction holds
+for each such element.
+\end{proof}
+
+\begin{theorem}[Exact subgroup-radius classification]
+\label{thm:exact-subgroup-radii}
+For every alphabet-permutation subgroup $H\le S_4$,
+the smallest symmetric radius of a valid
+$H$-invariant marker rule is
+\[
+\boxed{
+r_H(4,3)=
+\begin{cases}
+5,& |H|\le2,\\
+6,& |H|>2\text{ and $H$ has no four-cycle},\\
+7,& \text{$H$ contains a four-cycle}.
+\end{cases}}
+\]
+Thus, among the 30 subgroups of $S_4$,
+respectively 10, 13 and 7 have minimum radii
+five, six and seven.
+\end{theorem}
+\begin{proof}
+Theorem~\ref{thm:subgroup} establishes the
+first case and excludes radius five for larger
+groups. Lemma~\ref{lem:new-c4-r6} excludes
+radius six for a group with a four-cycle.
+Any still smaller rule could ignore unused
+input letters and hence would also give a
+radius-six rule, which is impossible.
+
+For the upper bounds, four SHA-pinned finite
+marker-decision tables give a radius-six
+$A_4$-invariant rule, a radius-six
+point-stabilizer $S_3$-invariant rule,
+a radius-six intransitive $V_4$-invariant
+rule, and a radius-seven $S_4$-invariant
+rule. A C++17 checker exhaustively validates packing at
+distances one and two and five-site covering on
+finite square-free sources modulo the respective
+alphabet group. A separate C11 implementation
+expands each table to all named square-free
+source words and checks the same constraints
+without orbit pruning. These stronger finite-word
+checks suffice for each upper bound without assuming
+finite square-free words extend bi-infinitely.
+
+Every subgroup of order greater than two
+without a four-cycle is, up to conjugacy,
+contained in $A_4$, a point stabilizer $S_3$,
+or an intransitive $V_4$. An independent
+enumerator checks this group reduction
+against all 30 subgroups of $S_4$.
+If $f$ is a valid $H$-invariant rule,
+then $f^\pi(w)=f(\pi^{-1}w)$ is a valid
+$\pi H\pi^{-1}$-invariant rule.
+The fully invariant radius-seven rule works
+for every remaining subgroup. All three
+cases follow.
+\end{proof}
+
+\begin{corollary}[Exact radius-five alphabet stabilizers]
+\label{cor:exact-stabilizers}
+For valid radius-five marker rules, the realizable
+\emph{exact} alphabet stabilizers belong to precisely
+three conjugacy types:
+\[
+ \{e\},\qquad \langle(0\,1)\rangle,\qquad
+ \langle(0\,1)(2\,3)\rangle.
+\]
+In particular, some valid radius-five rule has trivial
+exact alphabet stabilizer.
+\end{corollary}
+\begin{proof}
+Theorem~\ref{thm:subgroup} rules out stabilizers of
+order greater than two. The two positive single-involution
+SAT witnesses already realize both order-two conjugacy
+types; they cannot have larger stabilizers.
+
+For the trivial type, take the original source-certified
+unrestricted radius-five SAT assignment. Its first audit
+reconstructs all 87,936 finite square-free length-11
+contexts and checks all 24 alphabet permutations. Only
+the identity preserves that \emph{finite} decision table;
+the nearest nonidentity permutation changes 10,528
+decisions. This alone is not a proof about $\Xsf$, since
+some finite square-free contexts may fail to be
+bi-infinitely extendible.
+
+A separate verifier closes this logical gap directly.
+It computes the 36 distinct length-11 ternary factors
+in a length-4096 prefix of the classical Hall--Thue
+fixed point and all their four-letter alphabet relabelings,
+giving 432 distinct quaternary contexts. Each is in
+$\Lang_{11}(\Xsf)$: by the square-freeness and
+uniform recurrence of the primitive Hall--Thue
+substitution, every such ternary factor lies in a
+bi-infinite square-free orbit-closure point; applying
+any alphabet relabeling to that entire point preserves
+square-freeness. Among these 432 genuine-language
+contexts, every one of the 23 nonidentity alphabet
+permutations changes at least one decision of the
+original model. The smallest nonidentity disagreement
+count on this set is 48, attained by the relabeling
+with image word $\texttt{0213}$ (which swaps $1$ and $2$).
+For example, this permutation sends
+$\texttt{01020121020}$ to $\texttt{02010212010}$,
+where the archived model selects the first context
+and rejects the second. Both are relabeled factors
+of the Hall--Thue word. The verifier archives an
+explicit Hall factor, occurrence offset and
+relabeling for a conflicting context for \emph{each}
+nonidentity permutation.
+
+Thus no nonidentity permutation fixes the model
+\emph{on the actual shift}. Its separately certified
+marker validity then proves the stated trivial exact
+stabilizer.
+\end{proof}
+
+\paragraph{Results at a glance.}
+Table~\ref{tab:main-results} distinguishes
+minimum radii from exact stabilizer types.
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}p{2.02in}p{0.65in}p{2.80in}@{}}
+\toprule
+Alphabet invariance & Radius & Evidence\\
+\midrule
+$|H|\le2$ & $5$ &
+Radius-four obstruction; unrestricted and
+two involution-type radius-five models\\
+$|H|>2$, no four-cycle & $6$ &
+Radius-five subgroup obstructions;
+$A_4$, $S_3$, intransitive $V_4$
+radius-six decision tables\\
+$H$ contains a four-cycle & $7$ &
+Eleven source-supported clauses at radius six;
+fully $S_4$-invariant radius-seven table\\
+\midrule
+Exact stabilizers at radius five & $\{e\}$ or $C_2$ &
+Three certified models, including
+Hall-backed actual-language witnesses\\
+\bottomrule
+\end{tabular}
+\caption{Complete fixed-case classification
+(alphabet size four, separation three,
+domination radius two). The last row is
+not an additional radius.}
+\label{tab:main-results}
+\end{table}
+
+\paragraph{Proof dependency roadmap.}
+The computer-assisted \emph{lower} bounds have three distinct
+links: (i) an independently reconstructed finite source clause
+corresponds to a required packing or covering condition;
+(ii) the source word is realized in the bi-infinite square-free
+shift using its complete Hall--Thue exteriors and the appropriate
+single- or multiple-separator lemma; and (iii) an independently
+checked refutation shows the supported clauses are incompatible.
+The \emph{upper} bounds instead check complete
+marker-decision tables or an alternative orbit
+factor coloring against \emph{all} finite square-free
+sources. The nonoptimal coloring additionally
+uses the rank-dependency argument.
+No finite sample test substitutes for the infinite extension
+arguments.
+
+\section{Relationship to prior work and limitations}
+
+\paragraph{Topological and explicit marker existence.}
+Krieger-type marker lemmas give clopen sets with disjoint selected
+translates and covering properties for aperiodic zero-dimensional
+dynamical systems. Meyerovitch's
+\cite[Lemmas~3.3--3.4]{meyerovitch2025embedding}
+formulation covers subshifts and general compact totally
+disconnected actions. Applied to the finite alphabet-permutation
+quotient of our square-free shift, it already guarantees
+\emph{qualitative} $S_4$-invariant markers at some finite
+symmetric coding radius.
+
+Importantly, \emph{the separation and covering requirements
+themselves are classical}. On the free part of the binary
+$\mathbb Z$-Bernoulli shift, Gao and Jackson
+\cite[Lemma~2.1]{gaojackson2015markers}
+construct a relatively clopen marker set whose points are
+separated by more than $d$ and whose orbits are covered
+within distance $d$. Taking $d=2$ gives precisely
+separation at least three and covering within two;
+their Lemma~2.9 gives stronger gap control.
+This is a theorem on a noncompact free part: relative
+clopenness there does not itself assert any \emph{uniform}
+finite coding radius for a block rule on our compact
+quaternary square-free shift, nor input-alphabet
+$S_4$-invariance.
+
+Macdonald's restatement of Krieger's cylinder-marker
+lemma \cite[Lemma~2.6]{macdonald2024encoding}
+gives markers separated by $N$, with a short-periodicity
+alternative in a missing-marker neighborhood.
+That alternative is excluded on a square-free subshift
+for $N=3$. T{\"o}rm{\"a}'s explicit marker map
+\cite[Lemma~6.10]{torma2015structural}
+has radius at most $n|A|^{2n+1}$, specializing to
+$49{,}152$ when $n=3$ and $|A|=4$.
+It supplies neither optimality nor full alphabet
+relabeling invariance.
+
+Gao and Wang's stronger clopen marker existence theorems
+\cite[Theorems~1.2--1.3]{gao2026markers}
+and their later arbitrary-generating-set extension
+\cite[Theorem~1.2]{gaowang2026arbitrary}
+also work on free Bernoulli actions and allow a
+covering constant chosen with the separation parameter.
+They do not state the minimum fixed uniform input-window
+radius with domination distance two and $S_4$-invariance
+on $\Xsf$. Our contribution is the \emph{exact coding-radius
+and alphabet-subgroup classification in this fixed system},
+not the existence of separated and covering clopen
+markers or the generic marker-construction mechanism.
+
+\paragraph{Local algorithms and ruling sets.}
+Our marker outputs form a $(3,2)$-ruling set on the line:
+chosen positions have mutual distance at least three,
+and every position is within distance two of one.
+This is established terminology; for example,
+Bourreau et al.\ give exactly these two properties in
+\cite[Definition~6]{bourreau2026ruling}. Their
+labeled-line rendezvous algorithm, however, depends
+on node labels and distance, rather than giving the
+least uniform radius of one alphabet-$H$-invariant
+Boolean block predicate on our square-free shift.
+Naor and Stockmeyer's LOCAL/LCL framework
+\cite{naor1995local}, path-LCL decidability
+\cite{balliu2019paths}, and automata-theoretic
+classification \cite{chang2023automata} address
+broader distributed computational models.
+Even \emph{order invariance} of processor identifiers
+is not invariance under all permutations of four
+input symbols. Classical deterministic color
+reduction \cite{colevishkin1986} and continuous
+combinatorial colorings \cite{bernshteyn2023probabilistic}
+are likewise background, not algorithms claimed as new.
+
+\paragraph{Local string sampling and synchronizing sets.}
+String synchronizing sets
+\cite{kempa2019synchronizing,kociumaka2024ipm}
+are a closer selection analogy. The precise
+definition in \cite[Definition~5.1]{ellert2026synchronizing}
+requires matching length-$2\tau$ contexts to
+have consistent membership, and a marker in every
+$\tau$-site window except in sufficiently periodic
+regions. At $\tau=3$, square-freeness rules out the
+period-one exception, so the coverage resembles
+our problem. Crucially, it imposes \emph{no
+minimum distance between selected sites}; aggregate
+size bounds are not a hard packing guarantee.
+Moreover, per-text consistency does not by itself
+supply a single shared block table valid uniformly
+on every point of $\Xsf$.
+
+Minimizers and winnowing
+\cite{schleimer2003winnowing,shaw2022localselection}
+also guarantee a representative in every
+designated window, but may select nearby positions.
+Universal hitting sets \cite{zheng2021uhs}
+give an analogous unavoidable-factor coverage
+condition without our separation requirement.
+Common minimizers use an ordering of $k$-mers;
+the separate alphabet-reordering optimization
+studied in \cite{verbeek2026reordering} does not
+make their output invariant under every renaming.
+None of these properties alone entails the exact
+radius-five/six/seven $S_4$-subgroup classification.
+We do not assert an improvement in string-indexing
+running time, sampling density, or sequence matching.
+
+\paragraph{Alphabet-permutation symmetry and color blindness.}
+Salo and T{\"o}rm{\"a} introduced a systematic
+theory of \emph{color-blind} cellular automata,
+including invariance under specified symbol
+permutations, in \cite{salotorma2014colorblind}.
+Their Lemma~2 characterizes permutation-invariant
+sets of finite words by equality/inequality
+patterns, and their Proposition~1 addresses
+permutation-equivariant cellular automata on
+subshifts. Thus neither permutation-invariant
+local descriptions nor symbol-orbit reduction
+is introduced here. Their principal maps return
+symbols of the \emph{input} alphabet, whereas
+our rule returns a Boolean marker indicator
+on a designated square-free subshift; most
+importantly, their results do not state our
+minimum \emph{uniform input radius} under
+packing, covering, and each $H\le S_4$.
+
+In particular, \emph{shift equivariance} means
+all sites use one translation-invariant predicate,
+while \emph{alphabet-$S_4$ invariance}
+additionally forbids exploiting input symbol names.
+This differs from having unique processor
+identifiers in distributed LOCAL algorithms.
+We do not claim the generic construction of
+maximal independent sets by processing colors
+in order, or the use of orbit representatives,
+as new. Our contribution is the exact
+fixed-parameter subgroup-radius classification
+with source-backed matching lower bounds.
+
+\paragraph{Square-free words and certificate extendibility.}
+The existence and square-freeness of the ternary
+Hall--Thue word are classical; the particular
+substitution is documented in
+\cite{badkobeh2022avoiding}. Square-free
+constructions have also played a role in
+distributed-algorithm lower bounds since
+Attiya, Snir and Warmuth's anonymous-ring
+work \cite{attiya1988anonymous}. That paper
+does not solve our fixed-radius local marker
+problem, but this historical connection
+deserves acknowledgment.
+Grytczuk, Kordulewski and Pawlik study square-free word
+extension phenomena and extremal words
+\cite{grytczuk2021squarefree}; thus finite square-freeness
+by itself must not be mistaken for infinite extendibility.
+Our proof does not infer the existence of a bi-infinite
+continuation from finite square tests alone. It uses complete zero-free extremities and
+Lemma~\ref{lem:separator}, followed by classical recurrence.
+
+Our candidate contribution is the exact
+two-unit symmetry locality penalty,
+all 30 subgroup-minimum radii, and
+the exact radius-five stabilizer types.
+Our targeted primary-source comparisons
+have not identified a theorem giving
+these fixed-case values. We do not claim
+universal bibliographic priority or an
+all-parameter theorem, nor any
+data-chunking performance improvement.
+
+\section{Reproducibility and certificate scope}
+
+The archived computations consist of an unrestricted
+radius-four refutation, an unrestricted radius-five
+construction, a ten-source full-$\Sym$ radius-six refutation
+with corrected two-sided Hall--Thue source extensions, and
+an eleven-source cyclic four-group radius-six
+obstruction, four additional positive subgroup
+marker tables, and an independently checked
+nonoptimal nine-color factor graph. The
+radius-four and subgroup finite-source audits also include
+single-separator witnesses, covered by
+Lemma~\ref{lem:single-separator}. Original
+certificate byte lengths and SHA-256 values are recorded in
+the artifact manifest.
+
+The 21 original main-theorem source artifacts have their
+byte counts and SHA-256 digests checked against a fixed manifest.
+The subgroup annex separately checks the imported original Git blobs,
+regenerates and audits the two involution quotient CNFs, verifies the
+archived positive SAT models on all named finite factors, and
+independently replays the source-certified C3 and both Klein-four
+refutations. A source-pinned build of the MIT-licensed third-party
+DRAT-trim tool checks the archived refutations.
+For the unrestricted radius-four core, the full-$S_4$
+ten-clause pilot, and three subgroup negative cores,
+converted LRAT proofs were also accepted by the
+separately formally verified CakeML \texttt{cake\_lpr}
+checker. This independently confirms propositional
+UNSAT, not the mathematical source-realization
+premises. The original nine-job proof suite and the
+separate exact-symmetry annex have passed in clean
+private GitHub Actions checkouts. The final source
+release still requires licensing and public-content
+review before a fresh-history public artifact can
+be prepared.
+
+The checker and the Python finite-factor programs provide
+independently executable evidence, but the classical infinite-word
+facts and the two-sided extension argument remain mathematical
+ingredients of the proof, not conclusions of finite execution.
+The targeted primary-source originality comparison
+and 26-entry bibliography reconciliation are recorded
+in the private review ledger; they do not establish
+exhaustive publication priority. This draft has not
+undergone external peer review.
+
+\paragraph{Proof and code availability (private review version).}
+The 21 original main-theorem source artifacts are identified by
+byte lengths and SHA-256 digests in
+\texttt{artifacts/manifest.json}, while four positive
+symmetry tables and the eleven-source four-cycle core
+are identified in
+\path{artifacts/exact-symmetry-addendum-manifest.json}.
+The certificate versions are unchanged from private proof
+baseline \texttt{59a7075f75b4}; exact reproduction commands,
+checker source revisions and trust boundaries are documented
+in \texttt{REPRODUCING.md}. The source and proof archive
+is currently private, with no assigned public archive DOI
+or reproducibility download URL. Public distribution requires
+a separate provenance, third-party rights and licensing review.
+A public source revision and persistent location will be
+specified only when such a release is authorized.
+
+\begingroup
+\small
+\bibliographystyle{plain}
+\bibliography{references}
+\endgroup
+
+\clearpage
+\appendix
+\section{The ten finite source factors}
+
+Table~\ref{tab:sources} lists the source words in the order of the
+ten clauses above. Here $D$ is the distance from the first to
+the last distinguished $0$ in the factor. For each row, the
+separately checked left and right strings in
+Table~\ref{tab:pads} extend the source to a square-free
+finite witness. The entire zero-free extremities of that
+witness (not necessarily these added strings alone) are
+independently checked to be factors of relabeled forward
+Hall--Thue words.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{rcl}
+\toprule
+Row & $D$ & Canonical square-free source factor\\
+\midrule
+1 & 10 & \texttt{01023013210231}\\
+2 & 13 & \texttt{01201302312010}\\
+3 & 13 & \texttt{012013023120103}\\
+4 & 11 & \texttt{012032130120321}\\
+5 & 13 & \texttt{012310320123103}\\
+6 & 9 & \texttt{012312013023121}\\
+7 & 13 & \texttt{01023013210230131}\\
+8 & 14 & \texttt{01201302312013021}\\
+9 & 15 & \texttt{01231032012310302}\\
+10 & 14 & \texttt{01231201302312013}\\
+\bottomrule
+\end{tabular}
+\caption{Original source factors of the ten unsatisfiable clauses.}
+\label{tab:sources}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\scriptsize
+\begin{tabular}{rll}
+\toprule
+Row & Left appended ternary word & Right appended ternary word\\
+\midrule
+1 & \texttt{121323123} & \texttt{321232131}\\
+2 & \texttt{121312321323} & \texttt{212312132123}\\
+3 & \texttt{121312321323} & \texttt{121312321312}\\
+4 & \texttt{1213231232} & \texttt{2321312313}\\
+5 & \texttt{121312321323} & \texttt{121312321312}\\
+6 & \texttt{12131232} & \texttt{32123121}\\
+7 & \texttt{121312321312} & \texttt{231321312321}\\
+8 & \texttt{1213123213121} & \texttt{2321312313213}\\
+9 & \texttt{12131232131213} & \texttt{12312132123132}\\
+10 & \texttt{1213123213121} & \texttt{2123213123132}\\
+\bottomrule
+\end{tabular}
+\caption{Finite extensions verified against complete Hall--Thue tails.}
+\label{tab:pads}
+\end{table}
+
+The ten original CNF source-clause identities and both full-extremity
+audit reports are machine-checkable in the proof artifact package.
+The graph-coloring certificate has its own independent source-edge
+auditor. These are finite computations: the passage to infinite
+configurations uses Lemma~\ref{lem:separator} and the cited classical
+Hall--Thue theorem, not an extrapolation from finite test length.
+
+\clearpage
+\section{The eleven-source radius-six four-cycle core}
+For $g=(0\,1\,2\,3)$, the nine
+$\langle g\rangle$-context orbits are denoted
+$A,\ldots,I$. The independent verifier recovers
+the orbit-to-letter association directly from
+the source windows; labels alone are not proof.
+Each source has a complete SHA-pinned square-free
+extension with forward Hall--Thue exteriors.
+
+\begin{table}[htbp]
+\centering
+\small
+\begin{tabular}{@{}rll@{}}
+\toprule
+Row & Square-free source word & Clause\\
+\midrule
+1 & \texttt{01031021320310213} & $A\vee D\vee F\vee I$\\
+2 & \texttt{010310213203132} & $\neg A\vee\neg H$\\
+3 & \texttt{01203102132031021} & $B\vee C\vee D\vee F$\\
+4 & \texttt{012031021320313} & $\neg B\vee\neg G$\\
+5 & \texttt{01320310213202} & $\neg C\vee\neg G$\\
+6 & \texttt{013203102132021} & $\neg C\vee\neg H$\\
+7 & \texttt{01320310213203101} & $C\vee D\vee E\vee F$\\
+8 & \texttt{021320310213203} & $\neg D$\\
+9 & \texttt{031021320310213} & $\neg F$\\
+10 & \texttt{03102132031021310} & $D\vee F\vee G\vee H$\\
+11 & \texttt{03203102132030} & $\neg E\vee\neg I$\\
+\bottomrule
+\end{tabular}
+\caption{An eleven-clause radius-six obstruction
+for a four-cycle of alphabet names.}
+\label{tab:c4-core}
+\end{table}
+
+\end{document}

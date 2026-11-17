@@ -1,0 +1,225 @@
+{
+  "candidates": [
+    {
+      "clause": [
+        -1305,
+        -388
+      ],
+      "factor": "010212021020",
+      "factor_length": 12,
+      "factor_orbit_index": 1014,
+      "finite_witness": "01020121020130102120210203010201210201",
+      "first_separator_index": 12,
+      "kind": "external-double-separator",
+      "last_separator_index": 25,
+      "left_hall_factor": "010201210201",
+      "normalized_factor": "010212021020",
+      "offset": 13,
+      "original_zero_based_clause_index": 1014,
+      "right_hall_factor": "010201210201",
+      "separator": "3",
+      "separator_span": 13,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "3"
+        ]
+      ],
+      "unused_original_symbol": "3"
+    },
+    {
+      "clause": [
+        -14025,
+        -6717
+      ],
+      "factor": "021202102012",
+      "factor_length": 12,
+      "factor_orbit_index": 17606,
+      "finite_witness": "01020121020130212021020123010201210201",
+      "first_separator_index": 12,
+      "kind": "external-double-separator",
+      "last_separator_index": 25,
+      "left_hall_factor": "010201210201",
+      "normalized_factor": "021202102012",
+      "offset": 13,
+      "original_zero_based_clause_index": 17606,
+      "right_hall_factor": "010201210201",
+      "separator": "3",
+      "separator_span": 13,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "3"
+        ]
+      ],
+      "unused_original_symbol": "3"
+    },
+    {
+      "additional_exterior_margin": 0,
+      "clause": [
+        -4810,
+        -4666
+      ],
+      "distinguished_original_symbol": "0",
+      "factor": "0203020103020",
+      "factor_length": 13,
+      "factor_orbit_index": 33064,
+      "finite_witness": "01020121020313231303231320102012102",
+      "first_separator_index": 11,
+      "kind": "expanded-padded-multi-separator",
+      "last_separator_index": 23,
+      "left_hall_factor": "01020121020",
+      "normalized_factor": "3132313032313",
+      "offset": 11,
+      "original_zero_based_clause_index": 90694,
+      "right_hall_factor": "20102012102",
+      "separator": "3",
+      "separator_span": 12,
+      "source_to_normalized": [
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -6717,
+        -6621
+      ],
+      "factor": "0212021020121",
+      "factor_length": 13,
+      "factor_orbit_index": 46173,
+      "finite_witness": "01020121020103021202102012130102012102010",
+      "first_separator_index": 13,
+      "kind": "external-double-separator",
+      "last_separator_index": 27,
+      "left_hall_factor": "0102012102010",
+      "normalized_factor": "0212021020121",
+      "offset": 14,
+      "original_zero_based_clause_index": 103803,
+      "right_hall_factor": "0102012102010",
+      "separator": "3",
+      "separator_span": 14,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "3"
+        ]
+      ],
+      "unused_original_symbol": "3"
+    },
+    {
+      "additional_exterior_margin": 0,
+      "clause": [
+        -15573,
+        -14249
+      ],
+      "distinguished_original_symbol": "0",
+      "factor": "2021232021202",
+      "factor_length": 13,
+      "factor_orbit_index": 97957,
+      "finite_witness": "01202120131012131013120102012",
+      "first_separator_index": 9,
+      "kind": "expanded-padded-multi-separator",
+      "last_separator_index": 19,
+      "left_hall_factor": "012021201",
+      "normalized_factor": "1310121310131",
+      "offset": 8,
+      "original_zero_based_clause_index": 155587,
+      "right_hall_factor": "120102012",
+      "separator": "3",
+      "separator_span": 10,
+      "source_to_normalized": [
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ]
+    }
+  ],
+  "construction_types": {
+    "expanded-padded-multi-separator": 2,
+    "external-double-separator": 3
+  },
+  "early_certified_source_count": 26814,
+  "hall_prefix_length": 32768,
+  "input_sha256": {
+    "kbl-m3-r5-intransitive-v4-certified-only-sat-audit.json": "72bc9f64c27db433878fc2405c4ba1f132e9cacf3c79f191d19f19e86ad21762",
+    "kbl-m3-r5-intransitive-v4-core-extension-triage.json": "b3f803c02971d8b1d25cc183f7eed02b0603ac602bb36e1dd0560be5efdaa4bb",
+    "kbl-m3-r5-intransitive-v4-core-factor-map.json": "0e74186db840c89fca385168cd0118e9a24bd4b29920aadea53878dde0feb080",
+    "kbl-m3-r5-intransitive-v4-core.cnf": "e5707d9aa7f077c05d8775552ea9566e5eaa7a4885d8b5c99f6b69e27c9d8db9",
+    "kbl-m3-r5-intransitive-v4-extendible-only.cnf": "8584532defcb1d487f0653f2b83d3148f2165a50ff3dec5d89bbec58e4e69fde"
+  },
+  "max_additional_exterior_margin": 8,
+  "new_candidate_count": 5,
+  "parameters": {
+    "m": 3,
+    "q": 4,
+    "r": 5
+  },
+  "scope": "finite candidate premises ONLY; independent certificate audit pending",
+  "status": "ALL FIVE INTRANSITIVE V4 SOURCE EXTENSION CANDIDATES CONSTRUCTED",
+  "subgroup": "intransitive V4 = {e,(01),(23),(01)(23)}",
+  "unresolved_after_candidate_construction": 0
+}

@@ -1,0 +1,48 @@
+name: Verified independent unrestricted radius-four proof (private)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/verified-lrat-radius4.yml
+      - tools/verify_secondary_lrat_radius4.py
+      - tools/build_cake_lpr.sh
+      - tools/build_drat_trim.sh
+      - proofs/m3/kbl-q4-m3-r4-core.cnf
+      - proofs/m3/kbl-q4-m3-r4-core-direct-proof.drat
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  radius4-verified-checker:
+    name: CakeML independently checks the original 24292-clause UNSAT core
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - name: Checkout original archived proof bytes
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Install GNU time for measured proof checking
+        run: |
+          if test ! -x /usr/bin/time; then
+            sudo apt-get -qq update
+            sudo DEBIAN_FRONTEND=noninteractive apt-get -qq install -y time
+          fi
+      - name: Build source-pinned DRAT-to-LRAT converter
+        run: bash tools/build_drat_trim.sh
+      - name: Build formally verified source-pinned CakeML checker
+        run: bash tools/build_cake_lpr.sh
+      - name: Independently verify exact original unrestricted radius-four UNSAT core
+        run: |
+          python3 -B tools/verify_secondary_lrat_radius4.py \
+            --drat-trim .build/drat-trim/drat-trim \
+            --cake-lpr .build/cake_lpr/cake_lpr \
+            --report verified-lrat-radius4.json
+      - name: Upload deterministic private verifier performance and proof identity report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: verified-lrat-radius4-report
+          path: verified-lrat-radius4.json
+          if-no-files-found: error
+          retention-days: 14

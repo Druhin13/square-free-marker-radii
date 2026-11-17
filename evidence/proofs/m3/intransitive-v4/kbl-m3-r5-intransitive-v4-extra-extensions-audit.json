@@ -1,0 +1,115 @@
+{
+  "complete_core_source_partition": true,
+  "input_sha256": {
+    "kbl-m3-r5-intransitive-v4-certified-only-sat-audit.json": "72bc9f64c27db433878fc2405c4ba1f132e9cacf3c79f191d19f19e86ad21762",
+    "kbl-m3-r5-intransitive-v4-core-extension-triage.json": "b3f803c02971d8b1d25cc183f7eed02b0603ac602bb36e1dd0560be5efdaa4bb",
+    "kbl-m3-r5-intransitive-v4-core-factor-map.json": "0e74186db840c89fca385168cd0118e9a24bd4b29920aadea53878dde0feb080",
+    "kbl-m3-r5-intransitive-v4-core-lemmas.drat": "6806854a58c47d7444648b1df49cbfe8b718ad9c9b7c8a5c01308a4f36231c08",
+    "kbl-m3-r5-intransitive-v4-core.cnf": "e5707d9aa7f077c05d8775552ea9566e5eaa7a4885d8b5c99f6b69e27c9d8db9",
+    "kbl-m3-r5-intransitive-v4-extendible-only.cnf": "8584532defcb1d487f0653f2b83d3148f2165a50ff3dec5d89bbec58e4e69fde",
+    "kbl-m3-r5-intransitive-v4-extra-extensions.json": "64faa13c56c0a86b5764750e25c473c2b1415407ac345f2dd1146f83722c19f9"
+  },
+  "integrated_true_biinfinite_theorem_claim": false,
+  "mathematical_inputs": [
+    "classical squarefree and uniformly recurrent ternary Hall-Thue fixed point",
+    "finite-separator lemma with D-1 Hall-extendible exterior margins"
+  ],
+  "new_certificate_type_counts": {
+    "expanded-padded-multi-separator": 2,
+    "external-double-separator": 3
+  },
+  "new_certified_source_factors": [
+    {
+      "clause": [
+        -1305,
+        -388
+      ],
+      "factor": "010212021020",
+      "factor_length": 12,
+      "factor_orbit_index": 1014,
+      "finite_witness_length": 38,
+      "kind": "external-double-separator",
+      "left_hall_length": 12,
+      "offset": 13,
+      "original_zero_based_clause_index": 1014,
+      "right_hall_length": 12,
+      "separator_span": 13
+    },
+    {
+      "clause": [
+        -14025,
+        -6717
+      ],
+      "factor": "021202102012",
+      "factor_length": 12,
+      "factor_orbit_index": 17606,
+      "finite_witness_length": 38,
+      "kind": "external-double-separator",
+      "left_hall_length": 12,
+      "offset": 13,
+      "original_zero_based_clause_index": 17606,
+      "right_hall_length": 12,
+      "separator_span": 13
+    },
+    {
+      "clause": [
+        -4810,
+        -4666
+      ],
+      "factor": "0203020103020",
+      "factor_length": 13,
+      "factor_orbit_index": 33064,
+      "finite_witness_length": 35,
+      "kind": "expanded-padded-multi-separator",
+      "left_hall_length": 11,
+      "offset": 11,
+      "original_zero_based_clause_index": 90694,
+      "right_hall_length": 11,
+      "separator_span": 12
+    },
+    {
+      "clause": [
+        -6717,
+        -6621
+      ],
+      "factor": "0212021020121",
+      "factor_length": 13,
+      "factor_orbit_index": 46173,
+      "finite_witness_length": 41,
+      "kind": "external-double-separator",
+      "left_hall_length": 13,
+      "offset": 14,
+      "original_zero_based_clause_index": 103803,
+      "right_hall_length": 13,
+      "separator_span": 14
+    },
+    {
+      "clause": [
+        -15573,
+        -14249
+      ],
+      "factor": "2021232021202",
+      "factor_length": 13,
+      "factor_orbit_index": 97957,
+      "finite_witness_length": 29,
+      "kind": "expanded-padded-multi-separator",
+      "left_hall_length": 9,
+      "offset": 8,
+      "original_zero_based_clause_index": 155587,
+      "right_hall_length": 9,
+      "separator_span": 10
+    }
+  ],
+  "new_source_witnesses_independently_audited": 5,
+  "original_core_clause_count": 26819,
+  "parameters": {
+    "m": 3,
+    "q": 4,
+    "r": 5
+  },
+  "previous_source_witnesses_independently_audited_in_step339": 26814,
+  "scope": "five NEW source extensions independently certified; original full core DRAT not replayed in this audit",
+  "standalone_original_core_drat_replay_pending": true,
+  "status": "ALL THREE INTRANSITIVE V4 NEW SOURCE EXTENSION AUDIT PHASES PASSED",
+  "subgroup": "intransitive V4 = {e,(01),(23),(01)(23)}"
+}

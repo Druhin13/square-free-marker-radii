@@ -1,0 +1,154 @@
+name: Publication draft and theorem checks
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  publication-manifest:
+    name: Original certificate SHA-256 integrity
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify all 21 original proof files against SHA-256 registry
+        run: python3 tools/verify_manifest.py --full
+      - name: Validate JSON syntax
+        run: python3 -m json.tool artifacts/manifest.json > /dev/null
+
+  manuscript:
+    name: Compile the draft LaTeX manuscript
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Install TeX toolchain
+        run: |
+          sudo apt-get -qq update
+          sudo DEBIAN_FRONTEND=noninteractive apt-get -qq install -y \
+            texlive-latex-base texlive-latex-recommended lmodern poppler-utils
+      - name: Compile TeX and references
+        working-directory: paper
+        run: |
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          bibtex main
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          pdflatex -interaction=nonstopmode -halt-on-error main.tex
+          test -s main.pdf
+      - name: Test fail-closed final-pass quality gate
+        run: python3 -m unittest tests.test_manuscript_quality_gate -v
+      - name: Check final LaTeX warnings, source references and PDF text
+        run: |
+          python3 tools/check_manuscript_quality.py \
+            --tex paper/main.tex \
+            --bib paper/references.bib \
+            --log paper/main.log \
+            --pdf paper/main.pdf
+      - name: Upload manuscript PDF for private review
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: manuscript-review-pdf
+          path: paper/main.pdf
+          if-no-files-found: error
+          retention-days: 14
+
+
+  theorem-quick:
+    name: Corrected Hall tails and full nine-color source graph
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Independently reproduce corrected complete tails and nine-color graph
+        run: python3 tools/run_verification.py --quick
+
+  theorem-full:
+    name: Full unrestricted and S4 source-certified SAT/DRAT reproduction
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - name: Checkout main
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Compile MIT-licensed checker at exact upstream source commit
+        run: bash tools/build_drat_trim.sh
+      - name: Run all 21 artifact pins and independently reproduce theorem evidence
+        run: python3 tools/run_verification.py --full --checker .build/drat-trim/drat-trim
+
+  subgroup-obstructions:
+    name: Independently replay C3, both Klein-four, and 4-cycle obstructions
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout main without altering source certificates
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Build pinned independent DRAT checker
+        run: bash tools/build_drat_trim.sh
+      - name: Replay exact archive source witnesses and standalone DRAT
+        run: python3 -B -m tools.run_subgroup_verification --checker .build/drat-trim/drat-trim
+
+  subgroup-positive-swap:
+    name: Reproduce radius-five single-transposition SAT witness
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout original proof blobs
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Regenerate, independently audit, and check all named source factors
+        run: python3 -B -m tools.run_positive_verification --case swap
+
+  subgroup-positive-double:
+    name: Reproduce radius-five double-transposition SAT witness
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    steps:
+      - name: Checkout original proof blobs
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Regenerate, independently audit, and check all named source factors
+        run: python3 -B -m tools.run_positive_verification --case double
+
+  exact-stabilizers:
+    name: Independent three-model exact radius-five stabilizer audit
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - name: Checkout pinned private research proof archive
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify all 24 alphabet permutations on all original contexts
+        run: python3 -B -m tools.verify_exact_stabilizers --report exact-stabilizers.json
+      - name: Verify Hall-backed actual-language witnesses for all 23 nonidentity permutations
+        run: python3 -B -m tools.verify_hall_actual_language_stabilizer --report hall-actual-language-stabilizer.json
+      - name: Upload deterministic exact-stabilizer evidence
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: exact-stabilizer-audit
+          path: |
+            exact-stabilizers.json
+            hall-actual-language-stabilizer.json
+          if-no-files-found: error
+          retention-days: 14
+
+  derived-radius23:
+    name: Derive centered radius 23 using original nine-color table
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout exact original nine-color proof archive
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify pinned graph evidence and radius-23 dependency
+        run: python3 -B -m tools.derive_full_symmetry_radius23 --report radius23-derived.json
+      - name: Save the separate derived-radius evidence for private review
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: radius23-derived-audit
+          path: radius23-derived.json
+          if-no-files-found: error
+          retention-days: 14

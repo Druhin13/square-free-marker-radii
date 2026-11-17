@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "title": "Private exact radius-five single-involution SAT proof archive",
+  "source_branch": "research/streaming-periodicity-tradeoff",
+  "original_data_preserved_as_git_blobs": true,
+  "source_cnfs_generated_and_independently_audited_from_clean_checkout": true,
+  "archive_count": 3,
+  "archives": [
+    {
+      "relative_path": "proofs/m3/double01-23/kbl-m3-r5-double01-23-result.txt",
+      "size_bytes": 292157,
+      "git_blob_sha1": "95d27b60025af5f30aaa0e3a6c319e79f709209a"
+    },
+    {
+      "relative_path": "proofs/m3/double01-23/kbl-m3-r5-double01-23-sat-audit.json",
+      "size_bytes": 1033,
+      "git_blob_sha1": "c552d333cf9a3a980d81d78336fa0ab5110a05c0"
+    },
+    {
+      "relative_path": "proofs/m3/kbl-q4-m3-r5-swap01-result.txt",
+      "size_bytes": 292397,
+      "git_blob_sha1": "3c3be7bd607e14b695021d0899252f2164b4d647"
+    }
+  ]
+}

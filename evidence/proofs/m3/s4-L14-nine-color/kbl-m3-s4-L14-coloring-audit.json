@@ -1,0 +1,28 @@
+{
+  "EVERY_source_conflict_color_inequality_checked": true,
+  "assumptions": "L14 S4 orbit-period square obstruction; complete original n15/n16 squarefree source conflict enumeration; standard deterministic color-round maximal independent set.",
+  "coloring_bytes": 463685,
+  "coloring_sha256": "bd45025e9d58523711e966664f2cc922f0566546a820184e98ce48e386701525",
+  "conclusion": "Verified proper full-S4-invariant coloring by C colors of all squarefree length14 factor orbits. Standard color-round greedy maximal independent set yields a radius at most 2*C+13 marker rule on all bi-infinite quaternary squarefree words with separation>=3 and domination<=2. No novelty claimed.",
+  "conservative_valid_S4_symmetric_marker_radius_upper": 31,
+  "full_S4_n14_vertex_orbits": 66047,
+  "generator_manifest_bytes": 665,
+  "generator_manifest_sha256": "cd48e13fdcc4c5cb3380eea9715142c2d10617ce56439ee92e7d71a5f084ea14",
+  "graph_max_degree": 22,
+  "model": {
+    "factor_length": 14,
+    "group": "S4",
+    "m": 3,
+    "q": 4
+  },
+  "original_named_squarefree_n14": 1585128,
+  "original_source_orbits": {
+    "15": 173183,
+    "16": 453998
+  },
+  "original_source_preflight_sha256": "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0",
+  "proper_color_count": 9,
+  "source_orbit_rows_verifiably_no_loops": true,
+  "status": "INDEPENDENT S4 LENGTH14 CONFLICT COLORING FULL AUDIT 4/4 PASSED",
+  "unique_undirected_conflicts": 627159
+}

@@ -1,0 +1,58 @@
+name: Verified independent radius-five subgroup proofs (private)
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/verified-lrat-subgroups.yml
+      - tools/verify_secondary_lrat_subgroups.py
+      - tools/build_drat_trim.sh
+      - tools/build_cake_lpr.sh
+      - artifacts/subgroup-manifest.json
+      - proofs/m3/cycle012/kbl-m3-r5-cycle012-core.cnf
+      - proofs/m3/cycle012/kbl-m3-r5-cycle012-core-lemmas.drat
+      - proofs/m3/normal-v4/kbl-m3-r5-normal-v4-core.cnf
+      - proofs/m3/normal-v4/kbl-m3-r5-normal-v4-core-lemmas.drat
+      - proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-core.cnf
+      - proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-core-lemmas.drat
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  independent-subgroup-unsat:
+    name: CakeML original proof - ${{ matrix.case }}
+    runs-on: ubuntu-24.04
+    timeout-minutes: 30
+    strategy:
+      fail-fast: false
+      matrix:
+        case: [cycle012, normal-v4, intransitive-v4]
+    steps:
+      - name: Checkout exact original proof archive
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Ensure GNU time for resource accounting
+        run: |
+          if test ! -x /usr/bin/time; then
+            sudo apt-get -qq update
+            sudo DEBIAN_FRONTEND=noninteractive apt-get -qq install -y time
+          fi
+      - name: Build source-pinned DRAT-to-LRAT converter
+        run: bash tools/build_drat_trim.sh
+      - name: Build independent formally verified CakeML checker
+        run: bash tools/build_cake_lpr.sh
+      - name: Check original proof with CakeML and reject invalid input
+        run: |
+          python3 -B -m tools.verify_secondary_lrat_subgroups \
+            --case "${{ matrix.case }}" \
+            --drat-trim .build/drat-trim/drat-trim \
+            --cake-lpr .build/cake_lpr/cake_lpr \
+            --report "verified-lrat-${{ matrix.case }}.json"
+      - name: Archive exact private proof identities and resource report
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: verified-lrat-${{ matrix.case }}
+          path: verified-lrat-${{ matrix.case }}.json
+          if-no-files-found: error
+          retention-days: 14

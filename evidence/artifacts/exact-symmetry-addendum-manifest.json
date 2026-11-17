@@ -1,0 +1,74 @@
+{
+  "audit_origin": "external addendum supplied 2026-11-15, independently rebuilt model validators",
+  "cases": {
+    "a4": {
+      "checks": {
+        "14": 132094,
+        "15": 346366,
+        "17": 2380518
+      },
+      "group": "A4",
+      "radius": 6,
+      "selected": 13611
+    },
+    "s3": {
+      "checks": {
+        "14": 264188,
+        "15": 692732,
+        "17": 4761036
+      },
+      "group": "S3",
+      "radius": 6,
+      "selected": 27586
+    },
+    "s4": {
+      "checks": {
+        "16": 453998,
+        "17": 1190259,
+        "19": 8180124
+      },
+      "group": "S4",
+      "radius": 7,
+      "selected": 47142
+    },
+    "v4i": {
+      "checks": {
+        "14": 396282,
+        "15": 1039098,
+        "17": 7141554
+      },
+      "group": "V4i",
+      "radius": 6,
+      "selected": 41760
+    }
+  },
+  "files": [
+    {
+      "bytes": 754272,
+      "path": "proofs/m3/exact-symmetry/s4_radius7_selected_contexts.txt",
+      "sha256": "acfb277e3a960e83b7f490c9d34eb74d084791e5106b9d696010b8b7facdb354"
+    },
+    {
+      "bytes": 190554,
+      "path": "proofs/m3/exact-symmetry/a4_radius6_selected_contexts.txt",
+      "sha256": "a01bb64155b5300b3595d53cbd8d80fe32a5424dc75c629f397bdebfc412070d"
+    },
+    {
+      "bytes": 386204,
+      "path": "proofs/m3/exact-symmetry/s3_radius6_selected_contexts.txt",
+      "sha256": "f57833f190d9f8e60e32e59244ef27634b7478d947237115b1061317c082f3d2"
+    },
+    {
+      "bytes": 584640,
+      "path": "proofs/m3/exact-symmetry/v4i_radius6_selected_contexts.txt",
+      "sha256": "8e9963948203f991a1563c076e7b9ec5b6189537ebb58961580a8ced094b1ae2"
+    },
+    {
+      "bytes": 1752,
+      "path": "proofs/m3/exact-symmetry/c4_radius6_core.json",
+      "sha256": "b5667eb7e6607bdf3c68848ed65fe06363a9753b8a35d4e97a6ffbca629eeb4d"
+    }
+  ],
+  "private_development_only": true,
+  "schema_version": 1
+}

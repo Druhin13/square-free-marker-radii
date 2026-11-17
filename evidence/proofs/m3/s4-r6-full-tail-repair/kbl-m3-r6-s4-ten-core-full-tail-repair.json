@@ -1,0 +1,378 @@
+{
+  "all_complete_left_and_right_extremities_are_forward_Hall_factors": true,
+  "all_extended_300_300_finite_sanity_checks_passed": true,
+  "certificates": [
+    {
+      "corrected_right_padding": "321232131",
+      "finite_300_each_side_extension_squarefree": true,
+      "left_full_zero_free_extremity": "121323123",
+      "left_hall_forward_factor": {
+        "deep_sanity_offset": 359,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 39
+      },
+      "new_full_finite_squarefree_witness": "12132312301023013210231321232131",
+      "original_core_clause": [
+        -21696,
+        -4588
+      ],
+      "original_right_padding": "213123132",
+      "original_source_orbit_lex_rank_zero_based": 12029,
+      "original_source_word": "01023013210231",
+      "right_full_zero_free_extremity": "231321232131",
+      "right_hall_forward_factor": {
+        "deep_sanity_offset": 369,
+        "permutation_012_to_123": "123",
+        "prefix_offset": 1
+      },
+      "right_padding_replaced": true,
+      "separator": "0",
+      "separator_span_D": 10,
+      "source_factor_length": 14,
+      "source_number": 1,
+      "zero_positions_in_witness": [
+        9,
+        11,
+        14,
+        19
+      ]
+    },
+    {
+      "corrected_right_padding": "212312132123",
+      "finite_300_each_side_extension_squarefree": true,
+      "left_full_zero_free_extremity": "121312321323",
+      "left_hall_forward_factor": {
+        "deep_sanity_offset": 389,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 5
+      },
+      "new_full_finite_squarefree_witness": "12131232132301201302312010212312132123",
+      "original_core_clause": [
+        -12753,
+        -7817
+      ],
+      "original_right_padding": "212312132123",
+      "original_source_orbit_lex_rank_zero_based": 20497,
+      "original_source_word": "01201302312010",
+      "right_full_zero_free_extremity": "212312132123",
+      "right_hall_forward_factor": {
+        "deep_sanity_offset": 362,
+        "permutation_012_to_123": "132",
+        "prefix_offset": 42
+      },
+      "right_padding_replaced": false,
+      "separator": "0",
+      "separator_span_D": 13,
+      "source_factor_length": 14,
+      "source_number": 2,
+      "zero_positions_in_witness": [
+        12,
+        15,
+        18,
+        23,
+        25
+      ]
+    },
+    {
+      "corrected_right_padding": "121312321312",
+      "finite_300_each_side_extension_squarefree": true,
+      "left_full_zero_free_extremity": "121312321323",
+      "left_hall_forward_factor": {
+        "deep_sanity_offset": 389,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 5
+      },
+      "new_full_finite_squarefree_witness": "121312321323012013023120103121312321312",
+      "original_core_clause": [
+        -21695,
+        -7817
+      ],
+      "original_right_padding": "121312321312",
+      "original_source_orbit_lex_rank_zero_based": 53747,
+      "original_source_word": "012013023120103",
+      "right_full_zero_free_extremity": "3121312321312",
+      "right_hall_forward_factor": {
+        "deep_sanity_offset": 372,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 28
+      },
+      "right_padding_replaced": false,
+      "separator": "0",
+      "separator_span_D": 13,
+      "source_factor_length": 15,
+      "source_number": 3,
+      "zero_positions_in_witness": [
+        12,
+        15,
+        18,
+        23,
+        25
+      ]
+    },
+    {
+      "corrected_right_padding": "2321312313",
+      "finite_300_each_side_extension_squarefree": true,
+      "left_full_zero_free_extremity": "1213231232",
+      "left_hall_forward_factor": {
+        "deep_sanity_offset": 359,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 39
+      },
+      "new_full_finite_squarefree_witness": "12132312320120321301203212321312313",
+      "original_core_clause": [
+        -12754
+      ],
+      "original_right_padding": "2312131232",
+      "original_source_orbit_lex_rank_zero_based": 87684,
+      "original_source_word": "012032130120321",
+      "right_full_zero_free_extremity": "3212321312313",
+      "right_hall_forward_factor": {
+        "deep_sanity_offset": 388,
+        "permutation_012_to_123": "123",
+        "prefix_offset": 4
+      },
+      "right_padding_replaced": true,
+      "separator": "0",
+      "separator_span_D": 11,
+      "source_factor_length": 15,
+      "source_number": 4,
+      "zero_positions_in_witness": [
+        10,
+        13,
+        18,
+        21
+      ]
+    },
+    {
+      "corrected_right_padding": "121312321312",
+      "finite_300_each_side_extension_squarefree": true,
+      "left_full_zero_free_extremity": "121312321323",
+      "left_hall_forward_factor": {
+        "deep_sanity_offset": 389,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 5
+      },
+      "new_full_finite_squarefree_witness": "121312321323012310320123103121312321312",
+      "original_core_clause": [
+        -21697
+      ],
+      "original_right_padding": "121312321312",
+      "original_source_orbit_lex_rank_zero_based": 149148,
+      "original_source_word": "012310320123103",
+      "right_full_zero_free_extremity": "3121312321312",
+      "right_hall_forward_factor": {
+        "deep_sanity_offset": 372,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 28
+      },
+      "right_padding_replaced": false,
+      "separator": "0",
+      "separator_span_D": 13,
+      "source_factor_length": 15,
+      "source_number": 5,
+      "zero_positions_in_witness": [
+        12,
+        17,
+        20,
+        25
+      ]
+    },
+    {
+      "corrected_right_padding": "32123121",
+      "finite_300_each_side_extension_squarefree": true,
+      "left_full_zero_free_extremity": "12131232",
+      "left_hall_forward_factor": {
+        "deep_sanity_offset": 373,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 5
+      },
+      "new_full_finite_squarefree_witness": "1213123201231201302312132123121",
+      "original_core_clause": [
+        -21915,
+        -12753
+      ],
+      "original_right_padding": "31231321",
+      "original_source_orbit_lex_rank_zero_based": 150654,
+      "original_source_word": "012312013023121",
+      "right_full_zero_free_extremity": "2312132123121",
+      "right_hall_forward_factor": {
+        "deep_sanity_offset": 392,
+        "permutation_012_to_123": "132",
+        "prefix_offset": 8
+      },
+      "right_padding_replaced": true,
+      "separator": "0",
+      "separator_span_D": 9,
+      "source_factor_length": 15,
+      "source_number": 6,
+      "zero_positions_in_witness": [
+        8,
+        14,
+        17
+      ]
+    },
+    {
+      "corrected_right_padding": "231321312321",
+      "finite_300_each_side_extension_squarefree": true,
+      "left_full_zero_free_extremity": "121312321312",
+      "left_hall_forward_factor": {
+        "deep_sanity_offset": 373,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 29
+      },
+      "new_full_finite_squarefree_witness": "12131232131201023013210230131231321312321",
+      "original_core_clause": [
+        4588,
+        12753,
+        12754,
+        21697
+      ],
+      "original_right_padding": "213212312132",
+      "original_source_orbit_lex_rank_zero_based": 216750,
+      "original_source_word": "01023013210230131",
+      "right_full_zero_free_extremity": "131231321312321",
+      "right_hall_forward_factor": {
+        "deep_sanity_offset": 394,
+        "permutation_012_to_123": "123",
+        "prefix_offset": 10
+      },
+      "right_padding_replaced": true,
+      "separator": "0",
+      "separator_span_D": 13,
+      "source_factor_length": 17,
+      "source_number": 7,
+      "zero_positions_in_witness": [
+        12,
+        14,
+        17,
+        22,
+        25
+      ]
+    },
+    {
+      "corrected_right_padding": "2321312313213",
+      "finite_300_each_side_extension_squarefree": true,
+      "left_full_zero_free_extremity": "1213123213121",
+      "left_hall_forward_factor": {
+        "deep_sanity_offset": 373,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 29
+      },
+      "new_full_finite_squarefree_witness": "1213123213121012013023120130212321312313213",
+      "original_core_clause": [
+        7817,
+        12754,
+        21696,
+        21697
+      ],
+      "original_right_padding": "2312131232131",
+      "original_source_orbit_lex_rank_zero_based": 369411,
+      "original_source_word": "01201302312013021",
+      "right_full_zero_free_extremity": "212321312313213",
+      "right_hall_forward_factor": {
+        "deep_sanity_offset": 389,
+        "permutation_012_to_123": "123",
+        "prefix_offset": 5
+      },
+      "right_padding_replaced": true,
+      "separator": "0",
+      "separator_span_D": 14,
+      "source_factor_length": 17,
+      "source_number": 8,
+      "zero_positions_in_witness": [
+        13,
+        16,
+        19,
+        24,
+        27
+      ]
+    },
+    {
+      "corrected_right_padding": "12312132123132",
+      "finite_300_each_side_extension_squarefree": true,
+      "left_full_zero_free_extremity": "12131232131213",
+      "left_hall_forward_factor": {
+        "deep_sanity_offset": 373,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 29
+      },
+      "new_full_finite_squarefree_witness": "121312321312130123103201231030212312132123132",
+      "original_core_clause": [
+        12753,
+        12754,
+        21695,
+        21697
+      ],
+      "original_right_padding": "12312132123132",
+      "original_source_orbit_lex_rank_zero_based": 1025066,
+      "original_source_word": "01231032012310302",
+      "right_full_zero_free_extremity": "212312132123132",
+      "right_hall_forward_factor": {
+        "deep_sanity_offset": 362,
+        "permutation_012_to_123": "132",
+        "prefix_offset": 42
+      },
+      "right_padding_replaced": false,
+      "separator": "0",
+      "separator_span_D": 15,
+      "source_factor_length": 17,
+      "source_number": 9,
+      "zero_positions_in_witness": [
+        14,
+        19,
+        22,
+        27,
+        29
+      ]
+    },
+    {
+      "corrected_right_padding": "2123213123132",
+      "finite_300_each_side_extension_squarefree": true,
+      "left_full_zero_free_extremity": "1213123213121",
+      "left_hall_forward_factor": {
+        "deep_sanity_offset": 373,
+        "permutation_012_to_123": "213",
+        "prefix_offset": 29
+      },
+      "new_full_finite_squarefree_witness": "1213123213121012312013023120132123213123132",
+      "original_core_clause": [
+        7817,
+        12754,
+        21697,
+        21915
+      ],
+      "original_right_padding": "1213212312132",
+      "original_source_orbit_lex_rank_zero_based": 1035405,
+      "original_source_word": "01231201302312013",
+      "right_full_zero_free_extremity": "132123213123132",
+      "right_hall_forward_factor": {
+        "deep_sanity_offset": 387,
+        "permutation_012_to_123": "123",
+        "prefix_offset": 3
+      },
+      "right_padding_replaced": true,
+      "separator": "0",
+      "separator_span_D": 14,
+      "source_factor_length": 17,
+      "source_number": 10,
+      "zero_positions_in_witness": [
+        13,
+        19,
+        22,
+        27
+      ]
+    }
+  ],
+  "full_finite_witnesses_squarefree": true,
+  "independent_original_cnf_audit_sha256": "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15",
+  "mathematical_dependencies_not_machine_proved": [
+    "Classical Hall-Thue squarefreeness and uniform recurrence",
+    "Separate rigorous finite-separator extension lemma in docs/theory"
+  ],
+  "nature": "New publication repair certificate; original SHA-pinned immutable Step353/Step356 archive not rewritten.",
+  "original_core_sha256": "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14",
+  "replaced_right_padding_count": 6,
+  "source_audit_sha256": "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7",
+  "source_count": 10,
+  "status": "TEN FULL-S4 RADIUS-SIX SOURCE TWO-SIDED HALL COMPLETIONS FINITELY VERIFIED"
+}

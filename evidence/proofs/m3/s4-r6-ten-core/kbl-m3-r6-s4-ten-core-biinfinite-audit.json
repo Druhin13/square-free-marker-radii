@@ -1,0 +1,531 @@
+{
+  "conclusion": "Conditional fixed-parameter theorem: no shared radius-6 full S4-invariant marker rule on all bi-infinite quaternary squarefree words with separation >=3, domination <=2.",
+  "direct_truth_table_assignments_checked": 256,
+  "direct_truth_table_satisfying_assignments": 0,
+  "exact_core_variables": [
+    4588,
+    7817,
+    12753,
+    12754,
+    21695,
+    21696,
+    21697,
+    21915
+  ],
+  "independent_drat_replays": {
+    "full_binary_proof": {
+      "checker_exit": 0,
+      "exact_status": "s VERIFIED",
+      "proof_sha256": "877b2d2c3417735de7a2d74b9e7359bd4fe62a495ac3bdbe28af9c28a31fa6a3",
+      "source_formula_sha256": "95c9c6aa8e1cf8d14200feb59a4d9e4160a7818cf63e35eb19e6e3ab4310da6e"
+    },
+    "standalone_reduced_proof": {
+      "checker_exit": 0,
+      "exact_status": "s VERIFIED",
+      "proof_sha256": "16c6f25a8d3136a0b6ed916c639c17d99080263ea40008b51666dfc62287a700",
+      "source_formula_sha256": "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14"
+    }
+  },
+  "original_core_clause_count": 10,
+  "original_full_source_orbit_counts": {
+    "14": 66047,
+    "15": 173183,
+    "17": 1190259
+  },
+  "original_input_sha256": {
+    "core-lemmas.drat": "16c6f25a8d3136a0b6ed916c639c17d99080263ea40008b51666dfc62287a700",
+    "core.cnf": "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14",
+    "kbl-m3-r6-s4-cnf-audit.json": "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15",
+    "kbl-m3-r6-s4-export.json": "1ad0a70c9f6d70c7465f78e14ec8b36e0d5b39e8e34d4c3758f6ad5d6458a17a",
+    "kbl-m3-r6-s4-orbit-preflight.json": "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0",
+    "kbl-m3-r6-s4-proof.drat": "877b2d2c3417735de7a2d74b9e7359bd4fe62a495ac3bdbe28af9c28a31fa6a3",
+    "kbl-m3-r6-s4-result.txt": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+    "kbl-q4-m3-r6-s4.cnf": "95c9c6aa8e1cf8d14200feb59a4d9e4160a7818cf63e35eb19e6e3ab4310da6e"
+  },
+  "original_source_certificates": [
+    {
+      "canonical_source_word": "01023013210231",
+      "core_clause": [
+        -21696,
+        -4588
+      ],
+      "left_exterior": "121323123",
+      "left_hall_certificate": {
+        "hall_factor": "101202102",
+        "hall_prefix_offset": 39,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "left_margin": 9,
+      "original_cnf_source_row_zero_based": 12029,
+      "right_exterior": "213123132",
+      "right_hall_certificate": {
+        "hall_factor": "102012021",
+        "hall_prefix_offset": 9,
+        "hall_to_exterior_bijection": [
+          "01",
+          "12",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "right_margin": 9,
+      "separator": "0",
+      "separator_positions": [
+        9,
+        11,
+        14,
+        19
+      ],
+      "separator_span": 10,
+      "source_length": 14,
+      "source_orbit_lex_rank_zero_based": 12029,
+      "source_witness": "12132312301023013210231213123132",
+      "source_word": "01023013210231",
+      "witness_offset": 9,
+      "witness_squarefree_independently_verified": true
+    },
+    {
+      "canonical_source_word": "01201302312010",
+      "core_clause": [
+        -12753,
+        -7817
+      ],
+      "left_exterior": "121312321323",
+      "left_hall_certificate": {
+        "hall_factor": "101210201202",
+        "hall_prefix_offset": 5,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "left_margin": 12,
+      "original_cnf_source_row_zero_based": 20497,
+      "right_exterior": "212312132123",
+      "right_hall_certificate": {
+        "hall_factor": "202102012021",
+        "hall_prefix_offset": 42,
+        "hall_to_exterior_bijection": [
+          "01",
+          "13",
+          "22"
+        ],
+        "reversed_hall_factor": false
+      },
+      "right_margin": 12,
+      "separator": "0",
+      "separator_positions": [
+        12,
+        15,
+        18,
+        23,
+        25
+      ],
+      "separator_span": 13,
+      "source_length": 14,
+      "source_orbit_lex_rank_zero_based": 20497,
+      "source_witness": "12131232132301201302312010212312132123",
+      "source_word": "01201302312010",
+      "witness_offset": 12,
+      "witness_squarefree_independently_verified": true
+    },
+    {
+      "canonical_source_word": "012013023120103",
+      "core_clause": [
+        -21695,
+        -7817
+      ],
+      "left_exterior": "121312321323",
+      "left_hall_certificate": {
+        "hall_factor": "101210201202",
+        "hall_prefix_offset": 5,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "left_margin": 12,
+      "original_cnf_source_row_zero_based": 119794,
+      "right_exterior": "121312321312",
+      "right_hall_certificate": {
+        "hall_factor": "101210201210",
+        "hall_prefix_offset": 29,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "right_margin": 12,
+      "separator": "0",
+      "separator_positions": [
+        12,
+        15,
+        18,
+        23,
+        25
+      ],
+      "separator_span": 13,
+      "source_length": 15,
+      "source_orbit_lex_rank_zero_based": 53747,
+      "source_witness": "121312321323012013023120103121312321312",
+      "source_word": "012013023120103",
+      "witness_offset": 12,
+      "witness_squarefree_independently_verified": true
+    },
+    {
+      "canonical_source_word": "012032130120321",
+      "core_clause": [
+        -12754
+      ],
+      "left_exterior": "1213231232",
+      "left_hall_certificate": {
+        "hall_factor": "1012021020",
+        "hall_prefix_offset": 39,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "left_margin": 10,
+      "original_cnf_source_row_zero_based": 153731,
+      "right_exterior": "2312131232",
+      "right_hall_certificate": {
+        "hall_factor": "0210121020",
+        "hall_prefix_offset": 3,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "right_margin": 10,
+      "separator": "0",
+      "separator_positions": [
+        10,
+        13,
+        18,
+        21
+      ],
+      "separator_span": 11,
+      "source_length": 15,
+      "source_orbit_lex_rank_zero_based": 87684,
+      "source_witness": "12132312320120321301203212312131232",
+      "source_word": "012032130120321",
+      "witness_offset": 10,
+      "witness_squarefree_independently_verified": true
+    },
+    {
+      "canonical_source_word": "012310320123103",
+      "core_clause": [
+        -21697
+      ],
+      "left_exterior": "121312321323",
+      "left_hall_certificate": {
+        "hall_factor": "101210201202",
+        "hall_prefix_offset": 5,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "left_margin": 12,
+      "original_cnf_source_row_zero_based": 215195,
+      "right_exterior": "121312321312",
+      "right_hall_certificate": {
+        "hall_factor": "101210201210",
+        "hall_prefix_offset": 29,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "right_margin": 12,
+      "separator": "0",
+      "separator_positions": [
+        12,
+        17,
+        20,
+        25
+      ],
+      "separator_span": 13,
+      "source_length": 15,
+      "source_orbit_lex_rank_zero_based": 149148,
+      "source_witness": "121312321323012310320123103121312321312",
+      "source_word": "012310320123103",
+      "witness_offset": 12,
+      "witness_squarefree_independently_verified": true
+    },
+    {
+      "canonical_source_word": "012312013023121",
+      "core_clause": [
+        -21915,
+        -12753
+      ],
+      "left_exterior": "12131232",
+      "left_hall_certificate": {
+        "hall_factor": "10121020",
+        "hall_prefix_offset": 5,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "left_margin": 8,
+      "original_cnf_source_row_zero_based": 216701,
+      "right_exterior": "31231321",
+      "right_hall_certificate": {
+        "hall_factor": "20120210",
+        "hall_prefix_offset": 11,
+        "hall_to_exterior_bijection": [
+          "01",
+          "12",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "right_margin": 8,
+      "separator": "0",
+      "separator_positions": [
+        8,
+        14,
+        17
+      ],
+      "separator_span": 9,
+      "source_length": 15,
+      "source_orbit_lex_rank_zero_based": 150654,
+      "source_witness": "1213123201231201302312131231321",
+      "source_word": "012312013023121",
+      "witness_offset": 8,
+      "witness_squarefree_independently_verified": true
+    },
+    {
+      "canonical_source_word": "01023013210230131",
+      "core_clause": [
+        4588,
+        12753,
+        12754,
+        21697
+      ],
+      "left_exterior": "121312321312",
+      "left_hall_certificate": {
+        "hall_factor": "101210201210",
+        "hall_prefix_offset": 29,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "left_margin": 12,
+      "original_cnf_source_row_zero_based": 455980,
+      "right_exterior": "213212312132",
+      "right_hall_certificate": {
+        "hall_factor": "201202102012",
+        "hall_prefix_offset": 11,
+        "hall_to_exterior_bijection": [
+          "01",
+          "13",
+          "22"
+        ],
+        "reversed_hall_factor": false
+      },
+      "right_margin": 12,
+      "separator": "0",
+      "separator_positions": [
+        12,
+        14,
+        17,
+        22,
+        25
+      ],
+      "separator_span": 13,
+      "source_length": 17,
+      "source_orbit_lex_rank_zero_based": 216750,
+      "source_witness": "12131232131201023013210230131213212312132",
+      "source_word": "01023013210230131",
+      "witness_offset": 12,
+      "witness_squarefree_independently_verified": true
+    },
+    {
+      "canonical_source_word": "01201302312013021",
+      "core_clause": [
+        7817,
+        12754,
+        21696,
+        21697
+      ],
+      "left_exterior": "1213123213121",
+      "left_hall_certificate": {
+        "hall_factor": "1012102012101",
+        "hall_prefix_offset": 29,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "left_margin": 13,
+      "original_cnf_source_row_zero_based": 608641,
+      "right_exterior": "2312131232131",
+      "right_hall_certificate": {
+        "hall_factor": "0210121020121",
+        "hall_prefix_offset": 27,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "right_margin": 13,
+      "separator": "0",
+      "separator_positions": [
+        13,
+        16,
+        19,
+        24,
+        27
+      ],
+      "separator_span": 14,
+      "source_length": 17,
+      "source_orbit_lex_rank_zero_based": 369411,
+      "source_witness": "1213123213121012013023120130212312131232131",
+      "source_word": "01201302312013021",
+      "witness_offset": 13,
+      "witness_squarefree_independently_verified": true
+    },
+    {
+      "canonical_source_word": "01231032012310302",
+      "core_clause": [
+        12753,
+        12754,
+        21695,
+        21697
+      ],
+      "left_exterior": "12131232131213",
+      "left_hall_certificate": {
+        "hall_factor": "10121020121012",
+        "hall_prefix_offset": 29,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "left_margin": 14,
+      "original_cnf_source_row_zero_based": 1264296,
+      "right_exterior": "12312132123132",
+      "right_hall_certificate": {
+        "hall_factor": "02102012021012",
+        "hall_prefix_offset": 43,
+        "hall_to_exterior_bijection": [
+          "01",
+          "13",
+          "22"
+        ],
+        "reversed_hall_factor": false
+      },
+      "right_margin": 14,
+      "separator": "0",
+      "separator_positions": [
+        14,
+        19,
+        22,
+        27,
+        29
+      ],
+      "separator_span": 15,
+      "source_length": 17,
+      "source_orbit_lex_rank_zero_based": 1025066,
+      "source_witness": "121312321312130123103201231030212312132123132",
+      "source_word": "01231032012310302",
+      "witness_offset": 14,
+      "witness_squarefree_independently_verified": true
+    },
+    {
+      "canonical_source_word": "01231201302312013",
+      "core_clause": [
+        7817,
+        12754,
+        21697,
+        21915
+      ],
+      "left_exterior": "1213123213121",
+      "left_hall_certificate": {
+        "hall_factor": "1012102012101",
+        "hall_prefix_offset": 29,
+        "hall_to_exterior_bijection": [
+          "02",
+          "11",
+          "23"
+        ],
+        "reversed_hall_factor": false
+      },
+      "left_margin": 13,
+      "original_cnf_source_row_zero_based": 1274635,
+      "right_exterior": "1213212312132",
+      "right_hall_certificate": {
+        "hall_factor": "0201202102012",
+        "hall_prefix_offset": 10,
+        "hall_to_exterior_bijection": [
+          "01",
+          "13",
+          "22"
+        ],
+        "reversed_hall_factor": false
+      },
+      "right_margin": 13,
+      "separator": "0",
+      "separator_positions": [
+        13,
+        19,
+        22,
+        27
+      ],
+      "separator_span": 14,
+      "source_length": 17,
+      "source_orbit_lex_rank_zero_based": 1035405,
+      "source_witness": "1213123213121012312013023120131213212312132",
+      "source_word": "01231201302312013",
+      "witness_offset": 13,
+      "witness_squarefree_independently_verified": true
+    }
+  ],
+  "premises_not_machine_proved": [
+    "classical ternary Hall-Thue uniform recurrence and squarefreeness",
+    "generalized finite-separator D-1 extension lemma"
+  ],
+  "scope": {
+    "domination_radius": "<=2",
+    "group": "full S4",
+    "m": 3,
+    "q": 4,
+    "r": 6,
+    "separation": ">=3",
+    "subshift": "bi-infinite quaternary squarefree words"
+  },
+  "status": "ALL FOUR S4 RADIUS SIX TEN-SOURCE BI-INFINITE AUDIT PHASES PASSED"
+}

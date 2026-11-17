@@ -1,0 +1,49 @@
+{
+  "construction_histogram": {
+    "external-double-separator": 11,
+    "hall": 18,
+    "multi-separator": 25,
+    "padded-multi-separator": 53403,
+    "single-separator": 30
+  },
+  "factor_length_histogram": {
+    "12": 11269,
+    "13": 20376,
+    "15": 21842
+  },
+  "fixed_parameter_theorem": "No shared shift-equivariant radius-five marker rule on the bi-infinite quaternary squarefree subshift, with separation>=3 and domination<=2, is invariant under the normal Klein-four subgroup {e,(01)(23),(02)(13),(03)(12)}.",
+  "independent_drat_checker_exit": 0,
+  "independent_drat_status": "s VERIFIED",
+  "m": 3,
+  "marker_domination": "within distance 2",
+  "marker_separation": "at least 3",
+  "math_inputs": [
+    "classical squarefree uniformly recurrent Hall-Thue ternary fixed point",
+    "finite-separator lemma with D-1 Hall-extendible ternary exteriors"
+  ],
+  "normal_v4_context_orbit_variables": 21984,
+  "normal_v4_group": "{e,(01)(23),(02)(13),(03)(12)}",
+  "not_claimed": [
+    "intransitive V4 obstruction or existence",
+    "higher-radius normal-V4 results",
+    "arbitrary m, generalization to other q",
+    "unrestricted CDC edit locality or asymptotic memory",
+    "publication novelty"
+  ],
+  "original_named_n11_contexts": 87936,
+  "q": 4,
+  "r": 5,
+  "sha256_inputs": {
+    "kbl-m3-r5-normal-v4-core-extension-triage.json": "3b66c4b75cba46a597f6f666f81123eebd0d2d4a3dd949ce217b847cbf1ed704",
+    "kbl-m3-r5-normal-v4-core-factor-map.json": "a6dc740e073adf3ba4dafb14f958997e32511f829e161867fd02799eaee10744",
+    "kbl-m3-r5-normal-v4-core-lemmas.drat": "215a9ac707124910261a23749bccfff6771edea3f0a63b9b6b6eb361919b91e3",
+    "kbl-m3-r5-normal-v4-core.cnf": "1b8e67aa86f661ac6a9d369e6298357ab0541af58287152f9a498844a678d729",
+    "kbl-m3-r5-normal-v4-extendible-only.cnf": "ed46e0bd9321d6df91ab14cb9dfad39dc78b6d1efd5b2fcab8728a4383b8f284",
+    "kbl-m3-r5-normal-v4-extra-extensions-audit.json": "aa3724bef0ef71f005bf4ff872a8bc261fa20a6c351b72e8dc5b112dc1134d97",
+    "kbl-m3-r5-normal-v4-extra-extensions.json": "900eafa5b71377ecb93480fddf1fc5c48a9133829c93d3783918b4f3efae282a"
+  },
+  "status": "ALL FOUR NORMAL-V4 BI-INFINITE OBSTRUCTION AUDIT PHASES PASSED",
+  "verified_early_extension_witnesses": 53476,
+  "verified_external_double_separator_witnesses": 11,
+  "verified_original_core_clauses": 53487
+}

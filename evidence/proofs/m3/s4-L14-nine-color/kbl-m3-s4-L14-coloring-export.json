@@ -1,0 +1,17 @@
+{
+  "algorithm": "largest_degree_first",
+  "candidate_marker_radius_upper": 31,
+  "coloring_bytes": 463685,
+  "coloring_relative_path": "experiments/m3/kbl-q4-m3-s4-L14-coloring.json",
+  "coloring_sha256": "bd45025e9d58523711e966664f2cc922f0566546a820184e98ce48e386701525",
+  "colors": 9,
+  "interpretation": "Generator result only; separate independent exhaustive audit required.",
+  "preflight_sha256": "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0",
+  "source_rows": {
+    "15": 173183,
+    "16": 453998
+  },
+  "status": "STEP357 S4 GRAPH COLORING GENERATOR COMPLETE - EXTERNAL AUDIT PENDING",
+  "unique_edges": 627159,
+  "vertices": 66047
+}

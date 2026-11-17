@@ -1,0 +1,111 @@
+{
+  "S4_canonical_squarefree_orbit_counts": {
+    "11": 3664,
+    "12": 9605,
+    "13": 25192,
+    "14": 66047,
+    "15": 173183,
+    "16": 453998,
+    "17": 1190259
+  },
+  "S4_element_orders": {
+    "1": 1,
+    "2": 9,
+    "3": 8,
+    "4": 6
+  },
+  "independent_named_squarefree_counts": {
+    "13": 604608,
+    "14": 1585128
+  },
+  "model": {
+    "group": "full alphabet permutation S4",
+    "m": 3,
+    "q": 4,
+    "r_to_test": 6
+  },
+  "premises_not_computer_proved": [
+    "classical uniformly recurrent squarefree ternary Hall-Thue word",
+    "finite-separator D-1 extension lemma",
+    "Krieger marker lemma on aperiodic zero-dimensional systems"
+  ],
+  "radius_six_S4_quotient": {
+    "S4_greedy_MIS_color_label_length": 14,
+    "S4_greedy_MIS_conservative_symmetric_radius_upper_bound": 132107,
+    "S4_greedy_MIS_palette_size": 66047,
+    "S4_radius_lower_bound_from_existing_radius_five_obstruction": 6,
+    "negative_packing_distance_one_source_orbits_n14": 66047,
+    "negative_packing_distance_two_source_orbits_n15": 173183,
+    "positive_five_window_domination_source_orbits_n17": 1190259,
+    "radius_six_sat_unsat": "NOT RUN",
+    "radius_six_variable_orbits_n13": 25192,
+    "total_factor_derived_source_rows_before_clause_dedup": 1429489
+  },
+  "scope": "finite combinatorial audit; no radius-six SAT/UNSAT result",
+  "sharp_label_length_13_counterexample": {
+    "first_length_13_window": "0213203102132",
+    "four_cycle_image": [
+      1,
+      2,
+      3,
+      0
+    ],
+    "left_exterior_hall": {
+      "hall_factor": "101210201210",
+      "hall_prefix_offset": 29,
+      "original_exterior": "121312321312",
+      "original_hall_to_exterior_map": [
+        [
+          "0",
+          "2"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "3"
+        ]
+      ],
+      "reversed_hall_factor": false
+    },
+    "left_margin": 12,
+    "length_13_orbit_collision": true,
+    "right_exterior_hall": {
+      "hall_factor": "120210201202",
+      "hall_prefix_offset": 41,
+      "original_exterior": "321231213212",
+      "original_hall_to_exterior_map": [
+        [
+          "0",
+          "1"
+        ],
+        [
+          "1",
+          "3"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ],
+      "reversed_hall_factor": false
+    },
+    "right_margin": 12,
+    "second_length_13_window_offset_2": "1320310213203",
+    "separator_character": "0",
+    "separator_locations": [
+      12,
+      17,
+      20,
+      25
+    ],
+    "separator_span": 13,
+    "squarefree_extension_length_38": "12131232131202132031021320321231213212",
+    "target_length_15": "021320310213203",
+    "target_offset": 12
+  },
+  "status": "ALL FOUR S4 ORBIT-COLOR PREFLIGHT PHASES PASSED",
+  "universal_orbit_color_length_m3": 14
+}
