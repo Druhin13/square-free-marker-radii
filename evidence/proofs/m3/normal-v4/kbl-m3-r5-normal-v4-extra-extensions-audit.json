@@ -1,0 +1,132 @@
+{
+  "complete_original_core_source_partition": true,
+  "input_sha256": {
+    "kbl-m3-r5-normal-v4-certified-only-sat-audit.json": "3923121d647e6bef1bc4a86e02d0717828e8c3930e8db2760b2340f34fffe298",
+    "kbl-m3-r5-normal-v4-core-extension-triage.json": "3b66c4b75cba46a597f6f666f81123eebd0d2d4a3dd949ce217b847cbf1ed704",
+    "kbl-m3-r5-normal-v4-core-factor-map.json": "a6dc740e073adf3ba4dafb14f958997e32511f829e161867fd02799eaee10744",
+    "kbl-m3-r5-normal-v4-core.cnf": "1b8e67aa86f661ac6a9d369e6298357ab0541af58287152f9a498844a678d729",
+    "kbl-m3-r5-normal-v4-extra-extensions.json": "9892679b2234d96a86b73d6cb264ae9511094f25a7aa187bb90f0d528332f201"
+  },
+  "mathematical_inputs": [
+    "classical ternary Hall-Thue morphism squarefree and uniformly recurrent",
+    "finite-separator D-1 exterior-margin lemma"
+  ],
+  "new_certificate_types": {
+    "external-double-separator": 11
+  },
+  "new_certificates_independently_checked": 11,
+  "new_certified_source_factors": [
+    {
+      "clause": [
+        -3051,
+        -1083
+      ],
+      "factor": "010301303103",
+      "factor_length": 12,
+      "original_zero_based_clause_index": 2839
+    },
+    {
+      "clause": [
+        -18670,
+        -15886
+      ],
+      "factor": "030203202303",
+      "factor_length": 12,
+      "original_zero_based_clause_index": 41644
+    },
+    {
+      "clause": [
+        -17359,
+        -12797
+      ],
+      "factor": "031030131030",
+      "factor_length": 12,
+      "original_zero_based_clause_index": 45503
+    },
+    {
+      "clause": [
+        -21582,
+        -1083
+      ],
+      "factor": "032303203023",
+      "factor_length": 12,
+      "original_zero_based_clause_index": 56575
+    },
+    {
+      "clause": [
+        -15366,
+        -1083
+      ],
+      "factor": "0103013031030",
+      "factor_length": 13,
+      "original_zero_based_clause_index": 65073
+    },
+    {
+      "clause": [
+        -14268,
+        -2011
+      ],
+      "factor": "0120102101201",
+      "factor_length": 13,
+      "original_zero_based_clause_index": 71449
+    },
+    {
+      "clause": [
+        -12806,
+        -5833
+      ],
+      "factor": "0131030130313",
+      "factor_length": 13,
+      "original_zero_based_clause_index": 97730
+    },
+    {
+      "clause": [
+        -17355,
+        -3051
+      ],
+      "factor": "0310301303103",
+      "factor_length": 13,
+      "original_zero_based_clause_index": 176947
+    },
+    {
+      "clause": [
+        -20077,
+        -10286
+      ],
+      "factor": "0320302303203",
+      "factor_length": 13,
+      "original_zero_based_clause_index": 195662
+    },
+    {
+      "clause": [
+        3051,
+        5331,
+        10283,
+        15366,
+        20077
+      ],
+      "factor": "012102120121012",
+      "factor_length": 15,
+      "original_zero_based_clause_index": 352931
+    },
+    {
+      "clause": [
+        5333,
+        10286,
+        12806,
+        16385,
+        17355
+      ],
+      "factor": "013031030130313",
+      "factor_length": 15,
+      "original_zero_based_clause_index": 460786
+    }
+  ],
+  "no_integrated_true_subshift_theorem_claim": true,
+  "source_certificates_independently_checked": 53476,
+  "original_core_clause_count": 53487,
+  "scope": "Eleven additional original finite words individually certified bi-infinite extendible; original whole core refutation not replayed in THIS script",
+  "standalone_drat_replay_in_separate_verifier": true,
+  "status": "ALL THREE INDEPENDENT EXTRA V4 EXTENSION AUDIT PHASES PASSED",
+  "subgroup": "normal V4 = {e,(01)(23),(02)(13),(03)(12)}"
+}

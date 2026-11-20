@@ -1,0 +1,97 @@
+{
+  "higher_radius_positive_tables_freshly_benchmarked": false,
+  "historical_original_solver_settings_or_timing_recovered": false,
+  "models_and_fresh_drat_proofs_archived": false,
+  "negative_core_replays": [
+    {
+      "case": "r4",
+      "clauses": 24292,
+      "fresh_drat_checked": true,
+      "fresh_drat_sha256": "51e33969fdbbafa22321ac3edd9f314235b8a3ccb26d9be9f56eb8735458a31d",
+      "peak_rss_kib": 13744,
+      "source_sha256": "a2f66feec531e8cd08abe79f9a619eb0177129c482577521d735b133060467f3",
+      "system_seconds": 0.01,
+      "user_seconds": 0.7,
+      "variables": 12768,
+      "wall_seconds": 0.71
+    },
+    {
+      "case": "c3",
+      "clauses": 12747,
+      "fresh_drat_checked": true,
+      "fresh_drat_sha256": "fd59ae3439689c6ca7ae0133895aab19a51b780aa73d5750d83131110be8510b",
+      "peak_rss_kib": 12580,
+      "source_sha256": "4c3eb47253ff81c9375a7e062ea3baa3d906cbe6d9966d80598d37f0a63a1ae6",
+      "system_seconds": 0,
+      "user_seconds": 0.04,
+      "variables": 29312,
+      "wall_seconds": 0.04
+    },
+    {
+      "case": "normal-v4",
+      "clauses": 53487,
+      "fresh_drat_checked": true,
+      "fresh_drat_sha256": "60bbc641dc41cd0bacb96155a57df5ef3ba0d34b4fd9ffe4ce41fc7739f3625d",
+      "peak_rss_kib": 23708,
+      "source_sha256": "1b8e67aa86f661ac6a9d369e6298357ab0541af58287152f9a498844a678d729",
+      "system_seconds": 0.01,
+      "user_seconds": 0.75,
+      "variables": 21984,
+      "wall_seconds": 0.77
+    },
+    {
+      "case": "intransitive-v4",
+      "clauses": 26819,
+      "fresh_drat_checked": true,
+      "fresh_drat_sha256": "5504597480918aee9cedbb3f5ee826fd6132173f17a63c9413739cfb90464b20",
+      "peak_rss_kib": 14924,
+      "source_sha256": "e5707d9aa7f077c05d8775552ea9566e5eaa7a4885d8b5c99f6b69e27c9d8db9",
+      "system_seconds": 0.01,
+      "user_seconds": 0.29,
+      "variables": 21984,
+      "wall_seconds": 0.31
+    }
+  ],
+  "original_archive_certificates_unchanged": true,
+  "radius_five_involution_positive_replays": [
+    {
+      "case": "swap",
+      "cnf_sha256": "6b5ace8de69b932d0e346a540edd96168d3fd6f806588cbff56d26faa66d0a15",
+      "cpu_model": "Intel(R) Xeon(R) 6975P-C",
+      "fresh_model_sha256": "f1125c2a769252b6d735f825028352293c53a11fc36b48cac4743189434ce53c",
+      "group_generator": "(0 1)",
+      "peak_rss_kib": 551132,
+      "solver_system_cpu_seconds": 0.2,
+      "solver_user_cpu_seconds": 3.7,
+      "solver_wall_seconds": 3.94
+    },
+    {
+      "case": "double",
+      "cnf_sha256": "f44a5b98e0b47bac8d7ae988ddcd96dc5f8ed66500cad29ae0613a8a670889ff",
+      "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+      "fresh_model_sha256": "88a66148b24d3ecd1985b17c4796d4bf23a4a1f2f7d1715f2958e2772d6aa4eb",
+      "group_generator": "(0 1)(2 3)",
+      "peak_rss_kib": 656832,
+      "solver_system_cpu_seconds": 0.89,
+      "solver_user_cpu_seconds": 111.1,
+      "solver_wall_seconds": 112.04
+    }
+  ],
+  "radius_five_unrestricted_positive_replay": {
+    "clauses": 4991520,
+    "cnf_sha256": "02bdd92ab8271228b79f3c1b9d095bedc5fcce7564afdcb003ae56ac1c4897d7",
+    "cpu_model": "AMD EPYC 9V74 80-Core Processor",
+    "fresh_model_sha256": "bd6e58597537b29937cdc942632a0bd6e096aee4bc2032655d572ddd92ef9b52",
+    "independent_full_named_source_audit_passed": true,
+    "peak_rss_kib": 1299824,
+    "selected_contexts": 24091,
+    "solver_wall_seconds": 197.7,
+    "variables": 87936
+  },
+  "same_hardware_performance_comparison_valid": false,
+  "schema_version": 1,
+  "scope": "New controlled SAT/DRAT generation experiments, NOT historical original discovery",
+  "solver_binary_sha256": "7b73df0a6d9cf3c751a1948300e5baff8e82c4d39bcd88f0c063b5f5cfb8b33e",
+  "solver_reported_version": "1.7.3",
+  "ubuntu_package_version": "1.7.4-1"
+}

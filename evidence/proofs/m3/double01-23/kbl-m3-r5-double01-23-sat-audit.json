@@ -1,0 +1,24 @@
+{
+  "all_named_factors_checked": {
+    "12": 230520,
+    "13": 604608,
+    "15": 4156392
+  },
+  "cnf_sha256": "f44a5b98e0b47bac8d7ae988ddcd96dc5f8ed66500cad29ae0613a8a670889ff",
+  "complete_finite_factor_clauses_checked": 2495760,
+  "context_orbit_variables": 43968,
+  "finite_factor_coverage_is_superset_of_biinfinite_factors": true,
+  "marked_orbit_classes": 12095,
+  "marker_domination": "within 2",
+  "marker_separation": "at least 3",
+  "not_claimed": [
+    "larger invariance subgroup V4",
+    "full stabilizer of this particular model"
+  ],
+  "original_named_context_symmetry_checked": 87936,
+  "sat_model_sha256": "a3acf3c855420b8578c9882e2aab367de959a33093640084a62b3aa522b7d9be",
+  "scope": "q4,m3,r5 shift-equivariant Boolean marker on all bi-infinite square-free inputs",
+  "status": "ALL FOUR PHASES PASSED",
+  "symmetry": "(0 1)(2 3)",
+  "theorem": "exists a valid r5 marker rule invariant under any one double transposition, by alphabet conjugacy"
+}

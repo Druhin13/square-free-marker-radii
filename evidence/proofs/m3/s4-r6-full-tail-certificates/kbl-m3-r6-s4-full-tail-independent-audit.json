@@ -1,0 +1,97 @@
+{
+  "all_300_plus_300_extensions_squarefree": true,
+  "all_complete_extremities_match_forward_Hall_factors": true,
+  "all_finite_repaired_witnesses_squarefree": true,
+  "all_original_core_sources_preserved": true,
+  "original_cnf_core_sha256": "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14",
+  "original_cnf_source_audit_sha256": "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15",
+  "original_source_audit_sha256": "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7",
+  "proof_scope": "Finite certificates verified. The standalone separator lemma and classical squarefree uniformly recurrent Hall-Thue word yield bi-infinite extension.",
+  "repaired_certificate_bytes": 11966,
+  "repaired_certificate_sha256": "46978c02d61491302a647baba418e9dad1921a069fce8ed08fce21af346d7699",
+  "replaced_right_padding_count": 6,
+  "source_count": 10,
+  "sources": [
+    {
+      "complete_prefix_length": 9,
+      "complete_suffix_length": 12,
+      "original_right_padding_replaced": true,
+      "separator_span": 10,
+      "source_length": 14,
+      "source_ordinal": 1
+    },
+    {
+      "complete_prefix_length": 12,
+      "complete_suffix_length": 12,
+      "original_right_padding_replaced": false,
+      "separator_span": 13,
+      "source_length": 14,
+      "source_ordinal": 2
+    },
+    {
+      "complete_prefix_length": 12,
+      "complete_suffix_length": 13,
+      "original_right_padding_replaced": false,
+      "separator_span": 13,
+      "source_length": 15,
+      "source_ordinal": 3
+    },
+    {
+      "complete_prefix_length": 10,
+      "complete_suffix_length": 13,
+      "original_right_padding_replaced": true,
+      "separator_span": 11,
+      "source_length": 15,
+      "source_ordinal": 4
+    },
+    {
+      "complete_prefix_length": 12,
+      "complete_suffix_length": 13,
+      "original_right_padding_replaced": false,
+      "separator_span": 13,
+      "source_length": 15,
+      "source_ordinal": 5
+    },
+    {
+      "complete_prefix_length": 8,
+      "complete_suffix_length": 13,
+      "original_right_padding_replaced": true,
+      "separator_span": 9,
+      "source_length": 15,
+      "source_ordinal": 6
+    },
+    {
+      "complete_prefix_length": 12,
+      "complete_suffix_length": 15,
+      "original_right_padding_replaced": true,
+      "separator_span": 13,
+      "source_length": 17,
+      "source_ordinal": 7
+    },
+    {
+      "complete_prefix_length": 13,
+      "complete_suffix_length": 15,
+      "original_right_padding_replaced": true,
+      "separator_span": 14,
+      "source_length": 17,
+      "source_ordinal": 8
+    },
+    {
+      "complete_prefix_length": 14,
+      "complete_suffix_length": 15,
+      "original_right_padding_replaced": false,
+      "separator_span": 15,
+      "source_length": 17,
+      "source_ordinal": 9
+    },
+    {
+      "complete_prefix_length": 13,
+      "complete_suffix_length": 15,
+      "original_right_padding_replaced": true,
+      "separator_span": 14,
+      "source_length": 17,
+      "source_ordinal": 10
+    }
+  ],
+  "status": "INDEPENDENT FULL-TAIL S4 RADIUS-SIX COMPLETION AUDIT PASSED"
+}

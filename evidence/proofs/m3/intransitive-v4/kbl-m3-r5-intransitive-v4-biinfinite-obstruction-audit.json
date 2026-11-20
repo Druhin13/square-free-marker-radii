@@ -1,0 +1,48 @@
+{
+  "construction_histogram": {
+    "expanded-padded-multi-separator": 2,
+    "external-double-separator": 3,
+    "hall": 12,
+    "multi-separator": 80,
+    "padded-multi-separator": 26691,
+    "single-separator": 31
+  },
+  "factor_length_histogram": {
+    "12": 5967,
+    "13": 10578,
+    "15": 10274
+  },
+  "fixed_parameter_theorem": "No shared shift-equivariant radius-five Boolean marker rule on the bi-infinite quaternary squarefree subshift, with separation>=3 and domination<=2, is invariant under the intransitive Klein-four subgroup {e,(01),(23),(01)(23)}.",
+  "independent_drat_checker_exit": 0,
+  "independent_drat_status": "s VERIFIED",
+  "intransitive_v4_context_orbit_variables": 21984,
+  "intransitive_v4_group": "{e,(01),(23),(01)(23)}",
+  "m": 3,
+  "marker_domination": "within distance 2",
+  "marker_separation": "at least 3",
+  "mathematical_inputs": [
+    "classical squarefree uniformly recurrent Hall-Thue ternary fixed point",
+    "finite-separator lemma with D-1 Hall-extendible ternary exterior margins"
+  ],
+  "not_claimed": [
+    "higher radius or arbitrary (q,m)",
+    "non-H-invariant marker rules"
+  ],
+  "original_named_n11_contexts": 87936,
+  "q": 4,
+  "r": 5,
+  "sha256_inputs": {
+    "kbl-m3-r5-intransitive-v4-certified-only-sat-audit.json": "72bc9f64c27db433878fc2405c4ba1f132e9cacf3c79f191d19f19e86ad21762",
+    "kbl-m3-r5-intransitive-v4-core-extension-triage.json": "b3f803c02971d8b1d25cc183f7eed02b0603ac602bb36e1dd0560be5efdaa4bb",
+    "kbl-m3-r5-intransitive-v4-core-factor-map.json": "0e74186db840c89fca385168cd0118e9a24bd4b29920aadea53878dde0feb080",
+    "kbl-m3-r5-intransitive-v4-core-lemmas.drat": "6806854a58c47d7444648b1df49cbfe8b718ad9c9b7c8a5c01308a4f36231c08",
+    "kbl-m3-r5-intransitive-v4-core.cnf": "e5707d9aa7f077c05d8775552ea9566e5eaa7a4885d8b5c99f6b69e27c9d8db9",
+    "kbl-m3-r5-intransitive-v4-extendible-only.cnf": "8584532defcb1d487f0653f2b83d3148f2165a50ff3dec5d89bbec58e4e69fde",
+    "kbl-m3-r5-intransitive-v4-extra-extensions-audit.json": "d8b4ceb8140e5952d2bfdb955d00a3237f45ab837db7cd4b81959567fd68900e",
+    "kbl-m3-r5-intransitive-v4-extra-extensions.json": "560cf9b55b4ebd97790bdc8c367e5e7047088261b85c952fed19b803f90eaf32"
+  },
+  "status": "ALL FOUR INTRANSITIVE V4 BI-INFINITE OBSTRUCTION AUDIT PHASES PASSED",
+  "verified_earlier_extension_witnesses": 26814,
+  "verified_extra_extension_witnesses": 5,
+  "verified_original_core_clauses": 26819
+}

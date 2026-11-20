@@ -1,0 +1,824 @@
+{
+  "construction_counts": {
+    "expanded-multi-separator": 5,
+    "external-double-separator": 22
+  },
+  "new_candidate_count": 27,
+  "new_candidates": [
+    {
+      "clause": [
+        -9612,
+        -279
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "010210121020",
+      "factor_length": 12,
+      "finite_witness": "20102012102130102101210203201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "010210121020",
+      "offset": 13,
+      "original_zero_based_clause_index": 728,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -9378,
+        -388
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "010212021020",
+      "factor_length": 12,
+      "finite_witness": "20102012102130102120210203201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "010212021020",
+      "offset": 13,
+      "original_zero_based_clause_index": 1014,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -3053,
+        -2266
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "012021020102",
+      "factor_length": 12,
+      "finite_witness": "20102012102130120210201023201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "012021020102",
+      "offset": 13,
+      "original_zero_based_clause_index": 5937,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -7367,
+        -3009
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "020102120210",
+      "factor_length": 12,
+      "finite_witness": "20102012102130201021202103201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "020102120210",
+      "offset": 13,
+      "original_zero_based_clause_index": 19309,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -7716,
+        -2266
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "020121021202",
+      "factor_length": 12,
+      "finite_witness": "20102012102130201210212023201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "020121021202",
+      "offset": 13,
+      "original_zero_based_clause_index": 20224,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -10247,
+        -9340
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "021012021020",
+      "factor_length": 12,
+      "finite_witness": "20102012102130210120210203201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "021012021020",
+      "offset": 13,
+      "original_zero_based_clause_index": 24482,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -10376,
+        -9376
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "021012102010",
+      "factor_length": 12,
+      "finite_witness": "20102012102130210121020103201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "021012102010",
+      "offset": 13,
+      "original_zero_based_clause_index": 24576,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -10381,
+        -9378
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "021012102120",
+      "factor_length": 12,
+      "finite_witness": "20102012102130210121021203201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "021012102120",
+      "offset": 13,
+      "original_zero_based_clause_index": 24582,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -9611,
+        -9378
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "021020102101",
+      "factor_length": 12,
+      "finite_witness": "20102012102130210201021013201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "021020102101",
+      "offset": 13,
+      "original_zero_based_clause_index": 25192,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -10283,
+        -7607
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "021201210120",
+      "factor_length": 12,
+      "finite_witness": "20102012102130212012101203201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "021201210120",
+      "offset": 13,
+      "original_zero_based_clause_index": 26954,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -10376,
+        -7367
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "021202101210",
+      "factor_length": 12,
+      "finite_witness": "20102012102130212021012103201020121021",
+      "kind": "external-double-separator",
+      "normalized_factor": "021202101210",
+      "offset": 13,
+      "original_zero_based_clause_index": 27197,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -27956,
+        -18340
+      ],
+      "construction_note": "All Hall-compatible D-1 padding options searched",
+      "factor": "303123031303",
+      "factor_length": 12,
+      "finite_witness": "01021202320123202321012010",
+      "kind": "expanded-multi-separator",
+      "normalized_factor": "232012320232",
+      "offset": 7,
+      "original_zero_based_clause_index": 73285,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -29160,
+        -21547
+      ],
+      "construction_note": "All Hall-compatible D-1 padding options searched",
+      "factor": "303230312303",
+      "factor_length": 12,
+      "finite_witness": "01021202321232012321012010",
+      "kind": "expanded-multi-separator",
+      "normalized_factor": "232123201232",
+      "offset": 7,
+      "original_zero_based_clause_index": 76443,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -9376,
+        -279
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "0102101210201",
+      "factor_length": 13,
+      "finite_witness": "21012021012103010210121020132101202101210",
+      "kind": "external-double-separator",
+      "normalized_factor": "0102101210201",
+      "offset": 14,
+      "original_zero_based_clause_index": 78749,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -10376,
+        -387
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "0102120210121",
+      "factor_length": 13,
+      "finite_witness": "21012021012103010212021012132101202101210",
+      "kind": "external-double-separator",
+      "normalized_factor": "0102120210121",
+      "offset": 14,
+      "original_zero_based_clause_index": 79493,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -10381,
+        -388
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "0102120210201",
+      "factor_length": 13,
+      "finite_witness": "21012021012103010212021020132101202101210",
+      "kind": "external-double-separator",
+      "normalized_factor": "0102120210201",
+      "offset": 14,
+      "original_zero_based_clause_index": 79498,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -9612,
+        -3053
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "0121021202101",
+      "factor_length": 13,
+      "finite_witness": "21012021012103012102120210132101202101210",
+      "kind": "external-double-separator",
+      "normalized_factor": "0121021202101",
+      "offset": 14,
+      "original_zero_based_clause_index": 97820,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -7367,
+        -387
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "0201021202101",
+      "factor_length": 13,
+      "finite_witness": "21012021012103020102120210132101202101210",
+      "kind": "external-double-separator",
+      "normalized_factor": "0201021202101",
+      "offset": 14,
+      "original_zero_based_clause_index": 127482,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -7367,
+        -388
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "0201021202102",
+      "factor_length": 13,
+      "finite_witness": "21012021012103020102120210232101202101210",
+      "kind": "external-double-separator",
+      "normalized_factor": "0201021202102",
+      "offset": 14,
+      "original_zero_based_clause_index": 127483,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -7716,
+        -3053
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "0201210212021",
+      "factor_length": 13,
+      "finite_witness": "21012021012103020121021202132101202101210",
+      "kind": "external-double-separator",
+      "normalized_factor": "0201210212021",
+      "offset": 14,
+      "original_zero_based_clause_index": 129882,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -9376,
+        -7367
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "0210121020102",
+      "factor_length": 13,
+      "finite_witness": "21012021012103021012102010232101202101210",
+      "kind": "external-double-separator",
+      "normalized_factor": "0210121020102",
+      "offset": 14,
+      "original_zero_based_clause_index": 141294,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -10283,
+        -1998
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "0212012101202",
+      "factor_length": 13,
+      "finite_witness": "21012021012103021201210120232101202101210",
+      "kind": "external-double-separator",
+      "normalized_factor": "0212012101202",
+      "offset": 14,
+      "original_zero_based_clause_index": 147532,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -10376,
+        -3009
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "0212021012102",
+      "factor_length": 13,
+      "finite_witness": "21012021012103021202101210232101202101210",
+      "kind": "external-double-separator",
+      "normalized_factor": "0212021012102",
+      "offset": 14,
+      "original_zero_based_clause_index": 148168,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -28296,
+        -28293
+      ],
+      "construction_note": "All Hall-compatible D-1 padding options searched",
+      "factor": "3031323031303",
+      "factor_length": 13,
+      "finite_witness": "01210120232021232023210120102",
+      "kind": "expanded-multi-separator",
+      "normalized_factor": "2320212320232",
+      "offset": 8,
+      "original_zero_based_clause_index": 271368,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        -29168,
+        -28293
+      ],
+      "construction_note": "All Hall-compatible D-1 padding options searched",
+      "factor": "3032303132303",
+      "factor_length": 13,
+      "finite_witness": "01210120232123202123210120102",
+      "kind": "expanded-multi-separator",
+      "normalized_factor": "2321232021232",
+      "offset": 8,
+      "original_zero_based_clause_index": 277383,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        279,
+        7364,
+        9376,
+        9612,
+        10375
+      ],
+      "construction_note": "Preferred equal Hall margins, two new separators",
+      "factor": "010210121020121",
+      "factor_length": 15,
+      "finite_witness": "21202101202120130102101210201213212021012021201",
+      "kind": "external-double-separator",
+      "normalized_factor": "010210121020121",
+      "offset": 16,
+      "original_zero_based_clause_index": 291501,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ]
+      ]
+    },
+    {
+      "clause": [
+        17545,
+        21495,
+        27022,
+        27656,
+        29141
+      ],
+      "construction_note": "All Hall-compatible D-1 padding options searched",
+      "factor": "303230231323023",
+      "factor_length": 15,
+      "finite_witness": "01020121023212312021231210120210",
+      "kind": "expanded-multi-separator",
+      "normalized_factor": "232123120212312",
+      "offset": 9,
+      "original_zero_based_clause_index": 1655757,
+      "separator": "3",
+      "source_to_normalized": [
+        [
+          "0",
+          "3"
+        ],
+        [
+          "1",
+          "0"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ]
+    }
+  ],
+  "source_core_factor_map_sha256": "a94ac1bab1e4458148a50c406ba2fbc639e4077b545af523f1383f8eb3d59381",
+  "source_extension_triage_sha256": "be83c729af3a28b63ae6b8b0bc63e4db9becc4f7a01d668689ad982193b75269",
+  "source_unresolved_count": 27,
+  "status": "supplementary finite extension candidates; independently verified in the completed source audit",
+  "still_unresolved": [],
+  "still_unresolved_count": 0
+}

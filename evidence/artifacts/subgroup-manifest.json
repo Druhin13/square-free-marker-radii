@@ -1,0 +1,124 @@
+{
+  "archive_count": 23,
+  "archives": [
+    {
+      "git_blob_sha1": "1582246633bca36b573b21009038127ee4892ca2",
+      "relative_path": "proofs/m3/cycle012/kbl-m3-r5-cycle012-core-extension-triage.json",
+      "size_bytes": 4172070
+    },
+    {
+      "git_blob_sha1": "32697c6734e9eacc745f0968a03436ca38ecfe72",
+      "relative_path": "proofs/m3/cycle012/kbl-m3-r5-cycle012-core-factor-map.json",
+      "size_bytes": 2936590
+    },
+    {
+      "git_blob_sha1": "9d39056d3f2c0f5f1a40e1e7bedc8173e284f447",
+      "relative_path": "proofs/m3/cycle012/kbl-m3-r5-cycle012-core-lemmas.drat",
+      "size_bytes": 404191
+    },
+    {
+      "git_blob_sha1": "72e7c712879860ad7ca38805a338f56b2b15da9c",
+      "relative_path": "proofs/m3/cycle012/kbl-m3-r5-cycle012-core.cnf",
+      "size_bytes": 266512
+    },
+    {
+      "git_blob_sha1": "5763eb66d5f11c3d224d476e0f0974b4feabb76b",
+      "relative_path": "proofs/m3/cycle012/kbl-m3-r5-cycle012-extra-extensions.json",
+      "size_bytes": 18245
+    },
+    {
+      "git_blob_sha1": "69a6c41f8b40360c16e61e68e2a28e2658ae0e37",
+      "relative_path": "proofs/m3/cycle012/kbl-m3-r5-cycle012-global-obstruction-audit.json",
+      "size_bytes": 1735
+    },
+    {
+      "git_blob_sha1": "0824a6bf8136bc4afd1e7ee0229f5bac236f8e8a",
+      "relative_path": "proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-biinfinite-obstruction-audit.json",
+      "size_bytes": 2420
+    },
+    {
+      "git_blob_sha1": "8c0e09bfdff1b24e6233f987601c9d9cd7cd9d6e",
+      "relative_path": "proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-certified-only-sat-audit.json",
+      "size_bytes": 3681
+    },
+    {
+      "git_blob_sha1": "3188ab35d0d423bdf51094d5937e4bfd60b9a4c9",
+      "relative_path": "proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-core-extension-triage.json",
+      "size_bytes": 9527546
+    },
+    {
+      "git_blob_sha1": "a32d65a79e88865c87ab903fdb120d4d38690987",
+      "relative_path": "proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-core-factor-map.json",
+      "size_bytes": 6183720
+    },
+    {
+      "git_blob_sha1": "f7fe863713a4b9f8ff3a2b3478938de733b8bd35",
+      "relative_path": "proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-core-lemmas.drat",
+      "size_bytes": 1063898
+    },
+    {
+      "git_blob_sha1": "38346b36d0c53d0c8d1e0de53af9d30e633aabe4",
+      "relative_path": "proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-core.cnf",
+      "size_bytes": 549604
+    },
+    {
+      "git_blob_sha1": "5a8a4c49715a11e18135ccaccb65a77f434d6836",
+      "relative_path": "proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-extendible-only.cnf",
+      "size_bytes": 549532
+    },
+    {
+      "git_blob_sha1": "6d63fd8815b7c4e7ee6ceae1d5a509fd888c1a25",
+      "relative_path": "proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-extra-extensions-audit.json",
+      "size_bytes": 3846
+    },
+    {
+      "git_blob_sha1": "3a1bd50995e23b11fcae4f4678f0f46a1035e304",
+      "relative_path": "proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-extra-extensions.json",
+      "size_bytes": 5683
+    },
+    {
+      "git_blob_sha1": "adf614298d77df85ec03c9c1b19d34aad3d59c2c",
+      "relative_path": "proofs/m3/normal-v4/kbl-m3-r5-normal-v4-biinfinite-obstruction-audit.json",
+      "size_bytes": 2242
+    },
+    {
+      "git_blob_sha1": "33a07bd4313d1d89f706d7da5862ad492aaad281",
+      "relative_path": "proofs/m3/normal-v4/kbl-m3-r5-normal-v4-core-extension-triage.json",
+      "size_bytes": 19135188
+    },
+    {
+      "git_blob_sha1": "abab157ec9d81a3f8d53b389e14db5b243cc6c9c",
+      "relative_path": "proofs/m3/normal-v4/kbl-m3-r5-normal-v4-core-factor-map.json",
+      "size_bytes": 12396799
+    },
+    {
+      "git_blob_sha1": "8714e8ce3fb5cf29c51fcf69afcaac407dc8d46e",
+      "relative_path": "proofs/m3/normal-v4/kbl-m3-r5-normal-v4-core-lemmas.drat",
+      "size_bytes": 2257720
+    },
+    {
+      "git_blob_sha1": "0f8a537965bbd71a6f457ba72c75c8dcceea224c",
+      "relative_path": "proofs/m3/normal-v4/kbl-m3-r5-normal-v4-core.cnf",
+      "size_bytes": 1119417
+    },
+    {
+      "git_blob_sha1": "fef2c3ce22ee14d089207c57218f9041f62094b4",
+      "relative_path": "proofs/m3/normal-v4/kbl-m3-r5-normal-v4-extendible-only.cnf",
+      "size_bytes": 1119219
+    },
+    {
+      "git_blob_sha1": "c0e3bd6ecc9d2f3d4a4a9422fa6d521d135aab28",
+      "relative_path": "proofs/m3/normal-v4/kbl-m3-r5-normal-v4-extra-extensions-audit.json",
+      "size_bytes": 3525
+    },
+    {
+      "git_blob_sha1": "b13e0836d40b50e2b6fdd672d74262e98791dafa",
+      "relative_path": "proofs/m3/normal-v4/kbl-m3-r5-normal-v4-extra-extensions.json",
+      "size_bytes": 10447
+    }
+  ],
+  "description": "Original proof objects identified by their exact Git blob SHA-1 and byte count.",
+  "schema_version": 1,
+  "scope": "quaternary bi-infinite square-free marker rules: r=5, separation >=3, domination <=2",
+  "title": "Radius-five subgroup-obstruction certificate registry"
+}

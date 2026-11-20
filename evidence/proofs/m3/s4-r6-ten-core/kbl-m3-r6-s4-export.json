@@ -1,0 +1,48 @@
+{
+  "clauses": 1429489,
+  "cnf_bytes": 39463151,
+  "cnf_relative_path": "experiments/m3/kbl-q4-m3-r6-s4.cnf",
+  "cnf_sha256": "95c9c6aa8e1cf8d14200feb59a4d9e4160a7818cf63e35eb19e6e3ab4310da6e",
+  "family_clause_row_sha256": {
+    "14": "afc71b4fc97758b9b334816369945cb650e58e408a27fe4375048f5b6dec594a",
+    "15": "68fcfa2d3709ece71b1bb6429f441a2e411baff3a28371bfe9821596774550e4",
+    "17": "93336bdf6505cd168e773f10e196f3c9e50cf8315b5b335a35b59d0c4aa72ad1"
+  },
+  "interpretation": "Complete finite-factor CNF: SAT plus independent model audit proves S4 radius-six existence on true bi-infinite squarefree shift. UNSAT alone proves no true-shift theorem.",
+  "original_S4_preflight_sha256": "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0",
+  "parameters": {
+    "group": "S4",
+    "m": 3,
+    "q": 4,
+    "r": 6
+  },
+  "scope": "ALL finite squarefree source orbits; NO SAT/UNSAT assertion",
+  "shortened_clauses": {
+    "14": 0,
+    "15": 2,
+    "17": 91
+  },
+  "source_clause_policy": "Every finite-squarefree S4 factor orbit is retained as a source row. Duplicate literals within a row collapse; rows are not deduplicated. Every length13 window is S4 normalized independently.",
+  "source_lengths_in_order": [
+    14,
+    15,
+    17
+  ],
+  "source_orbit_counts": {
+    "14": 66047,
+    "15": 173183,
+    "17": 1190259
+  },
+  "source_zero_based_first_row": {
+    "14": 0,
+    "15": 66047,
+    "17": 239230
+  },
+  "status": "RADIUS SIX S4 COMPLETE FINITE FACTOR CNF EXPORTED",
+  "unit_clauses": {
+    "14": 0,
+    "15": 2,
+    "17": 0
+  },
+  "variables": 25192
+}

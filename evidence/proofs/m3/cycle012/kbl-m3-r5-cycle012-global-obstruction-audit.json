@@ -1,0 +1,40 @@
+{
+  "checked_unsat_proof": "s VERIFIED",
+  "checker_exit_code": 0,
+  "construction_classes": {
+    "expanded-multi-separator": 5,
+    "external-double-separator": 22,
+    "hall": 13,
+    "multi-separator": 6,
+    "padded-multi-separator": 12676,
+    "single-separator": 25
+  },
+  "factor_length_classes": {
+    "12": 2920,
+    "13": 5464,
+    "15": 4363
+  },
+  "global_theorem": "No radius-5 marker rule invariant under any chosen alphabet 3-cycle on the bi-infinite quaternary squarefree subshift satisfies separation>=3 and domination<=2",
+  "input_sha256": {
+    "kbl-m3-r5-cycle012-core-extension-triage.json": "be83c729af3a28b63ae6b8b0bc63e4db9becc4f7a01d668689ad982193b75269",
+    "kbl-m3-r5-cycle012-core-factor-map.json": "a94ac1bab1e4458148a50c406ba2fbc639e4077b545af523f1383f8eb3d59381",
+    "kbl-m3-r5-cycle012-core-lemmas.drat": "50dec59d3452e1868c6a79dd0795f1639f6e12df1934e54da3b1ef4f2754d2ad",
+    "kbl-m3-r5-cycle012-core.cnf": "4c3eb47253ff81c9375a7e062ea3baa3d906cbe6d9966d80598d37f0a63a1ae6",
+    "kbl-m3-r5-cycle012-extra-extensions.json": "9d5d6cb3ec6109d75cd43c56ef7d37b86f35f1fedbc2a9d5bf364968124d249a"
+  },
+  "mathematical_inputs": [
+    "classical squarefree uniformly recurrent Hall-Thue ternary morphism",
+    "finite separator lemma with D-1 Hall-extendible ternary exteriors"
+  ],
+  "new_certificate_records": 27,
+  "not_claimed": [
+    "minimum radius for 3-cycle-invariant rules at r>=6",
+    "generalization in m"
+  ],
+  "old_certificate_records": 12720,
+  "orbit_length11_contexts": 29312,
+  "original_core_clauses": 12747,
+  "original_named_length11_contexts": 87936,
+  "scope": "q4,m3,r5 single-C3-invariant shift-equivariant Boolean marker rule",
+  "status": "FULL FINITE AND DRAT CHECKS PASSED"
+}

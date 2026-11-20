@@ -1,0 +1,16 @@
+# Reproducibility builds and temporary reports (never commit generated outputs)
+evidence/.build/
+**/__pycache__/
+*.py[cod]
+.DS_Store
+/kbl-*.json
+/fresh-*.json
+/verification-report.json
+
+# Local LaTeX build products
+*.aux
+*.bbl
+*.blg
+*.fls
+*.fdb_latexmk
+*.synctex.gz

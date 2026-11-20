@@ -1,0 +1,55 @@
+name: Verify published finite-certificate evidence
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integrity:
+    name: Verify exact release file checksums
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository (pinned)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Verify SHA-256 of all packaged source and data files
+        run: sha256sum --check --strict SHA256SUMS
+      - name: Run finite-source and distribution regression tests
+        working-directory: evidence
+        run: python3 -B -m unittest discover -s tests -v
+      - name: Count and verify original proof objects
+        working-directory: evidence
+        run: |
+          python3 -B - <<'PY'
+          import reproduce
+          report = reproduce.verify_origins()
+          assert report['proof_count'] == 52
+          assert report['proof_bytes'] == 115720144
+          assert report['registries_valid'] is True
+          print('PASS: all 52 original proof objects and four registries verified')
+          PY
+
+  reproduce:
+    name: Independent finite proof family / ${{ matrix.case }}
+    needs: integrity
+    runs-on: ubuntu-24.04
+    timeout-minutes: 50
+    strategy:
+      fail-fast: false
+      matrix:
+        case: [main, subgroups, swap, double, exact, trust, lrat]
+    steps:
+      - name: Checkout repository (pinned)
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Reproduce one certificate family in isolated runner
+        working-directory: evidence
+        run: |
+          python3 -B reproduce.py --case '${{ matrix.case }}' \
+            --report "$RUNNER_TEMP/kbl-${{ matrix.case }}.json"
+      - name: Verify original checked-in files remain unchanged
+        run: sha256sum --check --strict SHA256SUMS

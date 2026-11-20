@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Cite the exact evidence-repository release or commit used; cite the mathematical manuscript separately when its public record is available."
+type: software
+title: "Exact Marker Radii on the Quaternary Square-Free Shift under Alphabet Symmetry"
+authors:
+  - given-names: Druhin
+    family-names: Tarafder
+    orcid: "https://orcid.org/0009-0008-3584-711X"
+repository-code: "https://github.com/Druhin13/square-free-marker-radii"
+url: "https://github.com/Druhin13/square-free-marker-radii"
+keywords:
+  - square-free words
+  - symbolic dynamics
+  - coding radius
+  - verified SAT certificates
+  - permutation symmetry

@@ -1,0 +1,157 @@
+{
+  "artifact_count": 21,
+  "artifacts": [
+    {
+      "id": "unrestricted-r4-core",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/kbl-q4-m3-r4-core.cnf",
+      "sha256": "a2f66feec531e8cd08abe79f9a619eb0177129c482577521d735b133060467f3",
+      "size_bytes": 485473
+    },
+    {
+      "id": "unrestricted-r4-direct-proof",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/kbl-q4-m3-r4-core-direct-proof.drat",
+      "sha256": "35b9366639739e68e0134b27638c1042251fd5fd32774d8d8cfa040e2d53faf7",
+      "size_bytes": 1450181
+    },
+    {
+      "id": "unrestricted-r4-easy-core",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/kbl-q4-m3-r4-easy-core.cnf",
+      "sha256": "925d9b7e28384bca92f29818b97a24d37b8aabe19b39d65041c4b7ca7ca5a833",
+      "size_bytes": 213129
+    },
+    {
+      "id": "unrestricted-r4-easy-witnesses",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/kbl-q4-m3-r4-easy-core-witnesses.json",
+      "sha256": "e07105792b091aaad3080b58a9fc016febd3786d7f620c3b961884c8ed4cc277",
+      "size_bytes": 2349406
+    },
+    {
+      "id": "unrestricted-r4-remaining-extensions",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/kbl-q4-m3-r4-remaining-core-extensions.json",
+      "sha256": "870e27d7af896aa12d2ad075a9a06007bfbf310f4a0090bb0a6d30085e9123e3",
+      "size_bytes": 6410443
+    },
+    {
+      "id": "unrestricted-r5-model",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/kbl-q4-m3-r5-result.txt",
+      "sha256": "d5ba5df3f93f6e996ffe1164d2dcb2886e0f530638f894b45a090ea79d2eb7c7",
+      "size_bytes": 595752
+    },
+    {
+      "id": "s4-r6-complete-cnf",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-q4-m3-r6-s4.cnf",
+      "sha256": "95c9c6aa8e1cf8d14200feb59a4d9e4160a7818cf63e35eb19e6e3ab4310da6e",
+      "size_bytes": 39463151
+    },
+    {
+      "id": "s4-r6-source-export",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-export.json",
+      "sha256": "1ad0a70c9f6d70c7465f78e14ec8b36e0d5b39e8e34d4c3758f6ad5d6458a17a",
+      "size_bytes": 1584
+    },
+    {
+      "id": "s4-r6-orbit-preflight",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-orbit-preflight.json",
+      "sha256": "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0",
+      "size_bytes": 2793
+    },
+    {
+      "id": "s4-r6-cnf-source-audit",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-cnf-audit.json",
+      "sha256": "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15",
+      "size_bytes": 1598
+    },
+    {
+      "id": "s4-r6-ten-clause-core",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-ten-core/core.cnf",
+      "sha256": "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14",
+      "size_bytes": 195
+    },
+    {
+      "id": "s4-r6-reduced-drat",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-ten-core/core-lemmas.drat",
+      "sha256": "16c6f25a8d3136a0b6ed916c639c17d99080263ea40008b51666dfc62287a700",
+      "size_bytes": 222
+    },
+    {
+      "id": "s4-r6-original-drat",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-proof.drat",
+      "sha256": "877b2d2c3417735de7a2d74b9e7359bd4fe62a495ac3bdbe28af9c28a31fa6a3",
+      "size_bytes": 11092
+    },
+    {
+      "id": "s4-r6-solver-result",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-result.txt",
+      "sha256": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+      "size_bytes": 16
+    },
+    {
+      "id": "s4-r6-original-source-audit",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-ten-core/kbl-m3-r6-s4-ten-core-biinfinite-audit.json",
+      "sha256": "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7",
+      "size_bytes": 14722
+    },
+    {
+      "id": "s4-r6-corrected-hall-extremities",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-full-tail-certificates/kbl-m3-r6-s4-ten-core-full-tail-completions.json",
+      "sha256": "46978c02d61491302a647baba418e9dad1921a069fce8ed08fce21af346d7699",
+      "size_bytes": 11966
+    },
+    {
+      "id": "s4-r6-independent-extension-audit",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-r6-full-tail-certificates/kbl-m3-r6-s4-full-tail-independent-audit.json",
+      "sha256": "f83adca618e4829cd1a9cbe51395bebc1b2ae91f81dda2baaff63671e1feda97",
+      "size_bytes": 3116
+    },
+    {
+      "id": "s4-l14-orbit-preflight",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-L14-nine-color/kbl-m3-r6-s4-orbit-preflight.json",
+      "sha256": "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0",
+      "size_bytes": 2793
+    },
+    {
+      "id": "s4-l14-nine-coloring",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-L14-nine-color/kbl-q4-m3-s4-L14-coloring.json",
+      "sha256": "ee755eff86ae9607037a1ee1a68322a73384cbc5e75b8d513a5ff2616747900d",
+      "size_bytes": 463640
+    },
+    {
+      "id": "s4-l14-coloring-manifest",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-L14-nine-color/kbl-m3-s4-L14-coloring-export.json",
+      "sha256": "c55995dc2e4feba424f937f00e9b0ffc17172c8345485ecab62a54f441c0183a",
+      "size_bytes": 661
+    },
+    {
+      "id": "s4-l14-independent-color-audit",
+      "integrity_status": "verified",
+      "relative_path": "proofs/m3/s4-L14-nine-color/kbl-m3-s4-L14-coloring-audit.json",
+      "sha256": "e3ee9c81e8190ae537162ac58ffa5a51c30ae1a6a4393244d91a3c26d56c7370",
+      "size_bytes": 1440
+    }
+  ],
+  "description": "21 SHA-256-identified proof objects supporting the finite certificate checks.",
+  "schema_version": 1,
+  "sha256_definition": "SHA-256 of exact original file bytes, without normalization or rewriting.",
+  "subject": "quaternary bi-infinite square-free marker rules with separation >=3 and domination <=2",
+  "title": "Exact marker radii: unrestricted and full-symmetry certificate registry"
+}

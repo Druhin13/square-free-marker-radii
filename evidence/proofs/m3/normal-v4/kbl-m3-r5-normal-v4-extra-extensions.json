@@ -1,0 +1,452 @@
+{
+  "candidates": [
+    {
+      "clause": [
+        -3051,
+        -1083
+      ],
+      "factor": "010301303103",
+      "factor_length": 12,
+      "factor_orbit_index": 2839,
+      "finite_witness": "01020121020130102012021023010201210201",
+      "first_separator_index": 12,
+      "kind": "external-double-separator",
+      "left_hall_factor": "010201210201",
+      "normalized_factor": "010201202102",
+      "offset": 13,
+      "original_zero_based_clause_index": 2839,
+      "right_hall_factor": "010201210201",
+      "second_separator_index": 25,
+      "separator": "3",
+      "separator_span": 13,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "3"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ],
+      "unused_original_symbol": "2"
+    },
+    {
+      "clause": [
+        -18670,
+        -15886
+      ],
+      "factor": "030203202303",
+      "factor_length": 12,
+      "factor_orbit_index": 41644,
+      "finite_witness": "01020121020130201021012023010201210201",
+      "first_separator_index": 12,
+      "kind": "external-double-separator",
+      "left_hall_factor": "010201210201",
+      "normalized_factor": "020102101202",
+      "offset": 13,
+      "original_zero_based_clause_index": 41644,
+      "right_hall_factor": "010201210201",
+      "second_separator_index": 25,
+      "separator": "3",
+      "separator_span": 13,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "3"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ],
+      "unused_original_symbol": "1"
+    },
+    {
+      "clause": [
+        -17359,
+        -12797
+      ],
+      "factor": "031030131030",
+      "factor_length": 12,
+      "factor_orbit_index": 45503,
+      "finite_witness": "01020121020130210201210203010201210201",
+      "first_separator_index": 12,
+      "kind": "external-double-separator",
+      "left_hall_factor": "010201210201",
+      "normalized_factor": "021020121020",
+      "offset": 13,
+      "original_zero_based_clause_index": 45503,
+      "right_hall_factor": "010201210201",
+      "second_separator_index": 25,
+      "separator": "3",
+      "separator_span": 13,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "3"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ],
+      "unused_original_symbol": "2"
+    },
+    {
+      "clause": [
+        -21582,
+        -1083
+      ],
+      "factor": "032303203023",
+      "factor_length": 12,
+      "factor_orbit_index": 56575,
+      "finite_witness": "01020121020130212021020123010201210201",
+      "first_separator_index": 12,
+      "kind": "external-double-separator",
+      "left_hall_factor": "010201210201",
+      "normalized_factor": "021202102012",
+      "offset": 13,
+      "original_zero_based_clause_index": 56575,
+      "right_hall_factor": "010201210201",
+      "second_separator_index": 25,
+      "separator": "3",
+      "separator_span": 13,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "3"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ],
+      "unused_original_symbol": "1"
+    },
+    {
+      "clause": [
+        -15366,
+        -1083
+      ],
+      "factor": "0103013031030",
+      "factor_length": 13,
+      "factor_orbit_index": 7443,
+      "finite_witness": "01020121020103010201202102030102012102010",
+      "first_separator_index": 13,
+      "kind": "external-double-separator",
+      "left_hall_factor": "0102012102010",
+      "normalized_factor": "0102012021020",
+      "offset": 14,
+      "original_zero_based_clause_index": 65073,
+      "right_hall_factor": "0102012102010",
+      "second_separator_index": 27,
+      "separator": "3",
+      "separator_span": 14,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "3"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ],
+      "unused_original_symbol": "2"
+    },
+    {
+      "clause": [
+        -14268,
+        -2011
+      ],
+      "factor": "0120102101201",
+      "factor_length": 13,
+      "factor_orbit_index": 13819,
+      "finite_witness": "01020121020103012010210120130102012102010",
+      "first_separator_index": 13,
+      "kind": "external-double-separator",
+      "left_hall_factor": "0102012102010",
+      "normalized_factor": "0120102101201",
+      "offset": 14,
+      "original_zero_based_clause_index": 71449,
+      "right_hall_factor": "0102012102010",
+      "second_separator_index": 27,
+      "separator": "3",
+      "separator_span": 14,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "3"
+        ]
+      ],
+      "unused_original_symbol": "3"
+    },
+    {
+      "clause": [
+        -12806,
+        -5833
+      ],
+      "factor": "0131030130313",
+      "factor_length": 13,
+      "factor_orbit_index": 40100,
+      "finite_witness": "01020121020103012102012021230102012102010",
+      "first_separator_index": 13,
+      "kind": "external-double-separator",
+      "left_hall_factor": "0102012102010",
+      "normalized_factor": "0121020120212",
+      "offset": 14,
+      "original_zero_based_clause_index": 97730,
+      "right_hall_factor": "0102012102010",
+      "second_separator_index": 27,
+      "separator": "3",
+      "separator_span": 14,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "3"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ],
+      "unused_original_symbol": "2"
+    },
+    {
+      "clause": [
+        -17355,
+        -3051
+      ],
+      "factor": "0310301303103",
+      "factor_length": 13,
+      "factor_orbit_index": 119317,
+      "finite_witness": "01020121020103021020120210230102012102010",
+      "first_separator_index": 13,
+      "kind": "external-double-separator",
+      "left_hall_factor": "0102012102010",
+      "normalized_factor": "0210201202102",
+      "offset": 14,
+      "original_zero_based_clause_index": 176947,
+      "right_hall_factor": "0102012102010",
+      "second_separator_index": 27,
+      "separator": "3",
+      "separator_span": 14,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "3"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ],
+      "unused_original_symbol": "2"
+    },
+    {
+      "clause": [
+        -20077,
+        -10286
+      ],
+      "factor": "0320302303203",
+      "factor_length": 13,
+      "factor_orbit_index": 138032,
+      "finite_witness": "01020121020103021020120210230102012102010",
+      "first_separator_index": 13,
+      "kind": "external-double-separator",
+      "left_hall_factor": "0102012102010",
+      "normalized_factor": "0210201202102",
+      "offset": 14,
+      "original_zero_based_clause_index": 195662,
+      "right_hall_factor": "0102012102010",
+      "second_separator_index": 27,
+      "separator": "3",
+      "separator_span": 14,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "3"
+        ],
+        [
+          "2",
+          "1"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ],
+      "unused_original_symbol": "1"
+    },
+    {
+      "clause": [
+        3051,
+        5331,
+        10283,
+        15366,
+        20077
+      ],
+      "factor": "012102120121012",
+      "factor_length": 15,
+      "factor_orbit_index": 144149,
+      "finite_witness": "01020121020102130121021201210123010201210201021",
+      "first_separator_index": 15,
+      "kind": "external-double-separator",
+      "left_hall_factor": "010201210201021",
+      "normalized_factor": "012102120121012",
+      "offset": 16,
+      "original_zero_based_clause_index": 352931,
+      "right_hall_factor": "010201210201021",
+      "second_separator_index": 31,
+      "separator": "3",
+      "separator_span": 16,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "2"
+        ],
+        [
+          "3",
+          "3"
+        ]
+      ],
+      "unused_original_symbol": "3"
+    },
+    {
+      "clause": [
+        5333,
+        10286,
+        12806,
+        16385,
+        17355
+      ],
+      "factor": "013031030130313",
+      "factor_length": 15,
+      "factor_orbit_index": 252004,
+      "finite_witness": "01020121020102130120210201202123010201210201021",
+      "first_separator_index": 15,
+      "kind": "external-double-separator",
+      "left_hall_factor": "010201210201021",
+      "normalized_factor": "012021020120212",
+      "offset": 16,
+      "original_zero_based_clause_index": 460786,
+      "right_hall_factor": "010201210201021",
+      "second_separator_index": 31,
+      "separator": "3",
+      "separator_span": 16,
+      "source_to_normalized": [
+        [
+          "0",
+          "0"
+        ],
+        [
+          "1",
+          "1"
+        ],
+        [
+          "2",
+          "3"
+        ],
+        [
+          "3",
+          "2"
+        ]
+      ],
+      "unused_original_symbol": "2"
+    }
+  ],
+  "extra_source_count": 11,
+  "hall_prefix_length": 32768,
+  "m": 3,
+  "new_candidate_count": 11,
+  "q": 4,
+  "r": 5,
+  "scope": "finite extension candidates; the mathematical certificate is independently verified elsewhere",
+  "source_origin_sha256": "a6dc740e073adf3ba4dafb14f958997e32511f829e161867fd02799eaee10744",
+  "source_triage_sha256": "3b66c4b75cba46a597f6f666f81123eebd0d2d4a3dd949ce217b847cbf1ed704",
+  "status": "ALL ELEVEN EXTERNAL-DOUBLE-SEPARATOR CANDIDATES CONSTRUCTED",
+  "source_sat_audit_sha256": "3923121d647e6bef1bc4a86e02d0717828e8c3930e8db2760b2340f34fffe298",
+  "subgroup": "normal V4 = {e,(01)(23),(02)(13),(03)(12)}",
+  "unresolved_after_candidate_construction": 0
+}
