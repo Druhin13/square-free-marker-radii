@@ -1,6 +1,6 @@
 # Exact Marker Radii on the Quaternary Square-Free Shift under Alphabet Symmetry
 
-Reproducible computational evidence for the exact marker-radius classification established by Druhin Tarafder.
+Finite proof certificates, verification software, and reproducibility materials for the exact marker-radius classification established by Druhin Tarafder.
 
 ## Result
 
@@ -12,15 +12,11 @@ Let X be the bi-infinite square-free shift over an alphabet of four letters. Con
 | Order greater than two; no four-cycle | **6** | 13 |
 | Contains a four-cycle | **7** | 7 |
 
-Consequently, the unrestricted optimum is 5 and the fully S₄-invariant optimum is 7. These values apply to the specified alphabet and marker parameters; they are not claimed for other parameter choices.
+Consequently, the unrestricted optimum is 5 and the fully S₄-invariant optimum is 7.
 
 ## Paper
 
-This evidence repository accompanies *Exact Marker Radii on the Quaternary
-Square-Free Shift under Alphabet Symmetry* by Druhin Tarafder. The complete
-mathematical argument is in the manuscript, which is not distributed here.
-A permanent public manuscript link will be provided when the paper is posted;
-no arXiv identifier or DOI is asserted without an existing public record.
+This repository provides the finite computational evidence for *Exact Marker Radii on the Quaternary Square-Free Shift under Alphabet Symmetry* by Druhin Tarafder. The accompanying manuscript presents the complete mathematical proofs.
 
 ## Reproduce the finite certificates
 
@@ -49,9 +45,7 @@ The verification runs seven families (`main`, `subgroups`, `swap`, `double`, `ex
 | [`evidence/benchmarks/`](evidence/benchmarks/) | Reproducible measurements from later controlled solver runs |
 | [`SHA256SUMS`](SHA256SUMS) | SHA-256 digests for all other distributed files |
 | [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) | Upstream checker revisions, authors, and licensing |
-| [`evidence/tools/verify_distribution_archive.py`](evidence/tools/verify_distribution_archive.py) | Optional standalone ZIP integrity audit (not a checkout test) |
-
-The accompanying manuscript is maintained separately and is not part of this evidence-only release. The repository contains neither a purported final preprint nor a substitute for the manuscript's mathematical proofs.
+| [`evidence/tools/verify_distribution_archive.py`](evidence/tools/verify_distribution_archive.py) | Integrity checks for exported evidence archives |
 
 ## Verification scope
 
@@ -59,6 +53,6 @@ The software checks the finite proof obligations: certified UNSAT cores and sour
 
 ## Citation and licensing
 
-Credit Druhin Tarafder and cite the exact commit or release checked, alongside the manuscript once available. Citation metadata is provided in [CITATION.cff](CITATION.cff). This repository does not claim an unassigned DOI or arXiv identifier.
+Cite the specific evidence release or commit used, along with the accompanying paper. Repository citation metadata is provided in [CITATION.cff](CITATION.cff).
 
 Original verification software is licensed under MIT. Original research data, mathematical certificates, and documentation are licensed under CC BY 4.0. Upstream checker licenses are preserved; see [LICENSE.md](LICENSE.md) for the file-by-file scope and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md) for dependency attribution.
