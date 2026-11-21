@@ -24,10 +24,10 @@ from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
 CASES = {
-    "r4": ("proofs/m3/kbl-q4-m3-r4-core.cnf", 12768, 24292, "artifacts/manifest.json", "artifacts", "sha256"),
-    "c3": ("proofs/m3/cycle012/kbl-m3-r5-cycle012-core.cnf", 29312, 12747, "artifacts/subgroup-manifest.json", "archives", "git_blob_sha1"),
-    "normal-v4": ("proofs/m3/normal-v4/kbl-m3-r5-normal-v4-core.cnf", 21984, 53487, "artifacts/subgroup-manifest.json", "archives", "git_blob_sha1"),
-    "intransitive-v4": ("proofs/m3/intransitive-v4/kbl-m3-r5-intransitive-v4-core.cnf", 21984, 26819, "artifacts/subgroup-manifest.json", "archives", "git_blob_sha1"),
+    "r4": ("proofs/m3/square-free-marker-q4-m3-r4-core.cnf", 12768, 24292, "artifacts/manifest.json", "artifacts", "sha256"),
+    "c3": ("proofs/m3/cycle012/square-free-marker-m3-r5-cycle012-core.cnf", 29312, 12747, "artifacts/subgroup-manifest.json", "archives", "git_blob_sha1"),
+    "normal-v4": ("proofs/m3/normal-v4/square-free-marker-m3-r5-normal-v4-core.cnf", 21984, 53487, "artifacts/subgroup-manifest.json", "archives", "git_blob_sha1"),
+    "intransitive-v4": ("proofs/m3/intransitive-v4/square-free-marker-m3-r5-intransitive-v4-core.cnf", 21984, 26819, "artifacts/subgroup-manifest.json", "archives", "git_blob_sha1"),
 }
 EXPECTED_PACKAGE = "1.7.4-1"
 SOLVER_TIMEOUT = 240
@@ -155,7 +155,7 @@ def run_case(case, solver, checker):
     require(allowed, "No legal CPU affinity available")
     cpu = allowed[0]
     started = datetime.now(timezone.utc).isoformat()
-    with tempfile.TemporaryDirectory(prefix="kbl-fresh-c03-unsat-") as td:
+    with tempfile.TemporaryDirectory(prefix="square-free-marker-fresh-c03-unsat-") as td:
         work = Path(td)
         output = work/"fresh-UNSAT.drat"
         timing = work/"solve.time"

@@ -27,7 +27,7 @@ git clone https://github.com/Druhin13/square-free-marker-radii.git
 cd square-free-marker-radii
 sha256sum --check --strict SHA256SUMS
 cd evidence
-python3 -B reproduce.py --case all --report ../kbl-all.json
+python3 -B reproduce.py --case all --report ../square-free-marker-all.json
 ```
 
 The verification runs seven families (`main`, `subgroups`, `swap`, `double`, `exact`, `trust`, `lrat`). All 52 registered certificate objects are checked against their published content hashes before and after verification. See [REPRODUCING.md](REPRODUCING.md) for individual commands, external dependencies, runtime considerations, and additional controlled solver experiments.
@@ -36,7 +36,7 @@ The verification runs seven families (`main`, `subgroups`, `swap`, `double`, `ex
 
 | Location | Description |
 | --- | --- |
-| [`evidence/proofs/`](evidence/proofs/) | 52 registered certificate and witness objects (115,720,144 bytes) |
+| [`evidence/proofs/`](evidence/proofs/) | 52 registered certificate and witness objects (115,721,014 bytes) |
 | [`evidence/artifacts/`](evidence/artifacts/) | Four proof registries, with exact source-object digests |
 | [`evidence/reproduce.py`](evidence/reproduce.py) | Standalone seven-family reproduction entry point |
 | [`evidence/tools/`](evidence/tools/) | Independent verification and checker build tools |

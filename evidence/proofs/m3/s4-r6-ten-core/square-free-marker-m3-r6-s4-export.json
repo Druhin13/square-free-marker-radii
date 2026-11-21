@@ -1,7 +1,7 @@
 {
   "clauses": 1429489,
   "cnf_bytes": 39463151,
-  "cnf_relative_path": "experiments/m3/kbl-q4-m3-r6-s4.cnf",
+  "cnf_relative_path": "experiments/m3/square-free-marker-q4-m3-r6-s4.cnf",
   "cnf_sha256": "95c9c6aa8e1cf8d14200feb59a4d9e4160a7818cf63e35eb19e6e3ab4310da6e",
   "family_clause_row_sha256": {
     "14": "afc71b4fc97758b9b334816369945cb650e58e408a27fe4375048f5b6dec594a",

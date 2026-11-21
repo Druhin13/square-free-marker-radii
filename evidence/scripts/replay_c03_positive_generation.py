@@ -101,7 +101,7 @@ def main() -> None:
     temp_root = ROOT / ".build"
     require(not temp_root.is_symlink(), "Unsafe .build temp root symlink")
     temp_root.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix="kbl-c03-fresh-positive-",
+    with tempfile.TemporaryDirectory(prefix="square-free-marker-c03-fresh-positive-",
                                      dir=temp_root) as temp:
         work = Path(temp)
         cnf = work / ("finite-" + args.case + ".cnf")

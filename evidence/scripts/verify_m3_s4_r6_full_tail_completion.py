@@ -35,10 +35,10 @@ from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
 ARCHIVE = ROOT / "proofs/m3/s4-r6-ten-core"
-SOURCE_AUDIT = ARCHIVE / "kbl-m3-r6-s4-ten-core-biinfinite-audit.json"
+SOURCE_AUDIT = ARCHIVE / "square-free-marker-m3-r6-s4-ten-core-biinfinite-audit.json"
 CORE = ARCHIVE / "core.cnf"
-CNF_AUDIT = ARCHIVE / "kbl-m3-r6-s4-cnf-audit.json"
-OUT = Path("/tmp/kbl-m3-r6-s4-ten-core-full-tail-completions.json")
+CNF_AUDIT = ARCHIVE / "square-free-marker-m3-r6-s4-cnf-audit.json"
+OUT = Path("/tmp/square-free-marker-m3-r6-s4-ten-core-full-tail-completions.json")
 PINS = {
     SOURCE_AUDIT: (14722, "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7"),
     CORE: (195, "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14"),
@@ -125,7 +125,7 @@ def occurrence_deep(hall, target, at_least=350):
 def export_exclusive(document):
     raw = (json.dumps(document, indent=2, sort_keys=True) + "\n").encode("utf-8")
     descriptor, temporary = tempfile.mkstemp(
-        prefix=".kbl-s4-r6-full-tail-", suffix=".tmp",
+        prefix=".square-free-marker-s4-r6-full-tail-", suffix=".tmp",
         dir=OUT.parent,
     )
     try:

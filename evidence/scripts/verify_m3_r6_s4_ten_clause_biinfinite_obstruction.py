@@ -50,13 +50,13 @@ One NEW report is created exclusively, with deterministic JSON contents.
 
 Run from the evidence directory:
   python3 -B -m scripts.verify_m3_r6_s4_ten_clause_biinfinite_obstruction \
-    --checker /tmp/kbl-drat-trim/drat-trim
+    --checker /tmp/square-free-marker-drat-trim/drat-trim
 
 For a fresh source checkout, replay using only the registered inputs:
   python3 -B -m scripts.verify_m3_r6_s4_ten_clause_biinfinite_obstruction \
-    --checker /tmp/kbl-drat-trim/drat-trim \
+    --checker /tmp/square-free-marker-drat-trim/drat-trim \
     --archive-dir proofs/m3/s4-r6-ten-core \
-    --report /tmp/kbl-m3-r6-s4-ten-core-clean-PROOFSHA-audit.json
+    --report /tmp/square-free-marker-m3-r6-s4-ten-core-clean-PROOFSHA-audit.json
 
 Archive replay pins all NINE archived files, including the original
 integrated report, before independently regenerating exactly the same audit
@@ -72,15 +72,15 @@ import subprocess
 from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
-CNF = ROOT / ".build/kbl-q4-m3-r6-s4.cnf"
-EXPORT = Path("/tmp/kbl-m3-r6-s4-export.json")
-PRE = Path("/tmp/kbl-m3-r6-s4-orbit-preflight.json")
-AUDIT = Path("/tmp/kbl-m3-r6-s4-cnf-audit.json")
-CORE = Path("/tmp/kbl-m3-r6-s4-ten-core/core.cnf")
-LEMMAS = Path("/tmp/kbl-m3-r6-s4-ten-core/core-lemmas.drat")
-BINARY = Path("/tmp/kbl-m3-r6-s4-proof.drat")
-RESULT = Path("/tmp/kbl-m3-r6-s4-result.txt")
-REPORT = Path("/tmp/kbl-m3-r6-s4-ten-core-biinfinite-audit.json")
+CNF = ROOT / ".build/square-free-marker-q4-m3-r6-s4.cnf"
+EXPORT = Path("/tmp/square-free-marker-m3-r6-s4-export.json")
+PRE = Path("/tmp/square-free-marker-m3-r6-s4-orbit-preflight.json")
+AUDIT = Path("/tmp/square-free-marker-m3-r6-s4-cnf-audit.json")
+CORE = Path("/tmp/square-free-marker-m3-r6-s4-ten-core/core.cnf")
+LEMMAS = Path("/tmp/square-free-marker-m3-r6-s4-ten-core/core-lemmas.drat")
+BINARY = Path("/tmp/square-free-marker-m3-r6-s4-proof.drat")
+RESULT = Path("/tmp/square-free-marker-m3-r6-s4-result.txt")
+REPORT = Path("/tmp/square-free-marker-m3-r6-s4-ten-core-biinfinite-audit.json")
 
 SHA = {
     CNF: "95c9c6aa8e1cf8d14200feb59a4d9e4160a7818cf63e35eb19e6e3ab4310da6e",
@@ -536,7 +536,7 @@ def configure_archive_inputs(archive_dir):
 
 def main():
     arg=argparse.ArgumentParser(description=__doc__)
-    arg.add_argument("--checker",default="/tmp/kbl-drat-trim/drat-trim",
+    arg.add_argument("--checker",default="/tmp/square-free-marker-drat-trim/drat-trim",
                      help="External standalone independently compiled DRAT verifier")
     arg.add_argument("--archive-dir", default=None,
                      help="Use exclusively SHA-pinned immutable proof archive")

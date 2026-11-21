@@ -23,7 +23,7 @@ certificates for a sufficient UNSAT core.
 
 From evidence/, use the complete workflow, which assigns an exclusive
 output path in a temporary directory and independently audits the result:
-    python3 -B reproduce.py --case swap --report ../kbl-swap.json
+    python3 -B reproduce.py --case swap --report ../square-free-marker-swap.json
 """
 from hashlib import sha256
 import os
@@ -32,7 +32,7 @@ import tempfile
 from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
-OUT = ROOT / ".build/kbl-q4-m3-r5-swap01.cnf"
+OUT = ROOT / ".build/square-free-marker-q4-m3-r5-swap01.cnf"
 TOTAL = {11: 87936, 12: 230520, 13: 604608, 15: 4156392}
 REPRESENTATIVES = {n: count // 2 for n, count in TOTAL.items()}
 CLAUSES = sum(REPRESENTATIVES[n] for n in (12, 13, 15))

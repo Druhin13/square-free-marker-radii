@@ -26,8 +26,8 @@ MODULES = {
     },
 }
 MODELS = {
-    "swap": ROOT / "proofs/m3/kbl-q4-m3-r5-swap01-result.txt",
-    "double": ROOT / "proofs/m3/double01-23/kbl-m3-r5-double01-23-result.txt",
+    "swap": ROOT / "proofs/m3/square-free-marker-q4-m3-r5-swap01-result.txt",
+    "double": ROOT / "proofs/m3/double01-23/square-free-marker-m3-r5-double01-23-result.txt",
 }
 
 

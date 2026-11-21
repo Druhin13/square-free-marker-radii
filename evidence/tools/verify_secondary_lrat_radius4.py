@@ -21,8 +21,8 @@ import subprocess
 import tempfile
 
 ROOT = Path(__file__).resolve().parent.parent
-CNF = ROOT / "proofs/m3/kbl-q4-m3-r4-core.cnf"
-DRAT = ROOT / "proofs/m3/kbl-q4-m3-r4-core-direct-proof.drat"
+CNF = ROOT / "proofs/m3/square-free-marker-q4-m3-r4-core.cnf"
+DRAT = ROOT / "proofs/m3/square-free-marker-q4-m3-r4-core-direct-proof.drat"
 DRAT_SOURCE_REV = "effa1dcce85c878236f8313133dff1a2b766cd7c"
 CAKE_SOURCE_REV = "033aad53d1733bd4b8ca41cf6f1b5fb5d84f8de2"
 
@@ -133,7 +133,7 @@ def main() -> int:
                 f"Original source proof digest/byte count mismatch: {source}")
     preflight_cnf(CNF)
 
-    with tempfile.TemporaryDirectory(prefix="kbl-r4-verified-lrat-") as tmp:
+    with tempfile.TemporaryDirectory(prefix="square-free-marker-r4-verified-lrat-") as tmp:
         scratch = Path(tmp)
         lrat = scratch / "radius4-original-converted.lrat"
         conversion = audited_run(

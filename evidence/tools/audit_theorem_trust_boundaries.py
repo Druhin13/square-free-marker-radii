@@ -64,9 +64,9 @@ def hall_premise_sanity():
     }
 
 def radius_four_source_census():
-    easy=json.loads((ROOT/"proofs/m3/kbl-q4-m3-r4-easy-core-witnesses.json")
+    easy=json.loads((ROOT/"proofs/m3/square-free-marker-q4-m3-r4-easy-core-witnesses.json")
                     .read_text("utf-8"))
-    rest=json.loads((ROOT/"proofs/m3/kbl-q4-m3-r4-remaining-core-extensions.json")
+    rest=json.loads((ROOT/"proofs/m3/square-free-marker-q4-m3-r4-remaining-core-extensions.json")
                     .read_text("utf-8"))
     first=Counter(row["kind"] for row in easy["certificates"])
     later=Counter(row["kind"] for row in rest["candidate_certificates"])
@@ -111,7 +111,7 @@ def c4_semantic_negative_controls():
              "inadequate_full_exterior":missing_exterior}
     rejected={}
     try:
-        with tempfile.TemporaryDirectory(prefix="kbl-c4-mutants-") as d:
+        with tempfile.TemporaryDirectory(prefix="square-free-marker-c4-mutants-") as d:
             for name,mutate in mutants.items():
                 rows=deepcopy(archive)
                 mutate(rows)

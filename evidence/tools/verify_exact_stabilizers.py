@@ -13,9 +13,9 @@ import json
 from pathlib import Path
 from tools.verify_positive_manifest import ROOT, verify_registry
 
-ROOT_MODEL = ROOT / "proofs/m3/kbl-q4-m3-r5-result.txt"
-SWAP_MODEL = ROOT / "proofs/m3/kbl-q4-m3-r5-swap01-result.txt"
-DOUBLE_MODEL = ROOT / "proofs/m3/double01-23/kbl-m3-r5-double01-23-result.txt"
+ROOT_MODEL = ROOT / "proofs/m3/square-free-marker-q4-m3-r5-result.txt"
+SWAP_MODEL = ROOT / "proofs/m3/square-free-marker-q4-m3-r5-swap01-result.txt"
+DOUBLE_MODEL = ROOT / "proofs/m3/double01-23/square-free-marker-m3-r5-double01-23-result.txt"
 ORIGINAL_SHA = "d5ba5df3f93f6e996ffe1164d2dcb2886e0f530638f894b45a090ea79d2eb7c7"
 DOUBLE_SHA = "a3acf3c855420b8578c9882e2aab367de959a33093640084a62b3aa522b7d9be"
 EXPECTED = (

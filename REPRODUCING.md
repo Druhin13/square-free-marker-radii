@@ -23,19 +23,19 @@ The certificate runner also checks all four proof registries and all 52 register
 
 ```bash
 cd evidence
-python3 -B reproduce.py --case all --report ../kbl-all.json
+python3 -B reproduce.py --case all --report ../square-free-marker-all.json
 ```
 
 Or run one case at a time:
 
 ```bash
-python3 -B reproduce.py --case main      --report ../kbl-main.json
-python3 -B reproduce.py --case subgroups --report ../kbl-subgroups.json
-python3 -B reproduce.py --case swap      --report ../kbl-swap.json
-python3 -B reproduce.py --case double    --report ../kbl-double.json
-python3 -B reproduce.py --case exact     --report ../kbl-exact.json
-python3 -B reproduce.py --case trust     --report ../kbl-trust.json
-python3 -B reproduce.py --case lrat      --report ../kbl-lrat.json
+python3 -B reproduce.py --case main      --report ../square-free-marker-main.json
+python3 -B reproduce.py --case subgroups --report ../square-free-marker-subgroups.json
+python3 -B reproduce.py --case swap      --report ../square-free-marker-swap.json
+python3 -B reproduce.py --case double    --report ../square-free-marker-double.json
+python3 -B reproduce.py --case exact     --report ../square-free-marker-exact.json
+python3 -B reproduce.py --case trust     --report ../square-free-marker-trust.json
+python3 -B reproduce.py --case lrat      --report ../square-free-marker-lrat.json
 ```
 
 The report destination must not already exist. Each command is non-destructive to the checked-in certificate data.

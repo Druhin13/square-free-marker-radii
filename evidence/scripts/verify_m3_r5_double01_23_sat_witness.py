@@ -30,7 +30,7 @@ or other marker parameters.
 
 The public reproduction driver supplies an isolated generated quotient CNF,
 the registered model, and an exclusive temporary report path. From evidence/:
-    python3 -B reproduce.py --case double --report ../kbl-double.json
+    python3 -B reproduce.py --case double --report ../square-free-marker-double.json
 
 Standalone use of this component requires the same explicit input paths;
 its generation-time defaults are not distributed proof files.
@@ -42,9 +42,9 @@ from pathlib import Path
 from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
-CNF = ROOT / ".build/kbl-q4-m3-r5-double01-23.cnf"
-MODEL = Path("/tmp/kbl-m3-r5-double01-23-result.txt")
-REPORT = Path("/tmp/kbl-m3-r5-double01-23-sat-audit.json")
+CNF = ROOT / ".build/square-free-marker-q4-m3-r5-double01-23.cnf"
+MODEL = Path("/tmp/square-free-marker-m3-r5-double01-23-result.txt")
+REPORT = Path("/tmp/square-free-marker-m3-r5-double01-23-sat-audit.json")
 CNF_PIN = "f44a5b98e0b47bac8d7ae988ddcd96dc5f8ed66500cad29ae0613a8a670889ff"
 VARS = 43968
 TOTAL_CLAUSES = 2495760

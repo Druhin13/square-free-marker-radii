@@ -3,7 +3,7 @@ evidence/.build/
 **/__pycache__/
 *.py[cod]
 .DS_Store
-/kbl-*.json
+/square-free-marker-*.json
 /fresh-*.json
 /verification-report.json
 

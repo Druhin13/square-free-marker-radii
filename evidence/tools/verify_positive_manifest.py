@@ -9,9 +9,9 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent.parent
 REGISTRY = ROOT / "artifacts/subgroup-positive-manifest.json"
 EXPECTED_PATHS = {
-    "proofs/m3/kbl-q4-m3-r5-swap01-result.txt",
-    "proofs/m3/double01-23/kbl-m3-r5-double01-23-result.txt",
-    "proofs/m3/double01-23/kbl-m3-r5-double01-23-sat-audit.json",
+    "proofs/m3/square-free-marker-q4-m3-r5-swap01-result.txt",
+    "proofs/m3/double01-23/square-free-marker-m3-r5-double01-23-result.txt",
+    "proofs/m3/double01-23/square-free-marker-m3-r5-double01-23-sat-audit.json",
 }
 
 

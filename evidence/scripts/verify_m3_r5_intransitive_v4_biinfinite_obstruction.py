@@ -38,7 +38,7 @@ filenames to a separate immutable proof archive (for clean reproduction).
 
 Usage from the evidence directory:
   python3 -B -m scripts.verify_m3_r5_intransitive_v4_biinfinite_obstruction \
-    --checker /tmp/kbl-drat-trim/drat-trim
+    --checker /tmp/square-free-marker-drat-trim/drat-trim
 """
 import argparse
 from collections import Counter
@@ -49,15 +49,15 @@ from pathlib import Path
 import subprocess
 from time import perf_counter
 
-CORE = Path("/tmp/kbl-m3-r5-intransitive-v4-core.cnf")
-DRAT = Path("/tmp/kbl-m3-r5-intransitive-v4-core-lemmas.drat")
-ORIGIN = Path("/tmp/kbl-m3-r5-intransitive-v4-core-factor-map.json")
-EARLY = Path("/tmp/kbl-m3-r5-intransitive-v4-core-extension-triage.json")
-EXTRAS = Path("/tmp/kbl-m3-r5-intransitive-v4-extra-extensions.json")
-EXTRA_AUDIT = Path("/tmp/kbl-m3-r5-intransitive-v4-extra-extensions-audit.json")
-CERTIFIED_SUBSET = Path("/tmp/kbl-m3-r5-intransitive-v4-extendible-only.cnf")
-SAT_AUDIT = Path("/tmp/kbl-m3-r5-intransitive-v4-certified-only-sat-audit.json")
-DEFAULT_REPORT = Path("/tmp/kbl-m3-r5-intransitive-v4-biinfinite-obstruction-audit.json")
+CORE = Path("/tmp/square-free-marker-m3-r5-intransitive-v4-core.cnf")
+DRAT = Path("/tmp/square-free-marker-m3-r5-intransitive-v4-core-lemmas.drat")
+ORIGIN = Path("/tmp/square-free-marker-m3-r5-intransitive-v4-core-factor-map.json")
+EARLY = Path("/tmp/square-free-marker-m3-r5-intransitive-v4-core-extension-triage.json")
+EXTRAS = Path("/tmp/square-free-marker-m3-r5-intransitive-v4-extra-extensions.json")
+EXTRA_AUDIT = Path("/tmp/square-free-marker-m3-r5-intransitive-v4-extra-extensions-audit.json")
+CERTIFIED_SUBSET = Path("/tmp/square-free-marker-m3-r5-intransitive-v4-extendible-only.cnf")
+SAT_AUDIT = Path("/tmp/square-free-marker-m3-r5-intransitive-v4-certified-only-sat-audit.json")
+DEFAULT_REPORT = Path("/tmp/square-free-marker-m3-r5-intransitive-v4-biinfinite-obstruction-audit.json")
 
 EXPECTED_SHA = {
     CORE: "e5707d9aa7f077c05d8775552ea9566e5eaa7a4885d8b5c99f6b69e27c9d8db9",

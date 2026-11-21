@@ -1,11 +1,11 @@
 {
   "complete_original_core_source_partition": true,
   "input_sha256": {
-    "kbl-m3-r5-normal-v4-certified-only-sat-audit.json": "3923121d647e6bef1bc4a86e02d0717828e8c3930e8db2760b2340f34fffe298",
-    "kbl-m3-r5-normal-v4-core-extension-triage.json": "3b66c4b75cba46a597f6f666f81123eebd0d2d4a3dd949ce217b847cbf1ed704",
-    "kbl-m3-r5-normal-v4-core-factor-map.json": "a6dc740e073adf3ba4dafb14f958997e32511f829e161867fd02799eaee10744",
-    "kbl-m3-r5-normal-v4-core.cnf": "1b8e67aa86f661ac6a9d369e6298357ab0541af58287152f9a498844a678d729",
-    "kbl-m3-r5-normal-v4-extra-extensions.json": "9892679b2234d96a86b73d6cb264ae9511094f25a7aa187bb90f0d528332f201"
+    "square-free-marker-m3-r5-normal-v4-certified-only-sat-audit.json": "3923121d647e6bef1bc4a86e02d0717828e8c3930e8db2760b2340f34fffe298",
+    "square-free-marker-m3-r5-normal-v4-core-extension-triage.json": "3b66c4b75cba46a597f6f666f81123eebd0d2d4a3dd949ce217b847cbf1ed704",
+    "square-free-marker-m3-r5-normal-v4-core-factor-map.json": "a6dc740e073adf3ba4dafb14f958997e32511f829e161867fd02799eaee10744",
+    "square-free-marker-m3-r5-normal-v4-core.cnf": "1b8e67aa86f661ac6a9d369e6298357ab0541af58287152f9a498844a678d729",
+    "square-free-marker-m3-r5-normal-v4-extra-extensions.json": "9892679b2234d96a86b73d6cb264ae9511094f25a7aa187bb90f0d528332f201"
   },
   "mathematical_inputs": [
     "classical ternary Hall-Thue morphism squarefree and uniformly recurrent",

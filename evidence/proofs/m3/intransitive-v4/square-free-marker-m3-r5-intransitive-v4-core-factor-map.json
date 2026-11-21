@@ -299020,12 +299020,12 @@
   ],
   "full_clause_count": 1247880,
   "input_sha256": {
-    "kbl-m3-r5-intransitive-v4-core-lemmas.drat": "6806854a58c47d7444648b1df49cbfe8b718ad9c9b7c8a5c01308a4f36231c08",
-    "kbl-m3-r5-intransitive-v4-core-standalone-check.log": "5222e24c839b0ae55503db3438cec81de123cea32ddba44acb021583070995be",
-    "kbl-m3-r5-intransitive-v4-core.cnf": "e5707d9aa7f077c05d8775552ea9566e5eaa7a4885d8b5c99f6b69e27c9d8db9",
-    "kbl-m3-r5-intransitive-v4-proof.drat": "42b09f12af87557df3c09d6ce135172552ca9e02b4d959ffbf301124cf8965d1",
-    "kbl-m3-r5-intransitive-v4-result.txt": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
-    "kbl-q4-m3-r5-intransitive-v4.cnf": "9dd2878aff6b0b2370225306c86b1e681c5efe289a6eaa3b6628da3213d9a137"
+    "square-free-marker-m3-r5-intransitive-v4-core-lemmas.drat": "6806854a58c47d7444648b1df49cbfe8b718ad9c9b7c8a5c01308a4f36231c08",
+    "square-free-marker-m3-r5-intransitive-v4-core-standalone-check.log": "5222e24c839b0ae55503db3438cec81de123cea32ddba44acb021583070995be",
+    "square-free-marker-m3-r5-intransitive-v4-core.cnf": "e5707d9aa7f077c05d8775552ea9566e5eaa7a4885d8b5c99f6b69e27c9d8db9",
+    "square-free-marker-m3-r5-intransitive-v4-proof.drat": "42b09f12af87557df3c09d6ce135172552ca9e02b4d959ffbf301124cf8965d1",
+    "square-free-marker-m3-r5-intransitive-v4-result.txt": "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
+    "square-free-marker-q4-m3-r5-intransitive-v4.cnf": "9dd2878aff6b0b2370225306c86b1e681c5efe289a6eaa3b6628da3213d9a137"
   },
   "parameters": {
     "m": 3,

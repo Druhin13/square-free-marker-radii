@@ -26,17 +26,17 @@ CASES = (
     (
         "cycle012",
         "scripts.verify_m3_r5_cycle012_biinfinite_obstruction",
-        "kbl-m3-r5-cycle012-global-obstruction-audit.json",
+        "square-free-marker-m3-r5-cycle012-global-obstruction-audit.json",
     ),
     (
         "normal-v4",
         "scripts.verify_m3_r5_normal_v4_biinfinite_obstruction",
-        "kbl-m3-r5-normal-v4-biinfinite-obstruction-audit.json",
+        "square-free-marker-m3-r5-normal-v4-biinfinite-obstruction-audit.json",
     ),
     (
         "intransitive-v4",
         "scripts.verify_m3_r5_intransitive_v4_biinfinite_obstruction",
-        "kbl-m3-r5-intransitive-v4-biinfinite-obstruction-audit.json",
+        "square-free-marker-m3-r5-intransitive-v4-biinfinite-obstruction-audit.json",
     ),
 )
 
@@ -62,7 +62,7 @@ def main() -> int:
          "scripts.verify_m3_r5_s4_elementary_obstruction"],
         "Single 4-cycle hand-checkable obstruction",
     )
-    with tempfile.TemporaryDirectory(prefix="kbl-subgroup-proof-") as tmp:
+    with tempfile.TemporaryDirectory(prefix="square-free-marker-subgroup-proof-") as tmp:
         for group, module, report in CASES:
             folder = ROOT / "proofs/m3" / group
             output = Path(tmp) / report

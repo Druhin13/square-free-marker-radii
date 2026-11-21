@@ -23,8 +23,8 @@ import tempfile
 from tools.verify_positive_manifest import ROOT, verify_registry
 
 CASES = {
-    "swap": "kbl-q4-m3-r5-swap01.cnf",
-    "double": "kbl-q4-m3-r5-double01-23.cnf",
+    "swap": "square-free-marker-q4-m3-r5-swap01.cnf",
+    "double": "square-free-marker-q4-m3-r5-double01-23.cnf",
 }
 
 
@@ -49,7 +49,7 @@ def main() -> int:
     if temp_root.is_symlink():
         raise ValueError("Unsafe build directory symlink")
     temp_root.mkdir(parents=True, exist_ok=True)
-    with tempfile.TemporaryDirectory(prefix="kbl-positive-", dir=temp_root) as tmp:
+    with tempfile.TemporaryDirectory(prefix="square-free-marker-positive-", dir=temp_root) as tmp:
         cnf = Path(tmp) / CASES[args.case]
         report = Path(tmp) / "fresh-double-sat-audit.json"
         invoke(args.case, "export", cnf)
@@ -60,7 +60,7 @@ def main() -> int:
         if args.case == "double":
             original = ROOT / (
                 "proofs/m3/double01-23/"
-                "kbl-m3-r5-double01-23-sat-audit.json"
+                "square-free-marker-m3-r5-double01-23-sat-audit.json"
             )
             actual = report.read_bytes()
             if actual != original.read_bytes():

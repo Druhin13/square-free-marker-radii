@@ -4,7 +4,7 @@ from pathlib import Path
 import unittest
 
 ROOT=Path(__file__).resolve().parent.parent
-DATA=ROOT/'proofs/m3/s4-r6-full-tail-certificates/kbl-m3-r6-s4-ten-core-full-tail-completions.json'
+DATA=ROOT/'proofs/m3/s4-r6-full-tail-certificates/square-free-marker-m3-r6-s4-ten-core-full-tail-completions.json'
 CORE=ROOT/'proofs/m3/s4-r6-ten-core/core.cnf'
 
 class SourceCertificateTables(unittest.TestCase):

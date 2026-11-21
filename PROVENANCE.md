@@ -2,7 +2,7 @@
 
 ## Certificate inventory
 
-The repository distributes 52 fixed proof and witness objects totaling **115,720,144 bytes**. Their registered paths, sizes, and cryptographic identities are checked before every verification family:
+The repository distributes 52 fixed proof and witness objects totaling **115,721,014 bytes**. Their registered paths, sizes, and cryptographic identities are checked before every verification family:
 
 | Registry | Objects | Identity |
 | --- | ---: | --- |
@@ -18,21 +18,13 @@ the registered objects remain unchanged **during verification**.
 
 ### Byte preservation and normalized metadata
 
-The source evidence and the publication-formatted metadata have distinct
-provenance properties. The original DIMACS CNF instances, DRAT proofs and
-archived SAT-model text files were preserved byte-for-byte from the earlier
-research archive. Supporting JSON audit reports were selectively normalized
-for clear mathematical scope, consistent certificate paths, and current
-cross-references. These changes affect presentation fields, record names,
-referenced digests or file sizes, **not** clauses, source words, marker
-assignments, proof conclusions or the mathematical meaning of the checks.
-
-The earlier 52-object inventory totaled **115,720,432 bytes**; this distribution
-contains **115,720,144 bytes** after publication normalization. The original
-aggregate byte count is therefore not a hash or byte identity for this edition.
-Readers should use the four included registries and the root SHA-256 manifest
-to validate this release. The repository does not claim that every JSON report
-is an unchanged byte copy of an earlier audit file.
+The DIMACS CNF instances, DRAT proofs, and SAT-model text files retain
+their verified bytes. Supporting JSON audit reports use descriptive
+certificate paths and corresponding input digests. These naming and
+metadata changes do not affect the underlying clauses, source words,
+marker assignments, proof conclusions, or mathematical interpretation.
+The four registries and root `SHA256SUMS` identify the exact files
+distributed in this release.
 
 ## What is independently checked
 

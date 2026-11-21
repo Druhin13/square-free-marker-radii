@@ -40,7 +40,7 @@ class PublicationManifestTests(unittest.TestCase):
     def test_all_certified_original_proof_bytes(self):
         self.assertEqual(
             verify_registry(ROOT / "artifacts/manifest.json", full=True),
-            (21, 51483373),
+            (21, 51483493),
         )
 
     def test_registry_rejects_path_traversal(self):

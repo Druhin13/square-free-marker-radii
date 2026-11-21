@@ -48,7 +48,7 @@ path to read the unchanged five original SHA-pinned inputs from Git.
 
 Run:
     python3 -B -m scripts.verify_m3_r5_cycle012_biinfinite_obstruction \
-        --checker /tmp/kbl-drat-trim/drat-trim
+        --checker /tmp/square-free-marker-drat-trim/drat-trim
 """
 import argparse
 from collections import Counter
@@ -60,12 +60,12 @@ import subprocess
 from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
-CORE = Path("/tmp/kbl-m3-r5-cycle012-core.cnf")
-PROOF = Path("/tmp/kbl-m3-r5-cycle012-core-lemmas.drat")
-SOURCES = Path("/tmp/kbl-m3-r5-cycle012-core-factor-map.json")
-FIRST = Path("/tmp/kbl-m3-r5-cycle012-core-extension-triage.json")
-SECOND = Path("/tmp/kbl-m3-r5-cycle012-extra-extensions.json")
-OUTPUT = Path("/tmp/kbl-m3-r5-cycle012-global-obstruction-audit.json")
+CORE = Path("/tmp/square-free-marker-m3-r5-cycle012-core.cnf")
+PROOF = Path("/tmp/square-free-marker-m3-r5-cycle012-core-lemmas.drat")
+SOURCES = Path("/tmp/square-free-marker-m3-r5-cycle012-core-factor-map.json")
+FIRST = Path("/tmp/square-free-marker-m3-r5-cycle012-core-extension-triage.json")
+SECOND = Path("/tmp/square-free-marker-m3-r5-cycle012-extra-extensions.json")
+OUTPUT = Path("/tmp/square-free-marker-m3-r5-cycle012-global-obstruction-audit.json")
 SHA_PINS = {
     CORE: "4c3eb47253ff81c9375a7e062ea3baa3d906cbe6d9966d80598d37f0a63a1ae6",
     PROOF: "50dec59d3452e1868c6a79dd0795f1639f6e12df1934e54da3b1ef4f2754d2ad",
@@ -379,7 +379,7 @@ def main():
             path: original_pins_by_name[path.name]
             for path in (CORE, PROOF, SOURCES, FIRST, SECOND)
         }
-        OUTPUT = Path("/tmp/kbl-m3-r5-cycle012-archived-audit.json")
+        OUTPUT = Path("/tmp/square-free-marker-m3-r5-cycle012-archived-audit.json")
 
     if args.report is not None:
         OUTPUT = args.report.resolve()

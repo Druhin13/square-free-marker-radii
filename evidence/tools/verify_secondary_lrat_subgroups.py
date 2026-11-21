@@ -20,17 +20,17 @@ from tools.verify_secondary_lrat_radius4 import audited_run, identity, require
 ROOT = Path(__file__).resolve().parent.parent
 CASES = {
     "cycle012": {
-        "prefix": "kbl-m3-r5-cycle012", "variables": 29312, "clauses": 12747,
+        "prefix": "square-free-marker-m3-r5-cycle012", "variables": 29312, "clauses": 12747,
         "cnf": (266512, "4c3eb47253ff81c9375a7e062ea3baa3d906cbe6d9966d80598d37f0a63a1ae6", "72e7c712879860ad7ca38805a338f56b2b15da9c"),
         "drat": (404191, "50dec59d3452e1868c6a79dd0795f1639f6e12df1934e54da3b1ef4f2754d2ad", "9d39056d3f2c0f5f1a40e1e7bedc8173e284f447"),
     },
     "normal-v4": {
-        "prefix": "kbl-m3-r5-normal-v4", "variables": 21984, "clauses": 53487,
+        "prefix": "square-free-marker-m3-r5-normal-v4", "variables": 21984, "clauses": 53487,
         "cnf": (1119417, "1b8e67aa86f661ac6a9d369e6298357ab0541af58287152f9a498844a678d729", "0f8a537965bbd71a6f457ba72c75c8dcceea224c"),
         "drat": (2257720, "215a9ac707124910261a23749bccfff6771edea3f0a63b9b6b6eb361919b91e3", "8714e8ce3fb5cf29c51fcf69afcaac407dc8d46e"),
     },
     "intransitive-v4": {
-        "prefix": "kbl-m3-r5-intransitive-v4", "variables": 21984, "clauses": 26819,
+        "prefix": "square-free-marker-m3-r5-intransitive-v4", "variables": 21984, "clauses": 26819,
         "cnf": (549604, "e5707d9aa7f077c05d8775552ea9566e5eaa7a4885d8b5c99f6b69e27c9d8db9", "38346b36d0c53d0c8d1e0de53af9d30e633aabe4"),
         "drat": (1063898, "6806854a58c47d7444648b1df49cbfe8b718ad9c9b7c8a5c01308a4f36231c08", "f7fe863713a4b9f8ff3a2b3478938de733b8bd35"),
     },
@@ -99,7 +99,7 @@ def main():
                 and (x.stat().st_mode & 0o111)
                 for x in (converter, checker)), "Unsafe checker binary")
 
-    with tempfile.TemporaryDirectory(prefix="kbl-r5-subgroup-lrat-") as tmp:
+    with tempfile.TemporaryDirectory(prefix="square-free-marker-r5-subgroup-lrat-") as tmp:
         scratch = Path(tmp)
         output = scratch / "original.lrat"
         converted = audited_run(

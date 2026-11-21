@@ -34,7 +34,7 @@ from scripts import verify_marker_m3_r5_sat_witness as upper
 
 ROOT = Path(__file__).resolve().parent.parent
 ARCHIVE = ROOT / "proofs/m3"
-MODEL_PATH = ARCHIVE / "kbl-q4-m3-r5-result.txt"
+MODEL_PATH = ARCHIVE / "square-free-marker-q4-m3-r5-result.txt"
 MODEL_SHA256 = "d5ba5df3f93f6e996ffe1164d2dcb2886e0f530638f894b45a090ea79d2eb7c7"
 EXPECTED_SELECTED = 24120
 EXPECTED_VARIABLES = 87936

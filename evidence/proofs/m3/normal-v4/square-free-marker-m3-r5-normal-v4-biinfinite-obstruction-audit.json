@@ -32,13 +32,13 @@
   "q": 4,
   "r": 5,
   "sha256_inputs": {
-    "kbl-m3-r5-normal-v4-core-extension-triage.json": "3b66c4b75cba46a597f6f666f81123eebd0d2d4a3dd949ce217b847cbf1ed704",
-    "kbl-m3-r5-normal-v4-core-factor-map.json": "a6dc740e073adf3ba4dafb14f958997e32511f829e161867fd02799eaee10744",
-    "kbl-m3-r5-normal-v4-core-lemmas.drat": "215a9ac707124910261a23749bccfff6771edea3f0a63b9b6b6eb361919b91e3",
-    "kbl-m3-r5-normal-v4-core.cnf": "1b8e67aa86f661ac6a9d369e6298357ab0541af58287152f9a498844a678d729",
-    "kbl-m3-r5-normal-v4-extendible-only.cnf": "ed46e0bd9321d6df91ab14cb9dfad39dc78b6d1efd5b2fcab8728a4383b8f284",
-    "kbl-m3-r5-normal-v4-extra-extensions-audit.json": "f12d5b8bf6b5ce97dff3770812af24d9dbd7901b5d1a8cbd4facaf43169ba375",
-    "kbl-m3-r5-normal-v4-extra-extensions.json": "9892679b2234d96a86b73d6cb264ae9511094f25a7aa187bb90f0d528332f201"
+    "square-free-marker-m3-r5-normal-v4-core-extension-triage.json": "3b66c4b75cba46a597f6f666f81123eebd0d2d4a3dd949ce217b847cbf1ed704",
+    "square-free-marker-m3-r5-normal-v4-core-factor-map.json": "a6dc740e073adf3ba4dafb14f958997e32511f829e161867fd02799eaee10744",
+    "square-free-marker-m3-r5-normal-v4-core-lemmas.drat": "215a9ac707124910261a23749bccfff6771edea3f0a63b9b6b6eb361919b91e3",
+    "square-free-marker-m3-r5-normal-v4-core.cnf": "1b8e67aa86f661ac6a9d369e6298357ab0541af58287152f9a498844a678d729",
+    "square-free-marker-m3-r5-normal-v4-extendible-only.cnf": "ed46e0bd9321d6df91ab14cb9dfad39dc78b6d1efd5b2fcab8728a4383b8f284",
+    "square-free-marker-m3-r5-normal-v4-extra-extensions-audit.json": "5bed7ff2edb6fdcd5b3e57bb18a50064fdcebb0f43a81006731f3903c284ea2f",
+    "square-free-marker-m3-r5-normal-v4-extra-extensions.json": "9892679b2234d96a86b73d6cb264ae9511094f25a7aa187bb90f0d528332f201"
   },
   "status": "ALL FOUR NORMAL-V4 BI-INFINITE OBSTRUCTION AUDIT PHASES PASSED",
   "verified_early_extension_witnesses": 53476,

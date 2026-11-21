@@ -77,7 +77,7 @@ def main():
 
     cc=shutil.which("gcc")
     require(cc is not None,"gcc required for separate C11 exhaustive verifier")
-    with tempfile.TemporaryDirectory(prefix="kbl-named-positive-") as temp:
+    with tempfile.TemporaryDirectory(prefix="square-free-marker-named-positive-") as temp:
         exe=Path(temp)/"verify_named_words"
         build=subprocess.run([cc,"-O3","-std=c11","-Wall","-Wextra",
                               "-Werror","-pedantic",

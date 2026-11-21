@@ -27,9 +27,9 @@ from scripts.audit_m3_r4_violation_extensions_independent import (
 from scripts.audit_m3_r4_easy_core_independent import clauses_from_cnf
 
 ROOT=Path(__file__).resolve().parent.parent
-CORE=ROOT/"proofs/m3/kbl-q4-m3-r4-core.cnf"
-EASY=ROOT/"proofs/m3/kbl-q4-m3-r4-easy-core.cnf"
-MANIFEST=ROOT/"proofs/m3/kbl-q4-m3-r4-remaining-core-extensions.json"
+CORE=ROOT/"proofs/m3/square-free-marker-q4-m3-r4-core.cnf"
+EASY=ROOT/"proofs/m3/square-free-marker-q4-m3-r4-easy-core.cnf"
+MANIFEST=ROOT/"proofs/m3/square-free-marker-q4-m3-r4-remaining-core-extensions.json"
 
 CORE_SHA="a2f66feec531e8cd08abe79f9a619eb0177129c482577521d735b133060467f3"
 EASY_SHA="925d9b7e28384bca92f29818b97a24d37b8aabe19b39d65041c4b7ca7ca5a833"

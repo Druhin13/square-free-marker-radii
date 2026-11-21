@@ -29,7 +29,7 @@ jobs:
           import reproduce
           report = reproduce.verify_origins()
           assert report['proof_count'] == 52
-          assert report['proof_bytes'] == 115720144
+          assert report['proof_bytes'] == 115721014
           assert report['registries_valid'] is True
           print('PASS: all 52 original proof objects and four registries verified')
           PY
@@ -50,6 +50,6 @@ jobs:
         working-directory: evidence
         run: |
           python3 -B reproduce.py --case '${{ matrix.case }}' \
-            --report "$RUNNER_TEMP/kbl-${{ matrix.case }}.json"
+            --report "$RUNNER_TEMP/square-free-marker-${{ matrix.case }}.json"
       - name: Verify original checked-in files remain unchanged
         run: sha256sum --check --strict SHA256SUMS

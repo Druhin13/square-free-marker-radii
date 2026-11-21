@@ -15,7 +15,7 @@ hash. The export file is local and remains untracked.
 
 From evidence/, run the reproducible three-stage workflow, which generates
 the quotient CNF before invoking this independent auditor:
-    python3 -B reproduce.py --case swap --report ../kbl-swap.json
+    python3 -B reproduce.py --case swap --report ../square-free-marker-swap.json
 
 A passing audit establishes a correct COMPLETE finite-factor quotient,
 not SAT/UNSAT nor an impossibility theorem on the infinite subshift.
@@ -25,7 +25,7 @@ from pathlib import Path
 from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
-CNF = ROOT / ".build/kbl-q4-m3-r5-swap01.cnf"
+CNF = ROOT / ".build/square-free-marker-q4-m3-r5-swap01.cnf"
 ORIGINAL_FACTORS = {11: 87936, 12: 230520, 13: 604608, 15: 4156392}
 HALF = {n: v // 2 for n, v in ORIGINAL_FACTORS.items()}
 TOTAL_CLAUSES = HALF[12] + HALF[13] + HALF[15]

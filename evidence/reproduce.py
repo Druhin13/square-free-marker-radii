@@ -69,7 +69,7 @@ def verify_origins():
         file = ROOT / item
         need(file.is_file() and not file.is_symlink(), "Unsafe proof file")
         size += file.stat().st_size
-    need(size == 115720144 and mbytes+sbytes+pbytes <= size,
+    need(size == 115721014 and mbytes+sbytes+pbytes <= size,
          "Source proof byte count changed")
     return {"proof_count": 52, "proof_bytes": size, "registries_valid": True}
 

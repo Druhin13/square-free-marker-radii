@@ -17,8 +17,8 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-COLOR = ROOT / "proofs/m3/s4-L14-nine-color/kbl-q4-m3-s4-L14-coloring.json"
-AUDIT = ROOT / "proofs/m3/s4-L14-nine-color/kbl-m3-s4-L14-coloring-audit.json"
+COLOR = ROOT / "proofs/m3/s4-L14-nine-color/square-free-marker-q4-m3-s4-L14-coloring.json"
+AUDIT = ROOT / "proofs/m3/s4-L14-nine-color/square-free-marker-m3-s4-L14-coloring-audit.json"
 COLOR_SHA = "ee755eff86ae9607037a1ee1a68322a73384cbc5e75b8d513a5ff2616747900d"
 AUDIT_SHA = "e3ee9c81e8190ae537162ac58ffa5a51c30ae1a6a4393244d91a3c26d56c7370"
 HALL = {"0":"012", "1":"02", "2":"1"}

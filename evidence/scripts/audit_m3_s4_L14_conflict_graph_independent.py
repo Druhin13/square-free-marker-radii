@@ -32,14 +32,14 @@ Provide the exact coloring and manifest SHA-256 values:
       --coloring-sha <SHA256> --manifest-sha <SHA256>
 
 Save ONE exclusive report:
-  /tmp/kbl-m3-s4-L14-coloring-audit.json
+  /tmp/square-free-marker-m3-s4-L14-coloring-audit.json
 
 Replay from the four recorded certificate objects:
   python3 -B -m scripts.audit_m3_s4_L14_conflict_graph_independent \
       --coloring-sha ee755eff86ae9607037a1ee1a68322a73384cbc5e75b8d513a5ff2616747900d \
       --manifest-sha c55995dc2e4feba424f937f00e9b0ffc17172c8345485ecab62a54f441c0183a \
       --archive-dir proofs/m3/s4-L14-nine-color \
-      --report /tmp/kbl-m3-s4-L14-coloring-clean-proofSHA-audit.json
+      --report /tmp/square-free-marker-m3-s4-L14-coloring-clean-proofSHA-audit.json
 
 This optional mode pins all FOUR archived inputs (including the
 independent original audit), then independently recomputes the exact
@@ -53,10 +53,10 @@ from pathlib import Path
 from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
-PREFLIGHT = Path("/tmp/kbl-m3-r6-s4-orbit-preflight.json")
-COLORING = ROOT / ".build/kbl-q4-m3-s4-L14-coloring.json"
-MANIFEST = Path("/tmp/kbl-m3-s4-L14-coloring-export.json")
-AUDIT = Path("/tmp/kbl-m3-s4-L14-coloring-audit.json")
+PREFLIGHT = Path("/tmp/square-free-marker-m3-r6-s4-orbit-preflight.json")
+COLORING = ROOT / ".build/square-free-marker-q4-m3-s4-L14-coloring.json"
+MANIFEST = Path("/tmp/square-free-marker-m3-s4-L14-coloring-export.json")
+AUDIT = Path("/tmp/square-free-marker-m3-s4-L14-coloring-audit.json")
 PREFLIGHT_SHA = "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0"
 
 SOURCE = {14:66047, 15:173183, 16:453998}
@@ -216,10 +216,10 @@ def configure_archive_sources(directory_string, coloring_sha, manifest_sha):
         not (ROOT / "proofs/m3").is_symlink(),
         "Missing/unsafe immutable coloring archive")
     expected={
-        "kbl-m3-r6-s4-orbit-preflight.json":(PREFLIGHT_SHA,2793),
-        "kbl-q4-m3-s4-L14-coloring.json":(coloring_sha,463640),
-        "kbl-m3-s4-L14-coloring-export.json":(manifest_sha,661),
-        "kbl-m3-s4-L14-coloring-audit.json":(
+        "square-free-marker-m3-r6-s4-orbit-preflight.json":(PREFLIGHT_SHA,2793),
+        "square-free-marker-q4-m3-s4-L14-coloring.json":(coloring_sha,463640),
+        "square-free-marker-m3-s4-L14-coloring-export.json":(manifest_sha,661),
+        "square-free-marker-m3-s4-L14-coloring-audit.json":(
           "e3ee9c81e8190ae537162ac58ffa5a51c30ae1a6a4393244d91a3c26d56c7370",1440),
     }
     assert_true({p.name for p in folder.iterdir()}==set(expected),
@@ -228,12 +228,12 @@ def configure_archive_sources(directory_string, coloring_sha, manifest_sha):
         path=folder/name
         assert_true(check_path(path,expected_sha)==size,
                     f"Immutable coloring source has wrong size: {name}")
-    PREFLIGHT=folder/"kbl-m3-r6-s4-orbit-preflight.json"
-    COLORING=folder/"kbl-q4-m3-s4-L14-coloring.json"
-    MANIFEST=folder/"kbl-m3-s4-L14-coloring-export.json"
+    PREFLIGHT=folder/"square-free-marker-m3-r6-s4-orbit-preflight.json"
+    COLORING=folder/"square-free-marker-q4-m3-s4-L14-coloring.json"
+    MANIFEST=folder/"square-free-marker-m3-s4-L14-coloring-export.json"
     print("ARCHIVE MODE: FOUR immutable original S4 coloring sources SHA PINNED")
     print("  Original independent audit SHA:",
-          expected["kbl-m3-s4-L14-coloring-audit.json"][0],flush=True)
+          expected["square-free-marker-m3-s4-L14-coloring-audit.json"][0],flush=True)
 
 
 def main():
@@ -318,7 +318,7 @@ def main():
     assert_true(
         manifest == {
             "status":"S4 LENGTH14 COLORING CONSTRUCTION DATA",
-            "coloring_relative_path":"experiments/m3/kbl-q4-m3-s4-L14-coloring.json",
+            "coloring_relative_path":"experiments/m3/square-free-marker-q4-m3-s4-L14-coloring.json",
             "coloring_sha256":opts.coloring_sha,
             "coloring_bytes":coloring_bytes,
             "preflight_sha256":PREFLIGHT_SHA,

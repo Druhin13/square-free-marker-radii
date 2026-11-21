@@ -4,7 +4,7 @@ from pathlib import Path
 import unittest
 
 ROOT = Path(__file__).resolve().parent.parent
-PROOF = ROOT / "proofs/m3/s4-L14-nine-color/kbl-m3-r6-s4-orbit-preflight.json"
+PROOF = ROOT / "proofs/m3/s4-L14-nine-color/square-free-marker-m3-r6-s4-orbit-preflight.json"
 MORPHISM = {"0": "012", "1": "02", "2": "1"}
 
 def squarefree(word):

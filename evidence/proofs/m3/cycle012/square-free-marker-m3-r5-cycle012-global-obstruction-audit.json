@@ -16,11 +16,11 @@
   },
   "global_theorem": "No radius-5 marker rule invariant under any chosen alphabet 3-cycle on the bi-infinite quaternary squarefree subshift satisfies separation>=3 and domination<=2",
   "input_sha256": {
-    "kbl-m3-r5-cycle012-core-extension-triage.json": "be83c729af3a28b63ae6b8b0bc63e4db9becc4f7a01d668689ad982193b75269",
-    "kbl-m3-r5-cycle012-core-factor-map.json": "a94ac1bab1e4458148a50c406ba2fbc639e4077b545af523f1383f8eb3d59381",
-    "kbl-m3-r5-cycle012-core-lemmas.drat": "50dec59d3452e1868c6a79dd0795f1639f6e12df1934e54da3b1ef4f2754d2ad",
-    "kbl-m3-r5-cycle012-core.cnf": "4c3eb47253ff81c9375a7e062ea3baa3d906cbe6d9966d80598d37f0a63a1ae6",
-    "kbl-m3-r5-cycle012-extra-extensions.json": "9d5d6cb3ec6109d75cd43c56ef7d37b86f35f1fedbc2a9d5bf364968124d249a"
+    "square-free-marker-m3-r5-cycle012-core-extension-triage.json": "be83c729af3a28b63ae6b8b0bc63e4db9becc4f7a01d668689ad982193b75269",
+    "square-free-marker-m3-r5-cycle012-core-factor-map.json": "a94ac1bab1e4458148a50c406ba2fbc639e4077b545af523f1383f8eb3d59381",
+    "square-free-marker-m3-r5-cycle012-core-lemmas.drat": "50dec59d3452e1868c6a79dd0795f1639f6e12df1934e54da3b1ef4f2754d2ad",
+    "square-free-marker-m3-r5-cycle012-core.cnf": "4c3eb47253ff81c9375a7e062ea3baa3d906cbe6d9966d80598d37f0a63a1ae6",
+    "square-free-marker-m3-r5-cycle012-extra-extensions.json": "9d5d6cb3ec6109d75cd43c56ef7d37b86f35f1fedbc2a9d5bf364968124d249a"
   },
   "mathematical_inputs": [
     "classical squarefree uniformly recurrent Hall-Thue ternary morphism",

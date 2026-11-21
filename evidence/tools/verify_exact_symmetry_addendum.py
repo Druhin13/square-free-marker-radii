@@ -66,7 +66,7 @@ def run():
     manifest=check_manifest()
     gpp=shutil.which("g++")
     require(gpp is not None,"C++ compiler g++ is needed for independent exhaustive check")
-    with tempfile.TemporaryDirectory(prefix="kbl-exact-radius-") as temp:
+    with tempfile.TemporaryDirectory(prefix="square-free-marker-exact-radius-") as temp:
         exe=Path(temp)/"verify_rules"
         subprocess.run([gpp,"-std=c++17","-O2","-Wall","-Wextra","-Werror",
                         "-pedantic",str(ROOT/"tools/verify_exact_symmetry_rules.cpp"),

@@ -19,9 +19,9 @@ import json
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE_CORE = ROOT / "proofs/m3/kbl-q4-m3-r4-core.cnf"
-SUB_CNF = ROOT / "proofs/m3/kbl-q4-m3-r4-easy-core.cnf"
-WITNESSES = ROOT / "proofs/m3/kbl-q4-m3-r4-easy-core-witnesses.json"
+SOURCE_CORE = ROOT / "proofs/m3/square-free-marker-q4-m3-r4-core.cnf"
+SUB_CNF = ROOT / "proofs/m3/square-free-marker-q4-m3-r4-easy-core.cnf"
+WITNESSES = ROOT / "proofs/m3/square-free-marker-q4-m3-r4-easy-core-witnesses.json"
 CORE_HASH = "a2f66feec531e8cd08abe79f9a619eb0177129c482577521d735b133060467f3"
 FULL_HASH = "bffb20dd55f501abe4e79249216b4836762579552cdf03ccff5b5c32120418d2"
 

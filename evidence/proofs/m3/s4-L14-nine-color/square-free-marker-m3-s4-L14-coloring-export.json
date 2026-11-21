@@ -2,7 +2,7 @@
   "algorithm": "largest_degree_first",
   "candidate_marker_radius_upper": 31,
   "coloring_bytes": 463640,
-  "coloring_relative_path": "experiments/m3/kbl-q4-m3-s4-L14-coloring.json",
+  "coloring_relative_path": "experiments/m3/square-free-marker-q4-m3-s4-L14-coloring.json",
   "coloring_sha256": "ee755eff86ae9607037a1ee1a68322a73384cbc5e75b8d513a5ff2616747900d",
   "colors": 9,
   "interpretation": "Constructed coloring data; correctness is independently checked by the exhaustive graph verifier.",

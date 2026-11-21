@@ -12,14 +12,14 @@ A passing audit establishes correctness of a complete finite-factor
 SAT quotient, NOT satisfiability or a bi-infinite impossibility theorem.
 
 From evidence/, use the complete workflow, which first generates the CNF:
-    python3 -B reproduce.py --case double --report ../kbl-double.json
+    python3 -B reproduce.py --case double --report ../square-free-marker-double.json
 """
 from hashlib import sha256
 from pathlib import Path
 from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
-CNF = ROOT / ".build/kbl-q4-m3-r5-double01-23.cnf"
+CNF = ROOT / ".build/square-free-marker-q4-m3-r5-double01-23.cnf"
 EXPECTED_NAMED = {11: 87936, 12: 230520, 13: 604608, 15: 4156392}
 EXPECTED_ORBITS = {11: 43968, 12: 115260, 13: 302304, 15: 2078196}
 EXPECTED_CLAUSES = (

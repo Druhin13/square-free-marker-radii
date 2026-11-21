@@ -21,13 +21,13 @@ from collections import Counter
 
 ROOT = Path(__file__).resolve().parent.parent
 ORIGINAL = ROOT / "proofs/m3/s4-r6-ten-core"
-DEFAULT_COMPLETION = Path("/tmp/kbl-m3-r6-s4-ten-core-full-tail-completions.json")
-DEFAULT_REPORT = Path("/tmp/kbl-m3-r6-s4-full-tail-independent-audit.json")
+DEFAULT_COMPLETION = Path("/tmp/square-free-marker-m3-r6-s4-ten-core-full-tail-completions.json")
+DEFAULT_REPORT = Path("/tmp/square-free-marker-m3-r6-s4-full-tail-independent-audit.json")
 
 PINS = {
     "core.cnf": (195, "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14"),
-    "kbl-m3-r6-s4-cnf-audit.json": (1598, "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15"),
-    "kbl-m3-r6-s4-ten-core-biinfinite-audit.json": (14722, "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7"),
+    "square-free-marker-m3-r6-s4-cnf-audit.json": (1598, "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15"),
+    "square-free-marker-m3-r6-s4-ten-core-biinfinite-audit.json": (14722, "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7"),
 }
 COMPLETION_PIN = (11966, "46978c02d61491302a647baba418e9dad1921a069fce8ed08fce21af346d7699")
 
@@ -112,7 +112,7 @@ def main():
 
     core_clauses = assert_clauses(ORIGINAL / "core.cnf")
     old = json.loads(
-        (ORIGINAL / "kbl-m3-r6-s4-ten-core-biinfinite-audit.json").read_bytes())
+        (ORIGINAL / "square-free-marker-m3-r6-s4-ten-core-biinfinite-audit.json").read_bytes())
     completion = json.loads(opts.completion.read_bytes())
 
     require(old["original_core_clause_count"] == 10
@@ -125,10 +125,10 @@ def main():
             and completion["source_count"] == 10
             and completion["replaced_right_padding_count"] == 6
             and completion["source_audit_sha256"] == PINS[
-               "kbl-m3-r6-s4-ten-core-biinfinite-audit.json"][1]
+               "square-free-marker-m3-r6-s4-ten-core-biinfinite-audit.json"][1]
             and completion["original_core_sha256"] == PINS["core.cnf"][1]
             and completion["independent_original_cnf_audit_sha256"] ==
-               PINS["kbl-m3-r6-s4-cnf-audit.json"][1]
+               PINS["square-free-marker-m3-r6-s4-cnf-audit.json"][1]
             and len(completion["certificates"]) == 10,
             "Complete-extremity certificate scope/lineage mismatch")
 
@@ -243,9 +243,9 @@ def main():
         "status": "INDEPENDENT FULL-TAIL S4 RADIUS-SIX COMPLETION AUDIT PASSED",
         "original_cnf_core_sha256": PINS["core.cnf"][1],
         "original_source_audit_sha256": PINS[
-            "kbl-m3-r6-s4-ten-core-biinfinite-audit.json"][1],
+            "square-free-marker-m3-r6-s4-ten-core-biinfinite-audit.json"][1],
         "original_cnf_source_audit_sha256": PINS[
-            "kbl-m3-r6-s4-cnf-audit.json"][1],
+            "square-free-marker-m3-r6-s4-cnf-audit.json"][1],
         "repaired_certificate_sha256": COMPLETION_PIN[1],
         "repaired_certificate_bytes": COMPLETION_PIN[0],
         "source_count": 10,

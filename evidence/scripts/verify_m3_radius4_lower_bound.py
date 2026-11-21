@@ -33,15 +33,15 @@ ROOT = Path(__file__).resolve().parent.parent
 ARCHIVE = ROOT / "proofs/m3"
 
 REQUIRED = {
-    "kbl-q4-m3-r4-core.cnf":
+    "square-free-marker-q4-m3-r4-core.cnf":
         "a2f66feec531e8cd08abe79f9a619eb0177129c482577521d735b133060467f3",
-    "kbl-q4-m3-r4-core-direct-proof.drat":
+    "square-free-marker-q4-m3-r4-core-direct-proof.drat":
         "35b9366639739e68e0134b27638c1042251fd5fd32774d8d8cfa040e2d53faf7",
-    "kbl-q4-m3-r4-easy-core.cnf":
+    "square-free-marker-q4-m3-r4-easy-core.cnf":
         "925d9b7e28384bca92f29818b97a24d37b8aabe19b39d65041c4b7ca7ca5a833",
-    "kbl-q4-m3-r4-easy-core-witnesses.json":
+    "square-free-marker-q4-m3-r4-easy-core-witnesses.json":
         "e07105792b091aaad3080b58a9fc016febd3786d7f620c3b961884c8ed4cc277",
-    "kbl-q4-m3-r4-remaining-core-extensions.json":
+    "square-free-marker-q4-m3-r4-remaining-core-extensions.json":
         "870e27d7af896aa12d2ad075a9a06007bfbf310f4a0090bb0a6d30085e9123e3",
 }
 
@@ -63,18 +63,18 @@ def audit_easy():
     import scripts.audit_m3_r4_easy_core_independent as auditor
     # Reconfigure input paths, not methods or expected digests. The
     # independent auditor retains its complete separate enumeration.
-    auditor.SOURCE_CORE = ARCHIVE / "kbl-q4-m3-r4-core.cnf"
-    auditor.SUB_CNF = ARCHIVE / "kbl-q4-m3-r4-easy-core.cnf"
-    auditor.WITNESSES = ARCHIVE / "kbl-q4-m3-r4-easy-core-witnesses.json"
+    auditor.SOURCE_CORE = ARCHIVE / "square-free-marker-q4-m3-r4-core.cnf"
+    auditor.SUB_CNF = ARCHIVE / "square-free-marker-q4-m3-r4-easy-core.cnf"
+    auditor.WITNESSES = ARCHIVE / "square-free-marker-q4-m3-r4-easy-core-witnesses.json"
     auditor.main()
 
 
 def audit_remaining():
     print("PHASE 3/4: independent audit of remaining 12,311 extensions")
     import scripts.audit_m3_r4_remaining_core_independent as auditor
-    auditor.CORE = ARCHIVE / "kbl-q4-m3-r4-core.cnf"
-    auditor.EASY = ARCHIVE / "kbl-q4-m3-r4-easy-core.cnf"
-    auditor.MANIFEST = ARCHIVE / "kbl-q4-m3-r4-remaining-core-extensions.json"
+    auditor.CORE = ARCHIVE / "square-free-marker-q4-m3-r4-core.cnf"
+    auditor.EASY = ARCHIVE / "square-free-marker-q4-m3-r4-easy-core.cnf"
+    auditor.MANIFEST = ARCHIVE / "square-free-marker-q4-m3-r4-remaining-core-extensions.json"
     auditor.main()
 
 
@@ -82,8 +82,8 @@ def verify_drat(checker):
     print("PHASE 4/4: direct DRAT verification of archived UNSAT core")
     cmd = [
         str(checker),
-        str(ARCHIVE / "kbl-q4-m3-r4-core.cnf"),
-        str(ARCHIVE / "kbl-q4-m3-r4-core-direct-proof.drat"),
+        str(ARCHIVE / "square-free-marker-q4-m3-r4-core.cnf"),
+        str(ARCHIVE / "square-free-marker-q4-m3-r4-core-direct-proof.drat"),
         "-i",
     ]
     result = subprocess.run(cmd, text=True, stdout=subprocess.PIPE,

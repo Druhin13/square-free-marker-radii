@@ -30,7 +30,7 @@ from pathlib import Path
 
 from tools.verify_positive_manifest import ROOT
 
-MODEL = ROOT / "proofs/m3/kbl-q4-m3-r5-result.txt"
+MODEL = ROOT / "proofs/m3/square-free-marker-q4-m3-r5-result.txt"
 MODEL_SHA256 = "d5ba5df3f93f6e996ffe1164d2dcb2886e0f530638f894b45a090ea79d2eb7c7"
 MODEL_BYTES = 595752
 MODEL_VARIABLES = 87936

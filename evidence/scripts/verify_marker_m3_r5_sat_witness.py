@@ -16,11 +16,11 @@ Optional full-DIMACS check, from evidence/ after reconstructing the CNF:
     python3 -B -m scripts.export_c03_unrestricted_r5_cnf --output /path/to/new.cnf
     python3 -B -m scripts.verify_marker_m3_r5_sat_witness \
       --cnf /path/to/new.cnf \
-      --model proofs/m3/kbl-q4-m3-r5-result.txt \
+      --model proofs/m3/square-free-marker-q4-m3-r5-result.txt \
       --report /path/to/new-verification.json
 
 The complete-radius proof can be verified without generating this 143 MB
-CNF via: python3 -B reproduce.py --case main --report ../kbl-main.json.
+CNF via: python3 -B reproduce.py --case main --report ../square-free-marker-main.json.
 The optional full-DIMACS check requires explicit paths; the defaults
 are not part of the published evidence package.
 
@@ -38,9 +38,9 @@ from pathlib import Path
 from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
-DEFAULT_CNF = ROOT / ".build/kbl-q4-m3-r5.cnf"
-DEFAULT_MODEL = Path("/tmp/kbl-m3-r5-result.txt")
-DEFAULT_REPORT = ROOT / ".build/kbl-q4-m3-r5-sat-verification.json"
+DEFAULT_CNF = ROOT / ".build/square-free-marker-q4-m3-r5.cnf"
+DEFAULT_MODEL = Path("/tmp/square-free-marker-m3-r5-result.txt")
+DEFAULT_REPORT = ROOT / ".build/square-free-marker-q4-m3-r5-sat-verification.json"
 
 EXPECTED_CNF_SHA = "02bdd92ab8271228b79f3c1b9d095bedc5fcce7564afdcb003ae56ac1c4897d7"
 VARIABLES = 87936

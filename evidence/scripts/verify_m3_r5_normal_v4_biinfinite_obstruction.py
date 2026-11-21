@@ -44,7 +44,7 @@ SHA-pinned archives for standalone reproduction, if available.
 
 Usage:
     python3 -B -m scripts.verify_m3_r5_normal_v4_biinfinite_obstruction \\
-      --checker /tmp/kbl-drat-trim/drat-trim
+      --checker /tmp/square-free-marker-drat-trim/drat-trim
 """
 import argparse
 from collections import Counter
@@ -55,14 +55,14 @@ from pathlib import Path
 import subprocess
 from time import perf_counter
 
-CORE = Path("/tmp/kbl-m3-r5-normal-v4-core.cnf")
-DRAT = Path("/tmp/kbl-m3-r5-normal-v4-core-lemmas.drat")
-ORIGIN = Path("/tmp/kbl-m3-r5-normal-v4-core-factor-map.json")
-EARLY = Path("/tmp/kbl-m3-r5-normal-v4-core-extension-triage.json")
-EXTRAS = Path("/tmp/kbl-m3-r5-normal-v4-extra-extensions.json")
-EXTRA_AUDIT = Path("/tmp/kbl-m3-r5-normal-v4-extra-extensions-audit.json")
-CERTIFIED_SUBSET = Path("/tmp/kbl-m3-r5-normal-v4-extendible-only.cnf")
-DEFAULT_REPORT = Path("/tmp/kbl-m3-r5-normal-v4-biinfinite-obstruction-audit.json")
+CORE = Path("/tmp/square-free-marker-m3-r5-normal-v4-core.cnf")
+DRAT = Path("/tmp/square-free-marker-m3-r5-normal-v4-core-lemmas.drat")
+ORIGIN = Path("/tmp/square-free-marker-m3-r5-normal-v4-core-factor-map.json")
+EARLY = Path("/tmp/square-free-marker-m3-r5-normal-v4-core-extension-triage.json")
+EXTRAS = Path("/tmp/square-free-marker-m3-r5-normal-v4-extra-extensions.json")
+EXTRA_AUDIT = Path("/tmp/square-free-marker-m3-r5-normal-v4-extra-extensions-audit.json")
+CERTIFIED_SUBSET = Path("/tmp/square-free-marker-m3-r5-normal-v4-extendible-only.cnf")
+DEFAULT_REPORT = Path("/tmp/square-free-marker-m3-r5-normal-v4-biinfinite-obstruction-audit.json")
 
 EXPECTED_SHA = {
     CORE: "1b8e67aa86f661ac6a9d369e6298357ab0541af58287152f9a498844a678d729",

@@ -3,17 +3,17 @@
   "archives": [
     {
       "git_blob_sha1": "95d27b60025af5f30aaa0e3a6c319e79f709209a",
-      "relative_path": "proofs/m3/double01-23/kbl-m3-r5-double01-23-result.txt",
+      "relative_path": "proofs/m3/double01-23/square-free-marker-m3-r5-double01-23-result.txt",
       "size_bytes": 292157
     },
     {
       "git_blob_sha1": "3f5cf0250fb43ef7db9ee824e3781776e0ce4cf9",
-      "relative_path": "proofs/m3/double01-23/kbl-m3-r5-double01-23-sat-audit.json",
+      "relative_path": "proofs/m3/double01-23/square-free-marker-m3-r5-double01-23-sat-audit.json",
       "size_bytes": 965
     },
     {
       "git_blob_sha1": "3c3be7bd607e14b695021d0899252f2164b4d647",
-      "relative_path": "proofs/m3/kbl-q4-m3-r5-swap01-result.txt",
+      "relative_path": "proofs/m3/square-free-marker-q4-m3-r5-swap01-result.txt",
       "size_bytes": 292397
     }
   ],

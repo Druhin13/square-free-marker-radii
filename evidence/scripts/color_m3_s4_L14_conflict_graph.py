@@ -44,10 +44,10 @@ import tempfile
 from time import perf_counter
 
 ROOT = Path(__file__).resolve().parent.parent
-PREFLIGHT = Path("/tmp/kbl-m3-r6-s4-orbit-preflight.json")
+PREFLIGHT = Path("/tmp/square-free-marker-m3-r6-s4-orbit-preflight.json")
 PRE_SHA = "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0"
-COLORING = ROOT / ".build/kbl-q4-m3-s4-L14-coloring.json"
-MANIFEST = Path("/tmp/kbl-m3-s4-L14-coloring-export.json")
+COLORING = ROOT / ".build/square-free-marker-q4-m3-s4-L14-coloring.json"
+MANIFEST = Path("/tmp/square-free-marker-m3-s4-L14-coloring-export.json")
 COUNTS = {14: 66047, 15: 173183, 16: 453998}
 N = COUNTS[14]
 
