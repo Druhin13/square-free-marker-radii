@@ -33,10 +33,10 @@ CORRECTED = PROOFS / "s4-r6-full-tail-certificates"
 COLORING = PROOFS / "s4-L14-nine-color"
 
 EXPECTED_REPORTS = {
-    "completion_hall": (11966, "46978c02d61491302a647baba418e9dad1921a069fce8ed08fce21af346d7699"),
-    "independent_hall": (3116, "f83adca618e4829cd1a9cbe51395bebc1b2ae91f81dda2baaff63671e1feda97"),
-    "nine_color": (1440, "e3ee9c81e8190ae537162ac58ffa5a51c30ae1a6a4393244d91a3c26d56c7370"),
-    "s4_radius6": (14722, "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7"),
+    "completion_hall": (11966, "b202eeee869a5f8b0a0d1ec2c14ab2d5418186c3d9ec79c46af794aa4fbce3c1"),
+    "independent_hall": (3116, "931c8565a2ccba6af4f28ae1af711e5cac91585743bf3b0f0264177f25a4401e"),
+    "nine_color": (1440, "15d0a73b28b5b50fa139446d411ffc77b32b79ea9057b56b089dbe81162652d9"),
+    "s4_radius6": (14812, "96c587da47b168783b7314de9edac9d999a853e41daec1a1aa802094ad544bfa"),
 }
 
 
@@ -134,7 +134,7 @@ def main() -> int:
             "--coloring-sha",
             "ee755eff86ae9607037a1ee1a68322a73384cbc5e75b8d513a5ff2616747900d",
             "--manifest-sha",
-            "c55995dc2e4feba424f937f00e9b0ffc17172c8345485ecab62a54f441c0183a",
+            "f1ba3eeb3355608a0b7fd72ccc99d6788c4f9309f4b3b53fb37d9f68be59a44b",
             "--report", str(colors)
         ], "Independently recompute nine-color original factor conflicts")
         expect_report(colors, "nine_color")

@@ -26,10 +26,10 @@ DEFAULT_REPORT = Path("/tmp/square-free-marker-m3-r6-s4-full-tail-independent-au
 
 PINS = {
     "core.cnf": (195, "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14"),
-    "square-free-marker-m3-r6-s4-cnf-audit.json": (1598, "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15"),
-    "square-free-marker-m3-r6-s4-ten-core-biinfinite-audit.json": (14722, "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7"),
+    "square-free-marker-m3-r6-s4-cnf-audit.json": (1598, "26adea7b5584fcda6d5c9de0f9b0e7da13b57b97e43babfa599169bfc7b39d3c"),
+    "square-free-marker-m3-r6-s4-ten-core-biinfinite-audit.json": (14812, "96c587da47b168783b7314de9edac9d999a853e41daec1a1aa802094ad544bfa"),
 }
-COMPLETION_PIN = (11966, "46978c02d61491302a647baba418e9dad1921a069fce8ed08fce21af346d7699")
+COMPLETION_PIN = (11966, "b202eeee869a5f8b0a0d1ec2c14ab2d5418186c3d9ec79c46af794aa4fbce3c1")
 
 def require(value, what):
     if not value:

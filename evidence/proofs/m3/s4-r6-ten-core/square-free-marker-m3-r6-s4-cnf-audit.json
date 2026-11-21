@@ -3,7 +3,7 @@
   "biinfinite_unsat_impossibility_not_claimed": true,
   "cnf_bytes": 39463151,
   "cnf_sha256": "95c9c6aa8e1cf8d14200feb59a4d9e4160a7818cf63e35eb19e6e3ab4310da6e",
-  "export_manifest_sha256": "1ad0a70c9f6d70c7465f78e14ec8b36e0d5b39e8e34d4c3758f6ad5d6458a17a",
+  "export_manifest_sha256": "00782082b21d28096bd5e1368b8a83b8cea94318242d04fb1af2f02b3ae5491b",
   "family_clause_row_sha256": {
     "14": "afc71b4fc97758b9b334816369945cb650e58e408a27fe4375048f5b6dec594a",
     "15": "68fcfa2d3709ece71b1bb6429f441a2e411baff3a28371bfe9821596774550e4",

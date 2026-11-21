@@ -364,7 +364,7 @@
     }
   ],
   "full_finite_witnesses_squarefree": true,
-  "independent_original_cnf_audit_sha256": "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15",
+  "independent_original_cnf_audit_sha256": "26adea7b5584fcda6d5c9de0f9b0e7da13b57b97e43babfa599169bfc7b39d3c",
   "mathematical_dependencies_not_machine_proved": [
     "Classical Hall-Thue squarefreeness and uniform recurrence",
     "Separate rigorous finite-separator extension lemma in the accompanying manuscript"
@@ -372,7 +372,7 @@
   "nature": "Complete two-sided Hall-Thue source-extremity certificates for the ten-clause obstruction.",
   "original_core_sha256": "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14",
   "replaced_right_padding_count": 6,
-  "source_audit_sha256": "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7",
+  "source_audit_sha256": "96c587da47b168783b7314de9edac9d999a853e41daec1a1aa802094ad544bfa",
   "source_count": 10,
   "status": "TEN FULL-S4 RADIUS-SIX SOURCE TWO-SIDED HALL COMPLETIONS FINITELY VERIFIED"
 }

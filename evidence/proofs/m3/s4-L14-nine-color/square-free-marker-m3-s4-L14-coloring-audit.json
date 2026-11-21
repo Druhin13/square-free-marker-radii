@@ -6,8 +6,8 @@
   "conclusion": "Verified proper full-S4-invariant coloring by C colors of all squarefree length14 factor orbits. Standard color-round greedy maximal independent set yields a radius at most 2*C+13 marker rule on all bi-infinite quaternary squarefree words with separation>=3 and domination<=2. No novelty claimed.",
   "conservative_valid_S4_symmetric_marker_radius_upper": 31,
   "full_S4_n14_vertex_orbits": 66047,
-  "generator_manifest_bytes": 661,
-  "generator_manifest_sha256": "c55995dc2e4feba424f937f00e9b0ffc17172c8345485ecab62a54f441c0183a",
+  "generator_manifest_bytes": 676,
+  "generator_manifest_sha256": "f1ba3eeb3355608a0b7fd72ccc99d6788c4f9309f4b3b53fb37d9f68be59a44b",
   "graph_max_degree": 22,
   "model": {
     "factor_length": 14,

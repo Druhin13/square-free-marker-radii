@@ -32,17 +32,17 @@
       "size_bytes": 1810
     },
     {
-      "git_blob_sha1": "6393e1153de368268c517d36ce31169df703a335",
+      "git_blob_sha1": "310c8fcca4d26edd6a838bd5447c6e90acc00794",
       "relative_path": "proofs/m3/intransitive-v4/square-free-marker-m3-r5-intransitive-v4-biinfinite-obstruction-audit.json",
       "size_bytes": 2540
     },
     {
-      "git_blob_sha1": "1a7cfb56f8410ab79742f44263fe662713f962ec",
+      "git_blob_sha1": "70780485c981618c8c9bde70359a644a62370b71",
       "relative_path": "proofs/m3/intransitive-v4/square-free-marker-m3-r5-intransitive-v4-certified-only-sat-audit.json",
       "size_bytes": 3786
     },
     {
-      "git_blob_sha1": "3188ab35d0d423bdf51094d5937e4bfd60b9a4c9",
+      "git_blob_sha1": "fc8f013065e719f978821d4e05bb4b1dd201b26a",
       "relative_path": "proofs/m3/intransitive-v4/square-free-marker-m3-r5-intransitive-v4-core-extension-triage.json",
       "size_bytes": 9527546
     },
@@ -67,12 +67,12 @@
       "size_bytes": 549532
     },
     {
-      "git_blob_sha1": "2d61f514d46089598a72c437581504cd1f14c28f",
+      "git_blob_sha1": "a81981c90ab54290bd5008f062761f3bb2a89ed7",
       "relative_path": "proofs/m3/intransitive-v4/square-free-marker-m3-r5-intransitive-v4-extra-extensions-audit.json",
       "size_bytes": 3951
     },
     {
-      "git_blob_sha1": "441170a4d8ad68cbc1f333f66d2616c37519b2b8",
+      "git_blob_sha1": "84312c652d01d992413c9f88f975e95456848de1",
       "relative_path": "proofs/m3/intransitive-v4/square-free-marker-m3-r5-intransitive-v4-extra-extensions.json",
       "size_bytes": 5758
     },

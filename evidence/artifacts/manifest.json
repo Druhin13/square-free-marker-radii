@@ -68,7 +68,7 @@
       "id": "s4-r6-cnf-source-audit",
       "integrity_status": "verified",
       "relative_path": "proofs/m3/s4-r6-ten-core/square-free-marker-m3-r6-s4-cnf-audit.json",
-      "sha256": "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15",
+      "sha256": "26adea7b5584fcda6d5c9de0f9b0e7da13b57b97e43babfa599169bfc7b39d3c",
       "size_bytes": 1598
     },
     {
@@ -103,21 +103,21 @@
       "id": "s4-r6-original-source-audit",
       "integrity_status": "verified",
       "relative_path": "proofs/m3/s4-r6-ten-core/square-free-marker-m3-r6-s4-ten-core-biinfinite-audit.json",
-      "sha256": "321c4daa30079884621eb0b019f6c1c1cfc5347cc4ec29ea11dde06a5dfd0dc8",
+      "sha256": "96c587da47b168783b7314de9edac9d999a853e41daec1a1aa802094ad544bfa",
       "size_bytes": 14812
     },
     {
       "id": "s4-r6-corrected-hall-extremities",
       "integrity_status": "verified",
       "relative_path": "proofs/m3/s4-r6-full-tail-certificates/square-free-marker-m3-r6-s4-ten-core-full-tail-completions.json",
-      "sha256": "46978c02d61491302a647baba418e9dad1921a069fce8ed08fce21af346d7699",
+      "sha256": "b202eeee869a5f8b0a0d1ec2c14ab2d5418186c3d9ec79c46af794aa4fbce3c1",
       "size_bytes": 11966
     },
     {
       "id": "s4-r6-independent-extension-audit",
       "integrity_status": "verified",
       "relative_path": "proofs/m3/s4-r6-full-tail-certificates/square-free-marker-m3-r6-s4-full-tail-independent-audit.json",
-      "sha256": "f83adca618e4829cd1a9cbe51395bebc1b2ae91f81dda2baaff63671e1feda97",
+      "sha256": "931c8565a2ccba6af4f28ae1af711e5cac91585743bf3b0f0264177f25a4401e",
       "size_bytes": 3116
     },
     {
@@ -145,7 +145,7 @@
       "id": "s4-l14-independent-color-audit",
       "integrity_status": "verified",
       "relative_path": "proofs/m3/s4-L14-nine-color/square-free-marker-m3-s4-L14-coloring-audit.json",
-      "sha256": "e3ee9c81e8190ae537162ac58ffa5a51c30ae1a6a4393244d91a3c26d56c7370",
+      "sha256": "15d0a73b28b5b50fa139446d411ffc77b32b79ea9057b56b089dbe81162652d9",
       "size_bytes": 1440
     }
   ],

@@ -84,16 +84,16 @@ REPORT = Path("/tmp/square-free-marker-m3-r6-s4-ten-core-biinfinite-audit.json")
 
 SHA = {
     CNF: "95c9c6aa8e1cf8d14200feb59a4d9e4160a7818cf63e35eb19e6e3ab4310da6e",
-    EXPORT: "1ad0a70c9f6d70c7465f78e14ec8b36e0d5b39e8e34d4c3758f6ad5d6458a17a",
+    EXPORT: "00782082b21d28096bd5e1368b8a83b8cea94318242d04fb1af2f02b3ae5491b",
     PRE: "d58cd38c36ceb8ee68461968f7995fb57bf21205a85205b39f18b01f488e2be0",
-    AUDIT: "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15",
+    AUDIT: "26adea7b5584fcda6d5c9de0f9b0e7da13b57b97e43babfa599169bfc7b39d3c",
     CORE: "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14",
     LEMMAS: "16c6f25a8d3136a0b6ed916c639c17d99080263ea40008b51666dfc62287a700",
     BINARY: "877b2d2c3417735de7a2d74b9e7359bd4fe62a495ac3bdbe28af9c28a31fa6a3",
     RESULT: "bde6e1eede96772c07c8ce29fd18088863815bd043aa59a06f11f5838cf8a162",
 }
 EXPECTED_BYTES = {
-    CNF: 39463151, EXPORT: 1584, PRE: 2793, AUDIT: 1598,
+    CNF: 39463151, EXPORT: 1599, PRE: 2793, AUDIT: 1598,
     CORE: 195, LEMMAS: 222, RESULT: 16,
 }
 SOURCE_CLASSES = {14: 2, 15: 4, 17: 4}
@@ -519,8 +519,8 @@ def configure_archive_inputs(archive_dir):
     require(old_report.is_file() and not old_report.is_symlink(),
             "Missing/symlink original integrated audit in archive")
     observed, report_bytes = hash_file(old_report)
-    require(report_bytes == 14722 and observed ==
-            "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7",
+    require(report_bytes == 14812 and observed ==
+            "96c587da47b168783b7314de9edac9d999a853e41daec1a1aa802094ad544bfa",
             "Original archived audit report SHA/size mismatch")
 
     old_sha = SHA
@@ -550,7 +550,7 @@ def main():
             "Independent corrected full-tail audit is missing/unsafe")
     observed, report_size = hash_file(full_tail)
     require(report_size == 3116 and observed ==
-            "f83adca618e4829cd1a9cbe51395bebc1b2ae91f81dda2baaff63671e1feda97",
+            "931c8565a2ccba6af4f28ae1af711e5cac91585743bf3b0f0264177f25a4401e",
             "Corrected full-extremity independent audit SHA/size mismatch")
     repaired = json.loads(full_tail.read_text(encoding="utf-8"))
     require(repaired.get("status") ==
@@ -561,7 +561,7 @@ def main():
             and repaired.get("all_original_core_sources_preserved") is True
             and repaired.get("all_finite_repaired_witnesses_squarefree") is True
             and repaired.get("repaired_certificate_sha256") ==
-                "46978c02d61491302a647baba418e9dad1921a069fce8ed08fce21af346d7699",
+                "b202eeee869a5f8b0a0d1ec2c14ab2d5418186c3d9ec79c46af794aa4fbce3c1",
             "Independent corrected-tail report lacks expected certificate premises")
     started=perf_counter()
     if opts.archive_dir is not None:

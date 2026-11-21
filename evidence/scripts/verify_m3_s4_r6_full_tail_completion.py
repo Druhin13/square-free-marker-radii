@@ -40,9 +40,9 @@ CORE = ARCHIVE / "core.cnf"
 CNF_AUDIT = ARCHIVE / "square-free-marker-m3-r6-s4-cnf-audit.json"
 OUT = Path("/tmp/square-free-marker-m3-r6-s4-ten-core-full-tail-completions.json")
 PINS = {
-    SOURCE_AUDIT: (14722, "aafc0b76e69e1c465b459bb610a771da292902c2fef30079b582117b2c21ffb7"),
+    SOURCE_AUDIT: (14812, "96c587da47b168783b7314de9edac9d999a853e41daec1a1aa802094ad544bfa"),
     CORE: (195, "b80b008364dace6c4177bb5f5d71b5e0ee2b828c7ea85a15c21e75eed7c86a14"),
-    CNF_AUDIT: (1598, "08dcfcc380b8e47443c2683f1c2cc175ed361e19f721851f4ae8ec0a81971c15"),
+    CNF_AUDIT: (1598, "26adea7b5584fcda6d5c9de0f9b0e7da13b57b97e43babfa599169bfc7b39d3c"),
 }
 
 # (original core clause, source factor word, original left padding,

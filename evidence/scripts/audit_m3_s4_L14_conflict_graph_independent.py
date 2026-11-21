@@ -37,7 +37,7 @@ Save ONE exclusive report:
 Replay from the four recorded certificate objects:
   python3 -B -m scripts.audit_m3_s4_L14_conflict_graph_independent \
       --coloring-sha ee755eff86ae9607037a1ee1a68322a73384cbc5e75b8d513a5ff2616747900d \
-      --manifest-sha c55995dc2e4feba424f937f00e9b0ffc17172c8345485ecab62a54f441c0183a \
+      --manifest-sha f1ba3eeb3355608a0b7fd72ccc99d6788c4f9309f4b3b53fb37d9f68be59a44b \
       --archive-dir proofs/m3/s4-L14-nine-color \
       --report /tmp/square-free-marker-m3-s4-L14-coloring-clean-proofSHA-audit.json
 
@@ -218,9 +218,9 @@ def configure_archive_sources(directory_string, coloring_sha, manifest_sha):
     expected={
         "square-free-marker-m3-r6-s4-orbit-preflight.json":(PREFLIGHT_SHA,2793),
         "square-free-marker-q4-m3-s4-L14-coloring.json":(coloring_sha,463640),
-        "square-free-marker-m3-s4-L14-coloring-export.json":(manifest_sha,661),
+        "square-free-marker-m3-s4-L14-coloring-export.json":(manifest_sha,676),
         "square-free-marker-m3-s4-L14-coloring-audit.json":(
-          "e3ee9c81e8190ae537162ac58ffa5a51c30ae1a6a4393244d91a3c26d56c7370",1440),
+          "15d0a73b28b5b50fa139446d411ffc77b32b79ea9057b56b089dbe81162652d9",1440),
     }
     assert_true({p.name for p in folder.iterdir()}==set(expected),
                 "Unexpected files in four-file immutable coloring archive")
